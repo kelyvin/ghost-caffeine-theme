@@ -1,4 +1,4 @@
-# Kelyvin Ghost Theme
+# Kelyvin Ghost Theme [![Codeship Status for kelyvin/kelyvin-ghost-theme](https://codeship.com/projects/2670e310-6805-0133-8838-460d97cd31f0/status?branch=master)](https://codeship.com/projects/114177)
 
 ---
 
