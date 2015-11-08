@@ -1,0 +1,42 @@
+{
+  "name": "kelyvin-ghost-theme",
+  "description": "Minimalist and Elegant theme for Ghost",
+  "homepage": "https://github.com/kelyvin/kelyvin-ghost-theme",
+  "version": "0.0.1",
+  "authors": [
+    "Kelyvin <kelvinnuci@gmail.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kelyvin/kelyvin-ghost-theme"
+  },
+  "bugs": {
+    "url": "https://github.com/kelyvin/kelyvin-ghost-theme/issues"
+  },
+  "keywords": [
+    "ghost",
+    "theme",
+    "uno",
+    "zen",
+    "elegant",
+    "minimalism"
+  ],
+  "dependencies": {
+    "animate.css": "*",
+    "fastclick": "*",
+    "ghostHunter": "git://github.com/i11ume/ghostHunter.git",
+    "pace": "*",
+    "reading-time": "*",
+    "fitvids": "*"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets/vendor ",
+    "test",
+    "tests"
+  ],
+  "private": true,
+  "license": "MIT"
+}

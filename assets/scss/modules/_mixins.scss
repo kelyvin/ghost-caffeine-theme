@@ -1,0 +1,68 @@
+@mixin inline-code-style {
+  padding: .09rem .2rem;
+
+  font-family: $code-font;
+  font-size: .85rem;
+  font-weight: $font-weight-normal;
+
+  color: $gray-dark;
+  border: 1px solid #d9d9d9;
+  border-radius: 3px;
+}
+
+@mixin background-filter {
+  background: linear-gradient(150deg, $cover-secondary 30%, $cover-primary 70%) 0 0/cover fixed;
+}
+
+@mixin center-absolute {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin font-shadow {
+  text-shadow: 0 1px 1px rgba(000, 000, 000, .4);
+}
+
+@mixin btn-cover {
+  position: relative;
+
+  display: block;
+
+  font-size: .9em;
+  -webkit-font-smoothing: antialiased;
+  font-weight: bold;
+
+  letter-spacing: 1px;
+
+  opacity: .8;
+  color: $gray-lightest;
+  border-radius: 20px;
+  text-shadow: none;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+@mixin btn-cover-with-border {
+  border: 1px solid $gray-lightest;
+
+  @extend btn-cover;
+}
+
+@mixin placeholder {
+  ::-webkit-input-placeholder {
+    @content
+  }
+  :-moz-placeholder {
+    @content
+  }
+  ::-moz-placeholder {
+    @content
+  }
+  :-ms-input-placeholder {
+    @content
+  }
+}

@@ -1,3 +1,6 @@
+# Other
+.DS_STORE
+
 # Logs
 logs
 *.log
@@ -24,4 +27,12 @@ build/Release
 
 # Dependency directory
 # https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
-node_modules
+node_modules/
+bower_components/
+
+# Cache
+.sass-cache/
+
+# Assets
+assets/vendor
+assets/scss/bourbon
