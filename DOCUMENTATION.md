@@ -15,10 +15,10 @@ The code of the theme is divided in 3 main sections: static files (as HTML and i
 │   ├── img # favicons and cover image
 │   ├── js
 │   │   ├── src
-│   │   │   ├── __init.coffee
-│   │   │   ├── cover.coffee
-│   │   │   ├── main.coffee
-│   │   │   └── search.coffee
+│   │   │   ├── __init.js
+│   │   │   ├── cover.js
+│   │   │   ├── main.js
+│   │   │   └── search.js
 │   │   └── kelyvin-ghost-theme.js # the production js
 │   └── scss
 │   │   ├── components # specific stuff
@@ -44,7 +44,7 @@ The code of the theme is divided in 3 main sections: static files (as HTML and i
 ├── bower.json
 ├── default.hbs
 ├── error.hbs
-├── gulpfile.coffee
+├── gulpfile.js
 ├── index.hbs
 ├── node_modules
 ├── package.json
@@ -68,7 +68,7 @@ Putting the files in context:
 - The SCSS (we use [SASS](http://sass-lang.com/)) inside `assets/scss` is compiled into `assets/css/kelyvin-ghost-theme.css`
 - We have some static files like `post.hbs`, `tag.hbs`, `default.hbs`, `index.hbs`,... the partials views inside `assets/partials` is used in this views.
 
-For do it automatically and easily we use [Gulp](http://gulpjs.com/), check `gulpfile.coffee` for know how to we do it.
+For do it automatically and easily we use [Gulp](http://gulpjs.com/), check `gulpfile.js` for know how to we do it.
 
 ## First Steps
 
@@ -97,7 +97,7 @@ Just run `gulp` command in the theme terminal. Now you have a development scenar
 
 With the `gulp` command you are automatically launching the task for compile the assets and reload the server when your assets change. For do it we uses [BrowserSync](http://www.browsersync.io) that is setup as middleware between the theme and the Ghost. You can connect different devices and try the responsive of the website as well.
 
-As the screenshot, you need to use for the proxying the same port as your Ghost server. If your Ghost server is in a different port than `2387` you need to modify `gulpfile.coffee` and put the correct port.
+As the screenshot, you need to use for the proxying the same port as your Ghost server. If your Ghost server is in a different port than `2387` you need to modify `gulpfile.js` and put the correct port.
 
 ## Customization
 

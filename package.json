@@ -29,7 +29,6 @@
     "gulp-add-src": "*",
     "gulp-autoprefixer": "*",
     "gulp-changed": "*",
-    "gulp-coffee": "*",
     "gulp-concat": "*",
     "gulp-cssmin": "*",
     "gulp-header": "*",
