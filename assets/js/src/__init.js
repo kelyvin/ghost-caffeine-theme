@@ -3,7 +3,7 @@
 $(function() {
     var KelyvinTheme;
     return window.KelyvinTheme = KelyvinTheme = {
-        version: '0.1.0',
+        version: '0.3.0',
         search: {
             container: function() {
                 return $('#results');

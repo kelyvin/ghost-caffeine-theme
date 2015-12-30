@@ -2,7 +2,7 @@
   "name": "kelyvin-ghost-theme",
   "description": "Minimalist and Elegant theme for Ghost",
   "homepage": "https://github.com/kelyvin/kelyvin-ghost-theme",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "author": {
     "name": "Kelyvin",
     "url": "https://github.com/kelyvin"
@@ -10,6 +10,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/kelyvin/kelyvin-ghost-theme"
+  },
+  "scripts": {
+    "test": "gulp build"
   },
   "bugs": {
     "url": "https://github.com/kelyvin/kelyvin-ghost-theme/issues"

@@ -1,38 +1,81 @@
 'use strict';
 
 $(function() {
-    var _animate, _expand, isOpen;
+    var _toggleNavHeader,
+        _animateCover,
+        _expand,
+        $navHeader,
+        $homeButton,
+        $cover,
+        isOpen;
+
     isOpen = location.hash === '#open';
-    _animate = function() {
-        return setTimeout(function() {
-            return $('.cover').addClass('animated');
-        }, 1000);
+    $navHeader = $('#nav-header');
+    $homeButton = $navHeader.find('#home-button'),
+    $cover = $('.cover');
+
+    _animateCover = function() {
+        $cover.addClass('animated');
     };
+
+    _toggleNavHeader = function() {
+        $navHeader.toggleClass('expanded');
+    };
+
     _expand = function(options) {
         $('main, .cover, .links > li, html').toggleClass('expanded');
+        _toggleNavHeader()
         return KelyvinTheme.search.form(options.form);
     };
-    $('#menu-button').click(function() {
-        return $('.cover, main, #menu-button, html').toggleClass('expanded');
+
+    $homeButton.click(function() {
+        location.hash = '';
+        _animateCover();
+        return _expand({
+            form: 'hide'
+        });
     });
-    $('.nav-blog > a, #avatar-link').click(function(event) {
+
+    $('.nav-blog > a').click(function(event) {
         if (KelyvinTheme.is('page', 'home')) {
             event.preventDefault();
-            location.hash = location.hash === '' ? '#open' : '';
-            if (!KelyvinTheme.is('device', 'desktop')) {
-                return $('#menu-button').trigger('click');
-            }
+            _animateCover();
+            location.hash = '#open';
             return _expand({
                 form: 'toggle'
             });
         }
     });
-    if ((KelyvinTheme.is('device', 'desktop')) && (KelyvinTheme.is('page', 'home'))) {
-        _animate();
-        if (!isOpen) {
+
+    $('#avatar-link').click(function (event) {
+        var device = KelyvinTheme.device();
+
+        if (KelyvinTheme.is('page', 'home')) {
+            event.preventDefault();
+            _animateCover();
+            location.hash = '#open';
+            return _expand({
+                form: 'toggle'
+            });
+        } else if (device !== 'desktop') {
+            event.preventDefault();
+            _animateCover();
             return _expand({
                 form: 'hide'
             });
         }
+    });
+
+    if (KelyvinTheme.is('page', 'home')) {
+        if (!isOpen) {
+            _toggleNavHeader();
+            return _expand({
+                form: 'hide'
+            });
+        } else {
+            _toggleNavHeader();
+        }
+    } else {
+        _toggleNavHeader();
     }
 });

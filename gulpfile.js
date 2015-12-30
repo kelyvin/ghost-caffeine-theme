@@ -18,7 +18,7 @@ browserSync = require('browser-sync');
 reload = browserSync.reload;
 
 PORT = {
-    GHOST: 2387,
+    GHOST: 2368,
     BROWSERSYNC: 3000
 };
 

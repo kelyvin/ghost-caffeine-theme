@@ -1,63 +1,73 @@
 img,
 .btn {
-  &.square {
-    border-radius: 0;
-  }
-
-  &.rounded {
-    border-radius: 50%;
-  }
+    &.square {
+        border-radius: 0;
+    }
+    &.rounded {
+        border-radius: 50%;
+    }
 }
 
 .btn {
-  padding: 10px 20px;
-
-  font-size: .9em;
-  -webkit-font-smoothing: antialiased;
-  font-weight: bold;
-
-  letter-spacing: 1px;
-
-  color: $primary-color;
-  border: 1px solid $primary-color;
-  border-radius: 20px;
-  text-shadow: none;
-
-  &:hover {
-    color: darken($primary-color, 15%);
-    border-color: darken($primary-color, 15%);
-  }
-  &.small {
-    padding: 8px 12px;
-
-    font-size: .7em;
-  }
-  &.large {
-    padding: 10px 24px;
-
-    font-size: 1.1em;
-  }
-  &.secondary {
-    color: $secondary-color;
-    border-color: $secondary-color;
-
+    padding: 10px 20px;
+    font-size: .9em;
+    -webkit-font-smoothing: antialiased;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: $primary-color;
+    border: 1px solid $primary-color;
+    border-radius: 20px;
+    text-shadow: none;
     &:hover {
-      color: darken($secondary-color, 15%);
-      border-color: darken($secondary-color, 15%);
+        color: darken($primary-color, 15%);
+        border-color: darken($primary-color, 15%);
     }
-  }
+    &.small {
+        padding: 8px 12px;
+        font-size: .7em;
+    }
+    &.large {
+        padding: 10px 24px;
+        font-size: 1.1em;
+    }
+    &.secondary {
+        color: $secondary-color;
+        border-color: $secondary-color;
+        &:hover {
+            color: darken($secondary-color, 15%);
+            border-color: darken($secondary-color, 15%);
+        }
+    }
 }
-#menu-button {
-  display: none;
 
-  > a {
-    > i {
-      position: relative;
-      top: 3px;
+#nav-header {
+    display: none;
+    width: 100%;
 
-      font-size: 36px;
+    > a {
+        left: .85rem;
 
-      color: $gray-lightest;
+        &.right {
+            float: right;
+            left: auto;
+            right: .85rem;
+        }
+
+        > i {
+            position: relative;
+            top: 3px;
+            font-size: 36px;
+            color: $gray-lightest;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            img {
+                max-width: 36px;
+                border: 1px solid $slate-green;
+                box-shadow: 0 0 1px 1px rgba(000, 000, 000, .2);
+            }
+        }
     }
-  }
 }

@@ -1,25 +1,34 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>{{meta_title}}</title>
-    {{> meta}}
-    <link rel="stylesheet" type="text/css" href="{{asset "css/kelyvin-ghost-theme.css"}}" />
-    {{ghost_head}}
-  </head>
-  <body class="{{body_class}}">
-    <header id="menu-button" class="expanded">
-      <a><i class="icon icon-list"></i></a>
-    </header>
-    {{> aside}}
-    <main>
-      <section id="search-results"></section>
-      <section class="content">
-        {{{body}}}
-        {{> footer}}
-      </section>
-    </main>
-    {{ghost_foot}}
-    <script src="{{asset "js/kelyvin-ghost-theme.js"}}" type="text/javascript" charset="utf-8"></script>
-    {{> google-analytics}}
-  </body>
+    <head>
+        <title>{{meta_title}}</title>
+        {{> meta}}
+        <link rel="stylesheet" type="text/css" href="{{asset "css/kelyvin-ghost-theme.css"}}" />
+        {{ghost_head}}
+    </head>
+    <body class="{{body_class}}">
+        <header id="nav-header">
+            <a id="home-button">
+                {{#if @blog.logo}}
+                    <i><img src="{{@blog.logo}}" alt="{{@blog.title}} avatar" class="profile avatar rounded hvr-buzz-out" /></i>
+                {{else}}
+                    <i class="icon icon-home"></i>
+                {{/if}}
+              </a>
+            <a id="search-button" class="right">
+                <i class="icon icon-search"></i>
+            </a>
+        </header>
+        {{> aside}}
+        <main>
+            <section id="search-results"></section>
+            <section class="content">
+                {{{body}}}
+                {{> footer}}
+            </section>
+        </main>
+        {{ghost_foot}}
+        <script src="{{asset "js/kelyvin-ghost-theme.js"}}" type="text/javascript" charset="utf-8"></script>
+        {{> google-analytics}}
+    </body>
 </html>

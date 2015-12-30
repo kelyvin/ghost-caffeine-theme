@@ -2,7 +2,7 @@
 
 ## Understanding scenario
 
-The code of the theme is divided in 3 main sections: static files (as HTML and images), CSS and JS. Check out the folders tree:
+The code for the theme is divided into 3 main sections: static files (as HTML and images), CSS and JS. Check out the directory structure below:
 
 ```
 .
@@ -65,25 +65,26 @@ The code of the theme is divided in 3 main sections: static files (as HTML and i
 Putting the files in context:
 
 - The JS inside `assets/js/src` is compiled into `assets/js/kelyvin-ghost-theme.js`
-- The SCSS (we use [SASS](http://sass-lang.com/)) inside `assets/scss` is compiled into `assets/css/kelyvin-ghost-theme.css`
-- We have some static files like `post.hbs`, `tag.hbs`, `default.hbs`, `index.hbs`,... the partials views inside `assets/partials` is used in this views.
+- The SCSS (we use [SASS](http://sass-lang.com/)) files inside `assets/scss` are compiled into `assets/css/kelyvin-ghost-theme.css`
+- We have some static files like `post.hbs`, `tag.hbs`, `default.hbs`, `index.hbs`... the partials views inside `assets/partials` are used in these views.
 
-For do it automatically and easily we use [Gulp](http://gulpjs.com/), check `gulpfile.js` for know how to we do it.
+To bundle, minify, and compile the stylesheets and js files, we use [Gulp](http://gulpjs.com/), check `gulpfile.js` for the build tasks.
 
 ## First Steps
 
-For local development you need to have a locally Ghost server, like this:
+For local development you need to have a locally running Ghost server, like this:
 
 ```bash
-node index.js
-Migrations: Up to date at version 003
+npm start
+
+Migrations: Up to date at version 004
 Ghost is running in development...
-Listening on 127.0.0.1:2387
-Url configured as: http://127.0.0.1:2387
+Listening on 127.0.0.1:2368
+Url configured as: http://localhost:2368
 Ctrl+C to shut down
 ```
 
-Note that my local Ghost is running in the port `2387`.
+Note that my local Ghost is running in the port `2368`.
 
 With your local Ghost running, open another terminal and enter in the folder `content/themes` of your local Ghost and clone the theme repository and install the dependencies for local development:
 
@@ -91,13 +92,13 @@ With your local Ghost running, open another terminal and enter in the folder `co
 $ git clone https://github.com/kelyvin/kelyvin-ghost-theme && cd kelyvin-ghost-theme && npm install && bower install
 ```
 
-Just run `gulp` command in the theme terminal. Now you have a development scenario, and looks like this:
+Then run the `gulp` command in the theme terminal. This should set you up for a development scenario, and looks like this:
 
 ![](http://i.imgur.com/Gf4gPR2.png)
 
-With the `gulp` command you are automatically launching the task for compile the assets and reload the server when your assets change. For do it we uses [BrowserSync](http://www.browsersync.io) that is setup as middleware between the theme and the Ghost. You can connect different devices and try the responsive of the website as well.
+With the `gulp` command you are automatically launching the task to compile the assets and reload the server when your assets change. To do this, we use [BrowserSync](http://www.browsersync.io). It is set up as middleware between the theme and Ghost. You can connect different devices and try the responsive of the website as well.
 
-As the screenshot, you need to use for the proxying the same port as your Ghost server. If your Ghost server is in a different port than `2387` you need to modify `gulpfile.js` and put the correct port.
+You need to use the same port as your Ghost server for proxying. If your Ghost server is in a different port than `2368` you need to modify `gulpfile.js` and put the correct port.
 
 ## Customization
 
@@ -131,13 +132,13 @@ Go to Ghost Admin panel → `Code Injection` → `Blog Header` and add:
 
 ```html
 <script>
-var profile_title = 'Kiko Beats';
+var profile_title = 'Kelyvin Theme';
 </script>
 ```
 
 ### Sidebar subtitle
 
-The purpose of the subtitle is resume the bio in a phrase. This will be shown in the mobile/tablet version instead of the bio.
+The purpose of the subtitle is describe your bio in a quick phrase. This will be shown in the mobile/tablet version instead of the bio.
 
 Go to Ghost Admin panel → `Code Injection` → `Blog Header` and add:
 
@@ -175,7 +176,7 @@ The linear gradient of the cover filter is based in `$cover-primary` and `$cover
 
 ### Custom static pages
 
-Check the [page part](http://themes.ghost.org/v0.6.4/docs/page-context) in the Ghost Official Documentation.
+Check the [page part](http://themes.ghost.org/docs/page-context) in the Ghost Official Documentation.
 
 ### Multiaccount support
 
@@ -183,4 +184,4 @@ You can enable the multiaccount support editing [posts.hbs](https://github.com/k
 
 ## Preparing for production
 
-When you consider that the development is done and you want to deploy a new version, package your code using `gulp build` command, that minify and concatenate all necessary code.
+When you consider that the development is done and you want to deploy a new version, package your code using `gulp build` command, that will minify and concatenate all the necessary code.

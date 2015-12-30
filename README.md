@@ -6,6 +6,12 @@
 
 **Kelyvin** is a fork of [Uno-Zen for Ghost by Kikobeats v2.5.7](https://github.com/Kikobeats/uno-zen).
 
+## What's Different
+
+The main difference between the kelyvin-ghost-theme and uno-zen is that there are major improvements to responsiveness and animation logic. These improvements will be better detailed in a separate commit.
+
+
+
 ## Installation
 
 Please ensure that `git` is installed on your machine.

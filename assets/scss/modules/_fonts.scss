@@ -26,15 +26,7 @@
   text-decoration: inherit;
   text-transform: none;
 }
-.icon-search {
-  position: static !important;
-}
 .icon-search:before {
-  position: absolute;
-  right: 83px;
-
-  margin-top: 30px;
-
   content: "\f16c";
 }
 .icon-address-book:before {

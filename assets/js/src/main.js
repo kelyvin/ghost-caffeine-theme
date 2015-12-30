@@ -15,6 +15,14 @@ $(function() {
     if (window.profile_resume) {
         $('#profile-resume').text(window.profile_resume);
     }
+    if (KelyvinTheme.is('page', 'post')) {
+        $('main').readingTime({
+            readingTimeTarget: '.post.reading-time > span'
+        });
+        $('.content').fitVids();
+    }
+
+    /*
     if (KelyvinTheme.is('device', 'desktop')) {
         $('a').not('[href*="mailto:"]').click(function() {
             if (this.href.indexOf(location.hostname) === -1) {
@@ -23,12 +31,7 @@ $(function() {
             }
         });
     }
-    if (KelyvinTheme.is('page', 'post')) {
-        $('main').readingTime({
-            readingTimeTarget: '.post.reading-time > span'
-        });
-        $('.content').fitVids();
-    }
+
     if (KelyvinTheme.is('page', 'error')) {
         return $('#panic-button').click(function() {
             var s;
@@ -37,4 +40,5 @@ $(function() {
             return document.body.appendChild(s);
         });
     }
+    */
 });
