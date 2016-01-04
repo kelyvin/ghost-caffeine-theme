@@ -1,6 +1,11 @@
 <aside class="cover" style="background: url({{@blog.cover}}) center/cover no-repeat">
     <div class="cover container">
         <div class="profile">
+            <header id="aside-header" class="nav-header">
+                <a id="aside-close-button" class="right">
+                    <i class="fa fa-close"></i>
+                </a>
+            </header>
             {{#if @blog.logo}}
                 <a id="avatar-link" title="Link to homepage for {{@blog.title}}" href="{{@blog.url}}/#open">
                     <img src="{{@blog.logo}}" alt="{{@blog.title}} avatar" class="profile avatar rounded hvr-buzz-out" />

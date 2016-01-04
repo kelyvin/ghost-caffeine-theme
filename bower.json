@@ -2,7 +2,7 @@
   "name": "kelyvin-ghost-theme",
   "description": "Minimalist and Elegant theme for Ghost",
   "homepage": "https://github.com/kelyvin/kelyvin-ghost-theme",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "authors": [
     "Kelyvin <kelvinnuci@gmail.com>"
   ],
@@ -27,7 +27,8 @@
     "ghostHunter": "git://github.com/i11ume/ghostHunter.git",
     "pace": "*",
     "reading-time": "*",
-    "fitvids": "*"
+    "fitvids": "*",
+    "font-awesome": "fontawesome#~4.5.0"
   },
   "ignore": [
     "**/.*",

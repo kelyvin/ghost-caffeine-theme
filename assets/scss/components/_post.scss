@@ -6,8 +6,8 @@
     > li {
         > a {
             > h2 {
-                margin-bottom: 1rem;
-                line-height: 3rem;
+                margin-bottom: 16px;
+                line-height: 48px;
                 transition: all $aside-animation-time;
                 &:hover {
                     transition: all $aside-animation-time;
@@ -23,7 +23,7 @@
 
 #post-content {
     a {
-        padding: 0 .2em;
+        padding: 0 4px;
         transition: all .5s;
         &::after {
             position: absolute;
@@ -50,7 +50,7 @@
     > p {
         > img {
             width: 100%;
-            margin: 1.5rem auto;
+            margin: 24px auto;
             text-align: center;
             border-radius: $border-radius;
         }
@@ -62,23 +62,23 @@
         text-align: center;
     }
     &.description {
-        margin-bottom: 1rem;
-        font-size: .9em;
+        margin-bottom: 16px;
+        font-size: 14px;
         color: $gray-dark;
     }
     &.meta {
-        margin: .7em 0;
-        font-size: .85rem;
+        margin: 10px 0;
+        font-size: 12px;
         color: $gray;
     }
     &.tags {
         > a {
-            padding: .167rem .25rem;
-            font-size: .55rem;
+            padding: 2px 4px;
+            font-size: 8px;
             transition: all $aside-animation-time;
             text-transform: uppercase;
             color: $gray-lightest;
-            border-radius: .25rem;
+            border-radius: 4px;
             background-color: rgba($primary-color, .7);
             &:hover {
                 background-color: rgba($primary-color, 1);
@@ -89,31 +89,36 @@
         img {
             display: inline-block;
             height: 22px;
-            margin: 0 .5rem;
+            margin: 0 8px;
             vertical-align: middle;
             border: none;
             box-shadow: none;
         }
     }
     &.comments {
-        padding: 2rem 0 0 0;
+        padding: 32px 0 0 0;
     }
     &.related {
         display: flex;
-        padding: 4rem 0 2rem 0;
+        padding: 64px 0 32px 0;
         justify-content: space-between;
     }
 }
 
 #post-image {
     max-width: 100%;
-    margin-top: 1rem;
+    margin-top: 16px;
 }
 
 #post-title {
-    margin: 3rem 0 2.5rem;
+    margin: 48px 0 40px;
     transition: all $aside-animation-time;
     &:hover {
         color: $hover-color;
+    }
+
+    i {
+        vertical-align: top;
+        font-size: 26px;
     }
 }

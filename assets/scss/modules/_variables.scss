@@ -10,19 +10,21 @@ $gray-lightest         : #f8f8f8;
 
 $white                 : #F6F4E9;
 $red                   : #7C221A;
-$tan                   : #85715F;
+$brown                 : #85715F;
 $slate-gray            : #39424B;
 $slate-green           : #56817A;
 $midnight-blue         : #222F38;
 
-$primary-color         : lighten($slate-green, 5%);
+$primary-color         : $slate-green;
 $secondary-color       : $slate-gray;
 
 $cover-secondary       : rgba(#5f2c82, .1);
 $cover-primary         : rgba(#49a09d, .2);
 
 $link-color            : $midnight-blue;
+$pre-hover-color       : lighten($primary-color, 15%);
 $hover-color           : $primary-color;
+$hover-color-inverse   : $white;
 
 $divider-color         : rgba(255, 255, 255, .14);
 

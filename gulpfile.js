@@ -51,12 +51,23 @@ src = {
     css: {
         main: 'assets/css/' + dist.name + '.css',
         vendor: []
+    },
+    fonts: {
+        files: [
+            'assets/vendor/font-awesome/fonts/**.*'
+        ],
+        dest: 'assets/fonts'
     }
 };
 
 banner = ["/**", " * <%= pkg.name %> - <%= pkg.description %>", " * @version <%= pkg.version %>", " * @link    <%= pkg.homepage %>", " * @author  <%= pkg.author.name %> (<%= pkg.author.url %>)", " * @license <%= pkg.license %>", " */", ""].join("\n");
 
-gulp.task('css', function() {
+gulp.task('fonts', function() {
+    gulp.src(src.fonts.files)
+        .pipe(gulp.dest(src.fonts.dest));
+});
+
+gulp.task('css', ['fonts'], function() {
     gulp.src(src.css.vendor).pipe(changed(dist.css)).pipe(addsrc(src.sass.main)).pipe(sass().on('error', gutil.log)).pipe(concat('' + dist.name + '.css')).pipe(prefix()).pipe(strip({
         all: true
     })).pipe(cssmin()).pipe(header(banner, {

@@ -4,14 +4,14 @@ $(function() {
     var _toggleNavHeader,
         _animateCover,
         _expand,
-        $navHeader,
+        $defaultHeader,
         $homeButton,
         $cover,
         isOpen;
 
     isOpen = location.hash === '#open';
-    $navHeader = $('#nav-header');
-    $homeButton = $navHeader.find('#home-button'),
+    $defaultHeader = $('#default-header');
+    $homeButton = $defaultHeader.find('#home-button');
     $cover = $('.cover');
 
     _animateCover = function() {
@@ -19,7 +19,7 @@ $(function() {
     };
 
     _toggleNavHeader = function() {
-        $navHeader.toggleClass('expanded');
+        $defaultHeader.toggleClass('expanded');
     };
 
     _expand = function(options) {
@@ -47,7 +47,7 @@ $(function() {
         }
     });
 
-    $('#avatar-link').click(function (event) {
+    $('#avatar-link, #aside-close-button').click(function (event) {
         var device = KelyvinTheme.device();
 
         if (KelyvinTheme.is('page', 'home')) {

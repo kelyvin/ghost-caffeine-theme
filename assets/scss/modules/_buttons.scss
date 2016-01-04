@@ -10,7 +10,7 @@ img,
 
 .btn {
     padding: 10px 20px;
-    font-size: .9em;
+    font-size: 14px;
     -webkit-font-smoothing: antialiased;
     font-weight: bold;
     letter-spacing: 1px;
@@ -24,11 +24,11 @@ img,
     }
     &.small {
         padding: 8px 12px;
-        font-size: .7em;
+        font-size: 10px;
     }
     &.large {
         padding: 10px 24px;
-        font-size: 1.1em;
+        font-size: 16px;
     }
     &.secondary {
         color: $secondary-color;
@@ -40,23 +40,23 @@ img,
     }
 }
 
-#nav-header {
+.nav-header {
     display: none;
     width: 100%;
 
     > a {
-        left: .85rem;
+        left: 12px;
 
         &.right {
             float: right;
             left: auto;
-            right: .85rem;
+            right: 12px;
         }
 
         > i {
             position: relative;
             top: 3px;
-            font-size: 36px;
+            font-size: 34px;
             color: $gray-lightest;
 
             &:hover {
@@ -65,7 +65,7 @@ img,
 
             img {
                 max-width: 36px;
-                border: 1px solid $slate-green;
+                border: 1px solid $primary-color;
                 box-shadow: 0 0 1px 1px rgba(000, 000, 000, .2);
             }
         }

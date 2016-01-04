@@ -7,16 +7,16 @@
         {{ghost_head}}
     </head>
     <body class="{{body_class}}">
-        <header id="nav-header">
+        <header id="default-header" class="nav-header">
             <a id="home-button">
                 {{#if @blog.logo}}
                     <i><img src="{{@blog.logo}}" alt="{{@blog.title}} avatar" class="profile avatar rounded hvr-buzz-out" /></i>
                 {{else}}
-                    <i class="icon icon-home"></i>
+                    <i class="fa fa-home"></i>
                 {{/if}}
               </a>
             <a id="search-button" class="right">
-                <i class="icon icon-search"></i>
+                <i class="fa fa-search"></i>
             </a>
         </header>
         {{> aside}}

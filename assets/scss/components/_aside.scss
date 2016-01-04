@@ -23,34 +23,32 @@
 }
 
 #profile-resume {
-    font-size: 1.2rem;
-    margin-top: .5rem;
-    margin-bottom: 1.5rem;
+    font-size: 18px;
+    margin-top: 8px;
+    margin-bottom: 24px;
 }
 
 .profile {
-    max-width: 38.75rem;
+    max-width: 620px;
     > p {
-        margin: 0 2rem;
-        font-size: .9rem;
+        margin: 0 32px;
+        font-size: 14px;
     }
     > a {
         > h1 {
             margin: 0;
             font-family: $sans-font;
             font-size: $unit * 2;
-            font-weight: $font-weight-bold;
-            letter-spacing: .05rem;
-            color: $gray-lightest;
-            margin: .5rem 0;
+            color: $white;
+            margin: 8px 0;
         }
         > h3 {
             margin: 0;
-            color: $gray-lightest;
+            color: $white;
         }
         > img {
-            width: 7rem;
-            border: 2px solid $midnight-blue;
+            width: 112px;
+            border: 2px solid $primary-color;
             box-shadow: 0 0 1px 1px rgba(000, 000, 000, .3);
         }
     }
@@ -59,32 +57,44 @@
 .navigation {
     &.left {
         display: inline-block;
-        margin-top: 1.2rem;
-        margin-bottom: 1rem;
+        margin-top: 18px;
+        margin-bottom: 16px;
         .links {
             margin: 0;
             list-style: none;
             > li {
                 display: block;
                 margin: 0 1px 0 0;
-                line-height: 1em;
+                line-height: 16px;
+
                 &.expanded {
                     display: inline-block;
                     margin: 0 5px;
                     border-radius: 20px;
+                    background: $primary-color;
+                    color: $white;
+
                     @include btn-cover-with-border;
+
                     > a {
-                        padding: .625rem 1.25rem;
+                        padding: 10px 20px;
+                    }
+
+                    &:hover {
+                        background: $hover-color-inverse;
                     }
                 }
+
                 > a {
                     display: block;
                     float: none;
-                    padding: .5rem 1.25rem;
-                    color: $gray-lightest;
+                    padding: 8px 20px;
                     @include btn-cover;
+                    @include font-shadow;
+
                     &:hover {
                         color: $hover-color;
+                        text-shadow: none;
                     }
                 }
             }
@@ -92,22 +102,22 @@
     }
     &.right {
         display: block;
-        margin: .5rem;
+        margin: 8px;
         .social {
             margin: 0;
             &.item {
                 display: inline-block;
                 margin: 0 4px 0 0;
-                line-height: 1em;
+                line-height: 16px;
                 a {
                     padding: 6px 8px 6px 9px;
                     @include btn-cover;
                     .label {
                         display: none;
                     }
-                    .icon {
+                    i {
                         display: block;
-                        font-size: 1.7em;
+                        font-size: 24px;
                     }
                     &:hover {
                         color: $hover-color;

@@ -3,10 +3,10 @@
 // ------------------------------
 @media only screen and (min-width:1824px) {
     main {
-        padding: 2.5rem 11rem;
+        padding: 40px 176px;
     }
     .content {
-        margin: 0 7rem;
+        margin: 0 112px;
     }
 }
 
@@ -28,30 +28,48 @@
         display: inherit;
     }
     /* off canvas */
-    #nav-header {
+    .nav-header {
         position: fixed;
-        top: .5rem;
-        left: 13.5rem;
+        top: 8px;
+        left: 216px;
         z-index: 2;
         transition: all $aside-animation-time;
+
         &.expanded {
             left: 0;
             display: block;
         }
         > a {
             > i {
-                color: $hover-color;
+                transition: all $aside-animation-time;
+                color: $pre-hover-color;
+
+                &:hover {
+                    color: $hover-color;
+                }
             }
         }
     }
     .cover {
-        width: 16rem;
-        transform: translate3d(-16rem, 0, 0);
+        width: 256px;
+        transform: translate3d(-256px, 0, 0);
         border-right: none;
         box-shadow: none;
         &.expanded {
             transform: translate3d(0, 0, 0);
             box-shadow: 11px -10px 1px -9px $gray-light;
+
+            .nav-header {
+                left: 0;
+                display: block;
+
+                > a {
+                    > i {
+                        color: $white;
+                        font-size: 26px;
+                    }
+                }
+            }
         }
         &.animated {
             transition: all $aside-animation-time;
@@ -68,26 +86,26 @@
         }
         > a {
             > img {
-                width: 8rem;
-                margin-bottom: 1rem;
+                width: 128px;
+                margin-bottom: 16px;
             }
         }
         > p {
-            margin: 0 10rem;
+            margin: 0 160px;
         }
     }
     .navigation.left .links {
         > li {
             margin: 0;
             > a {
-                padding: .85rem 1.25rem;
-                font-size: 1rem;
+                padding: 14px 20px;
+                font-size: 16px;
             }
         }
     }
     #avatar-link {
         display: inline-block;
-        margin-top: 4rem;
+        margin-top: 64px;
     }
     .navigation {
         width: 100%;
@@ -105,7 +123,7 @@
         transition: all $aside-animation-time;
         transform: translate3d(0, 0, 0);
         &.expanded {
-            transform: translate3d(14rem, 0, 0);
+            transform: translate3d(224px, 0, 0);
         }
     }
 }
@@ -116,7 +134,7 @@
 @media all and (max-width:600px) {
     .profile {
         > p {
-            margin: 0 5rem;
+            margin: 0 80px;
         }
     }
 
@@ -135,10 +153,10 @@
 @media all and (max-width:480px) {
     .btn {
         display: block;
-        margin-bottom: .4em;
+        margin-bottom: 6px;
     }
     main {
-        padding: 1rem 0;
+        padding: 16px 0;
     }
     .mayday {
         width: auto;
@@ -155,13 +173,13 @@
     }
     .astro-wrap,
     .astronaut {
-        height: 10rem;
+        height: 160px;
     }
     #panic-button {
-        margin-bottom: 1rem;
+        margin-bottom: 16px;
     }
     #post-title {
-        margin: 2.5rem 0;
+        margin: 40px 0;
     }
     .post .tags,
     .post .meta > time,
@@ -171,10 +189,10 @@
     .post {
         &.newer,
         &.older {
-            padding: 1rem;
+            padding: 16px;
         }
         &.newer {
-            margin: 0 0 1.2rem;
+            margin: 0 0 20px;
         }
         &.older {
             margin: 0 0 10px;
@@ -182,12 +200,12 @@
     }
     .profile {
         > p {
-            margin: 0 1rem;
+            margin: 0 16px;
         }
     }
     blockquote {
         > p {
-            margin: 2rem -1rem;
+            margin: 32px -16px;
         }
     }
 }
