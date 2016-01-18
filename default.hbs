@@ -7,7 +7,7 @@
         {{ghost_head}}
     </head>
     <body class="{{body_class}}">
-        <header id="default-header" class="nav-header">
+        <header id="mobile-header" class="nav-header mobile">
             <a id="home-button">
                 {{#if @blog.logo}}
                     <i><img src="{{@blog.logo}}" alt="{{@blog.title}} avatar" class="profile avatar rounded hvr-buzz-out" /></i>
@@ -15,18 +15,23 @@
                     <i class="fa fa-home"></i>
                 {{/if}}
               </a>
-            <a id="search-button" class="right">
+            <a class="tags-button right">
                 <i class="fa fa-search"></i>
             </a>
         </header>
         {{> aside}}
         <main>
-            <section id="search-results"></section>
+            <header id="main-header" class="nav-header">
+                <a class="tags-button right">
+                    <i class="fa fa-search"></i>
+                </a>
+            </header>
             <section class="content">
                 {{{body}}}
                 {{> footer}}
             </section>
         </main>
+        {{> tags-overlay}}
         {{ghost_foot}}
         <script src="{{asset "js/kelyvin-ghost-theme.js"}}" type="text/javascript" charset="utf-8"></script>
         {{> google-analytics}}

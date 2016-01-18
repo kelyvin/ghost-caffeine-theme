@@ -1,0 +1,44 @@
+.tags-overlay {
+    position: fixed;
+    z-index: 1;
+    display: block;
+    width: 0;
+    height: 100%;
+    overflow-y: auto;
+    opacity: 0;
+    background: $midnight-blue;
+    transition: opacity $aside-animation-time $aside-animation;
+
+    &.show {
+        width: 100%;
+        opacity: .97;
+    }
+
+    &.container {
+        font-weight: $font-weight-thin;
+        text-align: center;
+        color: $gray-lightest;
+        @include font-shadow;
+    }
+
+    .tags-container {
+        h2 {
+            color: $white;
+        }
+
+        .tags {
+            a {
+                padding: 8px 14px;
+                font-size: 12px;
+                transition: all $aside-animation-time;
+                text-transform: uppercase;
+                color: $gray-lightest;
+                border-radius: 4px;
+                background-color: rgba($brown, .7);
+                &:hover {
+                    background-color: rgba($brown, 1);
+                }
+            }
+        }
+    }
+}

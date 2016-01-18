@@ -41,26 +41,45 @@ img,
 }
 
 .nav-header {
-    display: none;
     width: 100%;
+    z-index: 10;
+
+    &.mobile {
+        display: none;
+
+        > a {
+            left: 12px;
+
+            &.right {
+                left: auto;
+                right: 12px;
+            }
+        }
+    }
 
     > a {
-        left: 12px;
+        z-index: 10;
 
         &.right {
             float: right;
-            left: auto;
-            right: 12px;
         }
 
         > i {
             position: relative;
             top: 3px;
             font-size: 34px;
-            color: $gray-lightest;
+            //color: $gray-lightest;
+
+            transition: all $aside-animation-time;
+            color: $pre-hover-color;
 
             &:hover {
+                color: $hover-color;
                 cursor: pointer;
+            }
+
+            &.fa-close {
+                color: $white;
             }
 
             img {

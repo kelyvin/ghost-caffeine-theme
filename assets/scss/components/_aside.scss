@@ -1,15 +1,15 @@
 .cover {
     position: fixed;
-    z-index: 1;
     display: block;
     width: $aside-width-collapsed;
     height: 100%;
     overflow-y: auto;
-    box-shadow: 10.5px -10px 1px -9px $gray-light;
+    box-shadow: 3px 0 3px 0 $gray-light;
     &.animated {
         transition: width $aside-animation-time $aside-animation;
     }
     &.expanded {
+        z-index: 15;
         width: 100%;
     }
     &.container {

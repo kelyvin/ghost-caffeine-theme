@@ -31,14 +31,5 @@ $(function() {
             }
         });
     }
-
-    if (KelyvinTheme.is('page', 'error')) {
-        return $('#panic-button').click(function() {
-            var s;
-            s = document.createElement('script');
-            s.setAttribute('src', 'https://nthitz.github.io/turndownforwhatjs/tdfw.js');
-            return document.body.appendChild(s);
-        });
-    }
     */
 });

@@ -1,16 +1,20 @@
 'use strict';
 
 $(function() {
-    var hideSearch, showSearch;
-    showSearch = function() {
-        $(".content").hide();
-        return $('#search-results').addClass('active');
+    var $searchField = $("#search-field"),
+        $popularTags = $("#popular-tags"),
+        showTags,
+        hideTags;
+
+    showTags = function() {
+        return $popularTags.show();
     };
-    hideSearch = function() {
-        $(".content").show();
-        return $('#search-results').removeClass('active');
+
+    hideTags = function() {
+        return $popularTags.hide();
     };
-    return $("#search-field").ghostHunter({
+
+    return $searchField.ghostHunter({
         results: "#search-results",
         zeroResultsInfo: false,
         onKeyUp: true,
@@ -18,10 +22,11 @@ $(function() {
         result_template: "<a class=\"result\" href='{{link}}'>\n  <h2>{{title}}</h2>\n  <h4>{{pubDate}}</h4>\n</a>",
         onComplete: function(query) {
             if (query.length > 0) {
-                return showSearch();
+                return hideTags();
             } else {
-                return hideSearch();
+                return showTags();
             }
+
         }
     });
 });

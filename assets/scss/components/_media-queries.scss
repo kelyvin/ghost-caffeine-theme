@@ -20,9 +20,6 @@
     .post.related {
         display: none;
     }
-    #search-container {
-        display: none !important;
-    }
     /* Enable element special for little devices */
     #profile-resume {
         display: inherit;
@@ -32,24 +29,18 @@
         position: fixed;
         top: 8px;
         left: 216px;
-        z-index: 2;
         transition: all $aside-animation-time;
 
         &.expanded {
             left: 0;
             display: block;
         }
-        > a {
-            > i {
-                transition: all $aside-animation-time;
-                color: $pre-hover-color;
-
-                &:hover {
-                    color: $hover-color;
-                }
-            }
-        }
     }
+
+    #main-header {
+        display: none;
+    }
+
     .cover {
         width: 256px;
         transform: translate3d(-256px, 0, 0);
@@ -145,6 +136,19 @@
             }
         }
     }
+
+    .error-body {
+        margin: 30px auto;
+        padding: 0 12px;
+
+        h1 {
+            font-size: 36px;
+        }
+
+        h2 {
+            font-size: 18px;
+        }
+    }
 }
 
 // ------------------------------
@@ -157,26 +161,6 @@
     }
     main {
         padding: 16px 0;
-    }
-    .mayday {
-        width: auto;
-        > h2 {
-            font-size: 20px;
-            line-height: 25px;
-        }
-    }
-    .astronaut {
-        background-size: 55%;
-    }
-    .astro-wrap {
-        margin: -5% auto;
-    }
-    .astro-wrap,
-    .astronaut {
-        height: 160px;
-    }
-    #panic-button {
-        margin-bottom: 16px;
     }
     #post-title {
         margin: 40px 0;

@@ -15,31 +15,20 @@ body {
 
 }
 
-.mayday {
-    width: 500px;
+.error-body {
+    max-width: 550px;
     margin: 150px auto 20px;
-    > h2 {
+
+    h1 {
+        font-size: 40px;
+        color: $gray-lightest;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, .4);
+    }
+
+    h2 {
         font-size: 24px;
         line-height: 35px;
         color: $gray-lightest;
         text-shadow: 0 1px 1px rgba(0, 0, 0, .4);
     }
-}
-
-.astro-wrap {
-    position: relative;
-    width: $astronaut-size;
-    height: $astronaut-size * 1.6;
-    margin: auto;
-}
-
-.astronaut {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: $astronaut-size;
-    height: $astronaut-size * 1.6;
-    transform: translate(0, 50px);
-    animation: move 10s infinite;
-    background: url("/assets/img/astronaut.png") center/cover no-repeat;
 }
