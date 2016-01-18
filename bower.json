@@ -1,17 +1,17 @@
 {
-  "name": "kelyvin-ghost-theme",
+  "name": "caffeine-theme",
   "description": "Minimalist and Elegant theme for Ghost",
-  "homepage": "https://github.com/kelyvin/kelyvin-ghost-theme",
+  "homepage": "https://github.com/kelyvin/caffeine-theme",
   "version": "1.0.0",
   "authors": [
     "Kelyvin <kelvinnuci@gmail.com>"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/kelyvin/kelyvin-ghost-theme"
+    "url": "https://github.com/kelyvin/caffeine-theme"
   },
   "bugs": {
-    "url": "https://github.com/kelyvin/kelyvin-ghost-theme/issues"
+    "url": "https://github.com/kelyvin/caffeine-theme/issues"
   },
   "keywords": [
     "ghost",

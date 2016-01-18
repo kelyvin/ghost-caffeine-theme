@@ -10,7 +10,7 @@ The code for the theme is divided into 3 main sections: static files (as HTML an
 ├── README.md
 ├── assets
 │   ├── css
-│   │   └── kelyvin-ghost-theme.css # the production css
+│   │   └── caffeine-theme.css # the production css
 │   ├── fonts
 │   ├── img # favicons and cover image
 │   ├── js
@@ -19,7 +19,7 @@ The code for the theme is divided into 3 main sections: static files (as HTML an
 │   │   │   ├── cover.js
 │   │   │   ├── main.js
 │   │   │   └── search.js
-│   │   └── kelyvin-ghost-theme.js # the production js
+│   │   └── caffeine-theme.js # the production js
 │   └── scss
 │   │   ├── components # specific stuff
 │   │   │   ├── _aside.scss
@@ -39,7 +39,7 @@ The code for the theme is divided into 3 main sections: static files (as HTML an
 │   │   │   ├── _mixins.scss
 │   │   │   ├── _reset.scss
 │   │   │   └── _variables.scss
-│   │   └── kelyvin-ghost-theme.scss # main file to create the CSS
+│   │   └── caffeine-theme.scss # main file to create the CSS
 |   └── vendor # frontend dependencies
 ├── bower.json
 ├── default.hbs
@@ -64,15 +64,15 @@ The code for the theme is divided into 3 main sections: static files (as HTML an
 
 Putting the files in context:
 
-- The JS inside `assets/js/src` is compiled into `assets/js/kelyvin-ghost-theme.js`
-- The SCSS (we use [SASS](http://sass-lang.com/)) files inside `assets/scss` are compiled into `assets/css/kelyvin-ghost-theme.css`
+- The JS inside `assets/js/src` is compiled into `assets/js/caffeine-theme.js`
+- The SCSS (we use [SASS](http://sass-lang.com/)) files inside `assets/scss` are compiled into `assets/css/caffeine-theme.css`
 - We have some static files like `post.hbs`, `tag.hbs`, `default.hbs`, `index.hbs`... the partials views inside `assets/partials` are used in these views.
 
 To bundle, minify, and compile the stylesheets and js files, we use [Gulp](http://gulpjs.com/), check `gulpfile.js` for the build tasks.
 
 ## First Steps
 
-For local development you need to have a locally running Ghost server, like this:
+For local development you need to have a locally running Ghost server, run this separately like this:
 
 ```bash
 npm start
@@ -89,7 +89,7 @@ Note that my local Ghost is running in the port `2368`.
 With your local Ghost running, open another terminal and enter in the folder `content/themes` of your local Ghost and clone the theme repository and install the dependencies for local development:
 
 ```bash
-$ git clone https://github.com/kelyvin/kelyvin-ghost-theme && cd kelyvin-ghost-theme && npm install && bower install
+$ git clone https://github.com/kelyvin/caffeine-theme && cd caffeine-theme && npm install && bower install
 ```
 
 Then run the `gulp` command in the theme terminal. This should set you up for a development scenario, and looks like this:
@@ -172,7 +172,7 @@ Go to Ghost Admin panel → General → `Blog Cover`
 
 ### Cover Filter
 
-The linear gradient of the cover filter is based in `$cover-primary` and `$cover-secondary` colors. If you want to adapt the filter for your cover, check [background-filter](https://github.com/kelyvin/kelyvin-ghost-theme/blob/master/assets/scss/modules/_mixins.scss#L11) mixin.
+The linear gradient of the cover filter is based in `$cover-primary` and `$cover-secondary` colors. If you want to adapt the filter for your cover, check [background-filter](https://github.com/kelyvin/caffeine-theme/blob/master/assets/scss/modules/_mixins.scss#L11) mixin.
 
 ### Custom static pages
 
@@ -180,7 +180,7 @@ Check the [page part](http://themes.ghost.org/docs/page-context) in the Ghost Of
 
 ### Multiaccount support
 
-You can enable the multiaccount support editing [posts.hbs](https://github.com/kelyvin/kelyvin-ghost-theme/blob/master/post.hbs#L11-L13) code commented inside the meta post information.
+You can enable the multiaccount support editing [posts.hbs](https://github.com/kelyvin/caffeine-theme/blob/master/post.hbs#L11-L13) code commented inside the meta post information.
 
 ## Preparing for production
 

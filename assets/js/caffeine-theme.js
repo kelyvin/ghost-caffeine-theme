@@ -1,7 +1,7 @@
 /**
- * kelyvin-ghost-theme - Minimalist and Elegant theme for Ghost
- * @version 0.4.0
- * @link    https://github.com/kelyvin/kelyvin-ghost-theme
+ * caffeine-theme - Minimalist and Elegant theme for Ghost
+ * @version 0.5.0
+ * @link    https://github.com/kelyvin/caffeine-theme
  * @author  Kelyvin (https://github.com/kelyvin)
  * @license MIT
  */

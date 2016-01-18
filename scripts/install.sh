@@ -1,12 +1,12 @@
 #!/bin/bash
 
-if [ -d "kelyvin-ghost-theme" ]; then
-  echo "\nKelyvin Ghost Theme is already installed. Maybe you want to update? Run:"
-  echo "\ncd kelyvin-ghost-theme && sh scripts/update.sh\n"
+if [ -d "caffeine-theme" ]; then
+  echo "\nCaffeine Theme is already installed. Maybe you want to update? Run:"
+  echo "\ncd caffeine-theme && sh scripts/update.sh\n"
   exit
 fi
 
-git clone https://github.com/kelyvin/kelyvin-ghost-theme.git && cd kelyvin-ghost-theme
+git clone https://github.com/kelyvin/caffeine-theme.git && cd caffeine-theme
 
 . "$PWD"/scripts/utils.sh
 
