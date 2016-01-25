@@ -2,9 +2,6 @@
 // MEDIA QUERIES
 // ------------------------------
 @media only screen and (min-width:1824px) {
-    main {
-        padding: 40px 176px;
-    }
     .content {
         margin: 0 112px;
     }
@@ -42,13 +39,11 @@
     }
 
     .cover {
-        width: 256px;
-        transform: translate3d(-256px, 0, 0);
+        transform: translate3d(-$aside-width-collapsed, 0, 0);
         border-right: none;
-        box-shadow: none;
+
         &.expanded {
             transform: translate3d(0, 0, 0);
-            box-shadow: 11px -10px 1px -9px $gray-light;
 
             .nav-header {
                 left: 0;
@@ -62,6 +57,7 @@
                 }
             }
         }
+
         &.animated {
             transition: all $aside-animation-time;
         }
@@ -113,8 +109,9 @@
         left: 0;
         transition: all $aside-animation-time;
         transform: translate3d(0, 0, 0);
+
         &.expanded {
-            transform: translate3d(224px, 0, 0);
+            //position: fixed;
         }
     }
 }
@@ -148,6 +145,10 @@
         h2 {
             font-size: 18px;
         }
+    }
+
+    .search-container {
+        margin-top: 60px;
     }
 }
 

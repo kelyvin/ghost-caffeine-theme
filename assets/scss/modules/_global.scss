@@ -202,7 +202,7 @@ main {
     top: 0;
     right: 0;
     bottom: 0;
-    left: 360px;
+    left: $aside-width-collapsed;
     padding: 32px 30px;
     > .content {
         padding: 32px 0;

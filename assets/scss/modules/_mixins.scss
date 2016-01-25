@@ -10,6 +10,9 @@
 
 @mixin background-filter {
     background: linear-gradient(150deg, $cover-secondary 30%, $cover-primary 70%) 0 0/cover fixed;
+    box-shadow: inset 0 0 100px rgba(0,0,0,.4);
+    background-color: rgba(0,0,0,.5);
+
 }
 
 @mixin center-absolute {

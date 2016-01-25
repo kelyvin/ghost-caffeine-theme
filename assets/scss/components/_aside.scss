@@ -4,13 +4,14 @@
     width: $aside-width-collapsed;
     height: 100%;
     overflow-y: auto;
-    box-shadow: 3px 0 3px 0 $gray-light;
+    z-index: 2;
+
     &.animated {
-        transition: width $aside-animation-time $aside-animation;
+        transition: all $aside-animation-time $aside-animation;
     }
     &.expanded {
-        z-index: 15;
         width: 100%;
+        z-index: 15;
     }
     &.container {
         font-weight: $font-weight-thin;

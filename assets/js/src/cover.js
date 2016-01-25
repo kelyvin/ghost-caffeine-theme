@@ -28,7 +28,6 @@ $(function() {
     _expand = function(options) {
         $('main, .cover, .links > li, html').toggleClass('expanded');
         _toggleNavHeader();
-        return KelyvinTheme.search.form(options.form);
     };
 
     _isOpen = function() {

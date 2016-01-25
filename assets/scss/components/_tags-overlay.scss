@@ -12,6 +12,7 @@
     &.show {
         width: 100%;
         opacity: .97;
+        z-index: 5;
     }
 
     &.container {
@@ -35,6 +36,7 @@
                 color: $gray-lightest;
                 border-radius: 4px;
                 background-color: rgba($brown, .7);
+
                 &:hover {
                     background-color: rgba($brown, 1);
                 }
