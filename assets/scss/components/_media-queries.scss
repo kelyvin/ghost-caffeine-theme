@@ -11,12 +11,12 @@
 // < 1024px (Tablet)
 // ------------------------------
 @media all and (max-width:1024px) {
-    /* disabling element, too much information*/
-    .pace,
-    .post.reading-time,
-    .post.related {
-        display: none;
+    main {
+        > .content {
+            margin: 0 50px;
+        }
     }
+
     /* Enable element special for little devices */
     #profile-resume {
         display: inherit;
@@ -109,17 +109,26 @@
         left: 0;
         transition: all $aside-animation-time;
         transform: translate3d(0, 0, 0);
-
-        &.expanded {
-            //position: fixed;
-        }
     }
 }
+
 
 // ------------------------------
 // < 600px ( 7" Tablet)
 // ------------------------------
 @media all and (max-width:600px) {
+    main {
+        > .content {
+            margin: 0 60px;
+        }
+    }
+    /* disabling element, too much information*/
+    .pace,
+    .post.reading-time,
+    .post.related {
+        display: none;
+    }
+
     .profile {
         > p {
             margin: 0 80px;
@@ -158,19 +167,18 @@
 @media all and (max-width:480px) {
     .btn {
         display: block;
-        margin-bottom: 6px;
+        margin: 10px 0;
+        text-align: center;
     }
+
     main {
         padding: 16px 0;
     }
+
     #post-title {
         margin: 40px 0;
     }
-    .post .tags,
-    .post .meta > time,
-    .pagination > span {
-        display: none;
-    }
+
     .post {
         &.newer,
         &.older {
@@ -183,11 +191,17 @@
             margin: 0 0 10px;
         }
     }
+
+    .pagination {
+        text-align: center;
+    }
+
     .profile {
         > p {
             margin: 0 16px;
         }
     }
+
     blockquote {
         > p {
             margin: 32px -16px;

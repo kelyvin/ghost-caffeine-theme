@@ -25,7 +25,7 @@ $(function() {
         $cover.addClass('animated');
     };
 
-    _expand = function(options) {
+    _expand = function() {
         $('main, .cover, .links > li, html').toggleClass('expanded');
         _toggleNavHeader();
     };
@@ -62,9 +62,7 @@ $(function() {
 
         location.hash = '';
         _animateCover();
-        return _expand({
-            form: 'hide'
-        });
+        return _expand();
     });
 
     $tagsButton.click(function() {
@@ -81,9 +79,7 @@ $(function() {
 
             // Only toggle the cover if it wasn't already open
             if (!isOpen) {
-                return _expand({
-                    form: 'toggle'
-                });
+                return _expand();
             }
         }
     });
@@ -96,25 +92,19 @@ $(function() {
             _animateCover();
             _toggleLocation();
 
-            return _expand({
-                form: 'toggle'
-            });
+            return _expand();
         } else if (device !== 'desktop') {
             event.preventDefault();
             _animateCover();
 
-            return _expand({
-                form: 'hide'
-            });
+            return _expand();
         }
     });
 
     if (KelyvinTheme.is('page', 'home')) {
         if (!_isOpen()) {
             _toggleNavHeader();
-            return _expand({
-                form: 'hide'
-            });
+            return _expand();
         } else {
             _toggleNavHeader();
         }

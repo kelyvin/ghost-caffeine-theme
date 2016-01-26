@@ -205,17 +205,18 @@ main {
     left: $aside-width-collapsed;
     padding: 32px 30px;
     > .content {
-        padding: 32px 0;
+        padding: 32px 0 20px;
         margin: 0 60px;
         > h1 {
             margin-bottom: 42px;
         }
         > footer {
+            margin-top: 20px;
             display: block;
             padding: 32px 0 0;
             font-size: 12px;
             color: lighten($gray-dark, 10%);
-            border-top: 2px solid $gray-light;
+            text-align: center;
         }
     }
 }
