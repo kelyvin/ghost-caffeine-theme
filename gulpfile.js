@@ -45,12 +45,15 @@ src = {
             'assets/vendor/ghostHunter/jquery.ghostHunter.min.js',
             'assets/vendor/pace/pace.min.js',
             'assets/vendor/fitvids/jquery.fitvids.js',
-            'assets/vendor/reading-time/build/readingTime.min.js'
+            'assets/vendor/reading-time/build/readingTime.min.js',
+            'assets/vendor/prism/prism.js'
         ]
     },
     css: {
         main: 'assets/css/' + dist.name + '.css',
-        vendor: []
+        vendor: [
+            'assets/vendor/prism/themes/prism-okaidia.css'
+        ]
     },
     fonts: {
         files: [
