@@ -53,6 +53,7 @@ img,
             &.right {
                 left: auto;
                 right: 12px;
+                margin: 0;
             }
         }
     }
@@ -62,6 +63,7 @@ img,
 
         &.right {
             float: right;
+            margin: 15px;
         }
 
         > i {
@@ -78,13 +80,69 @@ img,
             }
 
             &.fa-close {
-                color: $white;
+                color: $slate-white;
             }
 
             img {
                 max-width: 36px;
                 border: 1px solid $primary-color;
                 box-shadow: 0 0 1px 1px rgba(000, 000, 000, .2);
+            }
+        }
+    }
+}
+
+.card {
+    cursor: pointer;
+    background: white;
+    margin-bottom: 20px;
+
+    .card-content {
+        padding: 10px 30px 20px;
+    }
+
+    .card-footer {
+        padding: 12px 30px;
+        border-top: 1px solid $gray-light;
+
+        .meta {
+            float: left;
+            margin: 0;
+        }
+
+        .share {
+            float: right;
+        }
+    }
+
+    @include transition(all 250ms);
+    @include shadow(2);
+
+    &:hover {
+        @include shadow(3);
+        @include transform(translateY(-5px));
+    }
+}
+
+ul {
+    &.share-buttons {
+        margin: 0;
+        list-style: none;
+        padding: 0;
+
+        li {
+            margin: 0;
+            display: inline-block;
+
+            a {
+                color: rgba($primary-color, .7);
+                &:hover {
+                    color: rgba($primary-color, 1);
+                }
+            }
+
+            i {
+                font-size: 24px;
             }
         }
     }

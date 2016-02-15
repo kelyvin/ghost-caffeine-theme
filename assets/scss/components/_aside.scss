@@ -40,12 +40,12 @@
             margin: 0;
             font-family: $sans-font;
             font-size: $unit * 2;
-            color: $white;
+            color: $slate-white;
             margin: 8px 0;
         }
         > h3 {
             margin: 0;
-            color: $white;
+            color: $slate-white;
         }
         > img {
             width: 112px;
@@ -73,7 +73,7 @@
                     margin: 0 5px;
                     border-radius: 20px;
                     background: $primary-color;
-                    color: $white;
+                    color: $slate-white;
 
                     @include btn-cover-with-border;
 

@@ -8,7 +8,7 @@ $gray-light            : #ddd;
 $gray-lighter          : #eee;
 $gray-lightest         : #f8f8f8;
 
-$white                 : #F6F4E9;
+$slate-white           : #F6F4E9;
 $red                   : #7C221A;
 $brown                 : #85715F;
 $slate-gray            : #39424B;
@@ -24,7 +24,7 @@ $cover-primary         : rgba(#49a09d, .2);
 $link-color            : #2895F1;
 $pre-hover-color       : lighten($primary-color, 15%);
 $hover-color           : $primary-color;
-$hover-color-inverse   : $white;
+$hover-color-inverse   : $slate-white;
 
 $divider-color         : rgba(255, 255, 255, .14);
 

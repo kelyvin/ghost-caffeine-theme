@@ -2,11 +2,11 @@
 
 $(function() {
     var el;
-    el = KelyvinTheme.app;
-    el.dataset.page = KelyvinTheme.context();
-    el.dataset.device = KelyvinTheme.device();
-    KelyvinTheme.readTime();
-    if (!KelyvinTheme.is('device', 'desktop')) {
+    el = CaffeineTheme.app;
+    el.dataset.page = CaffeineTheme.context();
+    el.dataset.device = CaffeineTheme.device();
+    CaffeineTheme.readTime();
+    if (!CaffeineTheme.is('device', 'desktop')) {
         FastClick.attach(el);
     }
     if (window.profile_title) {
@@ -15,15 +15,15 @@ $(function() {
     if (window.profile_resume) {
         $('#profile-resume').text(window.profile_resume);
     }
-    if (KelyvinTheme.is('page', 'post')) {
+    if (CaffeineTheme.is('page', 'post')) {
         $('main').readingTime({
-            readingTimeTarget: '.post.reading-time > span'
+            readingTimeTarget: '.reading-time > span'
         });
         $('.content').fitVids();
     }
 
     /*
-    if (KelyvinTheme.is('device', 'desktop')) {
+    if (CaffeineTheme.is('device', 'desktop')) {
         $('a').not('[href*="mailto:"]').click(function() {
             if (this.href.indexOf(location.hostname) === -1) {
                 window.open($(this).attr('href'));

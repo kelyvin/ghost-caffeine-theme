@@ -1,9 +1,9 @@
 'use strict';
 
 $(function() {
-    var KelyvinTheme;
-    return window.KelyvinTheme = KelyvinTheme = {
-        version: '0.3.0',
+    var CaffeineTheme;
+    return window.CaffeineTheme = CaffeineTheme = {
+        version: '1.1.0',
         search: {
             container: function() {
                 return $('#results');
@@ -54,7 +54,7 @@ $(function() {
                     });
                 });
             };
-            return DateInDays('.post.meta > time');
+            return DateInDays('.meta > time');
         },
         device: function() {
             var h, w;

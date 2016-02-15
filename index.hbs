@@ -1,20 +1,9 @@
 {{!< default}}
 <div class="page-index">
-  <ol class="posts">
-    {{#foreach posts}}
-    <li>
-      <a href="{{url}}" title="link to {{{title}}}">
-        <h2>{{{title}}}</h2>
-        <p class="post description">{{excerpt}}&hellip;</p>
-      </a>
-      <div class="post meta">
-        <time datetime="{{date format="DD MMM YYYY"}}">{{date format="DD MMM YYYY"}}</time>
-        <span class="post tags">{{tags prefix="on " separator=" "}}</span>
-        - <a href="{{url}}#disqus_thread">Comments</a>
-      </div>
-      <hr class="divider post" />
-    </li>
-    {{/foreach}}
-  </ol>
-  {{pagination}}
+    <ol class="posts">
+        {{#foreach posts}}
+         {{> post-list-item }}
+        {{/foreach}}
+    </ol>
+    {{pagination}}
 </div>

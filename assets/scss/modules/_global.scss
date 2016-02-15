@@ -167,6 +167,10 @@ pre:hover {
     color: $gray-darkest;
 }
 
+.clear {
+    clear: both;
+}
+
 .block-heading {
     position: relative;
     bottom: -15px;
@@ -203,10 +207,8 @@ main {
     right: 0;
     bottom: 0;
     left: $aside-width-collapsed;
-    padding: 32px 30px;
+
     > .content {
-        padding: 32px 0 20px;
-        margin: 0 60px;
         > h1 {
             margin-bottom: 42px;
         }
@@ -241,11 +243,6 @@ main {
     }
     &.short {
         width: 15%;
-    }
-    &.post {
-        width: 30%;
-        margin: 26px 0;
-        border-top: 1px solid $gray-light;
     }
 }
 

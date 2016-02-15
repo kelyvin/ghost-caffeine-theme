@@ -31,13 +31,13 @@
     margin-bottom: 20px;
     text-decoration: none;
     word-wrap: break-word;
-    border: 1px solid $white;
+    border: 1px solid $slate-white;
     border-radius: 5px;
     margin: 20px 10%;
 
     > h2,
     > h4 {
-        color: $white;
+        color: $slate-white;
     }
     &:hover {
         background: $primary-color;
@@ -45,7 +45,7 @@
         > h2,
         > h4 {
             transition: .5s;
-            color: $white;
+            color: $slate-white;
         }
     }
 }

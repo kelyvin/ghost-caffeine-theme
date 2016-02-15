@@ -2,19 +2,18 @@
 // MEDIA QUERIES
 // ------------------------------
 @media only screen and (min-width:1824px) {
-    .content {
-        margin: 0 112px;
-    }
 }
 
 // ------------------------------
 // < 1024px (Tablet)
 // ------------------------------
 @media all and (max-width:1024px) {
-    main {
-        > .content {
-            margin: 0 50px;
-        }
+    .post {
+        margin: 0;
+    }
+
+    .post-container {
+        margin: 0 60px;
     }
 
     /* Enable element special for little devices */
@@ -51,7 +50,7 @@
 
                 > a {
                     > i {
-                        color: $white;
+                        color: $slate-white;
                         font-size: 26px;
                     }
                 }
@@ -118,15 +117,23 @@
 // ------------------------------
 @media all and (max-width:600px) {
     main {
-        > .content {
-            margin: 0 60px;
-        }
     }
+
+    .page-index,
+    .page-tag {
+        margin: 60px 25px 0;
+    }
+
     /* disabling element, too much information*/
     .pace,
-    .post.reading-time,
     .post.related {
         display: none;
+    }
+
+    .post {
+        .reading-time {
+            display: none
+        }
     }
 
     .profile {
@@ -169,14 +176,16 @@
         display: block;
         margin: 10px 0;
         text-align: center;
+
+        &.small {
+            padding: 14px;
+        }
     }
 
-    main {
-        padding: 16px 0;
-    }
-
-    #post-title {
-        margin: 40px 0;
+    .post-related {
+        #next-btn {
+            float: none;
+        }
     }
 
     .post {
