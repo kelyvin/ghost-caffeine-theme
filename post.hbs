@@ -4,33 +4,35 @@
 
   <article class="{{post_class}}">
     <header class="post-cover {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}"></header>
-    <div class="post-container">
-        <div class="post-header">
-            <div class="meta">
-                <time datetime="{{date format="DD MMM YYYY"}}">{{date format="DD MMM YYYY"}}</time>
-                <span class="tags">{{tags prefix="in " separator=" "}}</span>
-                <span class="reading-time"> ~ <span></span> read.</span>
+    <div class="post-card">
+        <div class="post-container">
+            <div class="post-header">
+                <div class="meta">
+                    <time datetime="{{date format="DD MMM YYYY"}}">{{date format="DD MMM YYYY"}}</time>
+                    <span class="tags">{{tags prefix="in " separator=" "}}</span>
+                    <span class="reading-time"> ~ <span></span> read.</span>
+                </div>
+                <h1 id="post-title">
+                    {{{title}}}
+                </h1>
+                <div class="share">
+                    {{> share }}
+                </div>
             </div>
-            <h1 id="post-title">
-                {{{title}}}
-            </h1>
-            <div class="share">
-                {{> share }}
+             <div class="post-content">
+                {{content}}
             </div>
-        </div>
-         <div class="post-content">
-            {{content}}
-        </div>
-        <div class="post-related">
-            {{#prev_post}}
-                <a rel="prev" id="prev-btn" class="btn small square" href="{{url}}"><i class="fa fa-arrow-left"></i> {{title}}</a>
-            {{/prev_post}}
+            <div class="post-related">
+                {{#prev_post}}
+                    <a rel="prev" id="prev-btn" class="btn small square" href="{{url}}"><i class="fa fa-arrow-left"></i> {{title}}</a>
+                {{/prev_post}}
 
-            {{#next_post}}
-                <a rel="next" id="next-btn" class="btn small square" href="{{url}}">{{title}} <i class="fa fa-arrow-right"></i></a>
-            {{/next_post}}
+                {{#next_post}}
+                    <a rel="next" id="next-btn" class="btn small square" href="{{url}}">{{title}} <i class="fa fa-arrow-right"></i></a>
+                {{/next_post}}
+            </div>
+            {{> comments}}
         </div>
-        {{> comments}}
     </div>
   </article>
 

@@ -10,15 +10,15 @@ $(function() {
         _toggleLocation,
         _toggleTagsOverlay,
         _defaultLogoNavEvent,
-        $mobileHeader,
+        $navHeader,
         $tagsButton,
         $homeButton,
         $cover,
         $tagsOverlay;
 
-    $mobileHeader = $('#mobile-header');
+    $navHeader = $('#default-nav-header');
     $tagsButton = $('.tags-button');
-    $homeButton = $mobileHeader.find('#home-button');
+    $homeButton = $navHeader.find('#home-button');
     $cover = $('.cover');
     $tagsOverlay = $('.tags-overlay');
 
@@ -39,7 +39,7 @@ $(function() {
 
     // Toggle the mobile nav header
     _toggleNavHeader = function() {
-        $mobileHeader.toggleClass('expanded');
+        $navHeader.toggleClass('expanded');
     };
 
     // Toggles the current home page between the cover and the opened page
@@ -67,6 +67,10 @@ $(function() {
     // Otherwise, toggle the cover
     _defaultLogoNavEvent = function (event) {
         var device = CaffeineTheme.device();
+
+        if (_isTagsOverlayOpen()) {
+            _toggleTagsOverlay();
+        }
 
         if (CaffeineTheme.is('page', 'home')) {
             event.preventDefault();

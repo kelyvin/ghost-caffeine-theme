@@ -20,6 +20,7 @@ body {
 body {
     font-family: $sans-font;
     color: $gray-darker;
+    background: $gray-lighter;
 }
 
 mark {
@@ -206,9 +207,9 @@ pre:hover {
 main {
     position: absolute;
     top: 0;
+    left: 0;
     right: 0;
     bottom: 0;
-    left: $aside-width-collapsed;
 
     > .content {
         > h1 {
@@ -224,6 +225,11 @@ main {
         }
     }
 }
+
+.page {
+    max-width: $container-medium-width;
+}
+
 
 .copyright {
     display: block;

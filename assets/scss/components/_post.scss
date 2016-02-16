@@ -1,6 +1,6 @@
 .posts {
     padding: 0;
-    margin: 0;
+    margin: 0 20px;
     list-style-type: none;
     text-align: left;
 
@@ -40,23 +40,30 @@
 }
 
 .post {
-    margin: 0 60px;
+    .post-card {
+        max-width: $container-medium-width;
+        background: white;
+        margin: 0 auto;
+        @include transition(all 250ms);
+        @include shadow(2);
+    }
+
+    .post-container {
+        padding: 20px 60px;
+    }
 }
 
 .post-cover {
-    min-height: 200px;
-    height: 65vh;
-    position: relative;
-    display: table;
+    height: $aside-height-collapsed;
     width: 100%;
     text-align: center;
     background: #222 no-repeat center center;
     background-size: cover;
     overflow: hidden;
-    margin-bottom: -40px;
+    margin-bottom: -80px;
 
     &.no-cover {
-        display: none;
+        visibility: hidden;
     }
 }
 
@@ -87,7 +94,7 @@
 
 .post-header {
     text-align: center;
-    margin-top: 80px;
+    // margin-top: 80px;
 
     .share {
         margin-bottom: 40px;

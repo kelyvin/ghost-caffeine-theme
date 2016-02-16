@@ -10,7 +10,7 @@ $(function() {
         FastClick.attach(el);
     }
     if (window.profile_title) {
-        $('#profile-title').text(window.profile_title);
+        $('.profile-title').text(window.profile_title);
     }
     if (window.profile_resume) {
         $('#profile-resume').text(window.profile_resume);

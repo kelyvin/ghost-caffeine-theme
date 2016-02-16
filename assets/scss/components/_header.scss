@@ -1,0 +1,48 @@
+.nav-header {
+    width: 100%;
+    z-index: 10;
+    padding-top: 10px;
+
+    > a {
+        z-index: 10;
+        left: 20px;
+
+        &.right {
+            float: right;
+            left: auto;
+            right: 20px;
+        }
+
+        > i {
+            position: relative;
+            top: 5px;
+            font-size: 34px;
+            transition: all $aside-animation-time;
+            color: $pre-hover-color;
+
+            &:hover {
+                color: $hover-color;
+                cursor: pointer;
+            }
+
+            &.fa-close {
+                color: $slate-white;
+            }
+
+            img {
+                max-width: 36px;
+                border: 1px solid $primary-color;
+                box-shadow: 0 0 1px 1px rgba(000, 000, 000, .2);
+            }
+        }
+    }
+
+    &.nav-header-fixed {
+        position: fixed;
+        transition: all $aside-animation-time;
+    }
+
+    &.mobile {
+        display: none;
+    }
+}

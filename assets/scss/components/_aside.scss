@@ -1,19 +1,29 @@
 .cover {
-    position: fixed;
-    display: block;
-    width: $aside-width-collapsed;
-    height: 100%;
-    min-height: 100%;
-    overflow-y: auto;
-    z-index: 2;
+    height: $aside-height-collapsed;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
 
     &.animated {
         transition: all $aside-animation-time $aside-animation;
     }
+
     &.expanded {
-        width: 100%;
+        height: 100%;
         z-index: 15;
+        position: fixed;
+
+        .profile {
+            transform: translate3d(0, 0, 0);
+            opacity: 100;
+        }
+
+        .blog-header {
+            display: none;
+        }
     }
+
     &.container {
         font-weight: $font-weight-thin;
         text-align: center;
@@ -24,36 +34,52 @@
     }
 }
 
-#profile-resume {
-    font-size: 18px;
-    margin-top: 8px;
-    margin-bottom: 24px;
+.blog-header {
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+
+    h1 {
+        color: $slate-white;
+        margin: 100px 0 10px;
+        font-size: $unit * 2.5;
+        @include font-shadow;
+
+        &:hover {
+            color: $primary-color;
+        }
+    }
 }
 
 .profile {
     max-width: 620px;
-    > p {
+    p {
         margin: 0 32px;
         font-size: 14px;
     }
-    > a {
-        > h1 {
+    a {
+        h1 {
             margin: 0;
             font-family: $sans-font;
             font-size: $unit * 2;
             color: $slate-white;
             margin: 8px 0;
         }
-        > h3 {
-            margin: 0;
+        h3 {
+            margin: 8px 0 24px;
             color: $slate-white;
+            font-size: 18px;
         }
-        > img {
+        img {
             width: 112px;
             border: 2px solid $primary-color;
             box-shadow: 0 0 1px 1px rgba(000, 000, 000, .3);
         }
     }
+
+    transform: translate3d(0, -$aside-height-collapsed, 0);
+    opacity: 0;
 }
 
 .navigation {
@@ -105,27 +131,5 @@
     &.right {
         display: block;
         margin: 8px;
-        .social {
-            margin: 0;
-            &.item {
-                display: inline-block;
-                margin: 0 4px 0 0;
-                line-height: 16px;
-                a {
-                    padding: 6px 8px 6px 9px;
-                    @include btn-cover;
-                    .label {
-                        display: none;
-                    }
-                    i {
-                        display: block;
-                        font-size: 24px;
-                    }
-                    &:hover {
-                        color: $hover-color;
-                    }
-                }
-            }
-        }
     }
 }
