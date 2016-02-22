@@ -46,9 +46,10 @@ img,
 }
 
 .card {
+    width: 48%;
+    margin: 0 1% 20px;
     cursor: pointer;
     background: white;
-    margin-bottom: 20px;
 
     .card-content {
         padding: 10px 30px 20px;

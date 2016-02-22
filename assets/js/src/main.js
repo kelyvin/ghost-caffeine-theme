@@ -1,7 +1,9 @@
 'use strict';
 
 $(function() {
-    var el;
+    var el,
+        $posts = $('.page-index ol.posts');
+
     el = CaffeineTheme.app;
     el.dataset.page = CaffeineTheme.context();
     el.dataset.device = CaffeineTheme.device();
@@ -20,6 +22,15 @@ $(function() {
             readingTimeTarget: '.reading-time > span'
         });
         $('.content').fitVids();
+    }
+
+    if ($posts && $posts.masonry) {
+        $posts.masonry({
+            itemSelector: '.card',
+            percentPosition: true
+        });
+    } else {
+        $posts.find('.card').css('width', '100%');
     }
 
     /*
