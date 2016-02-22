@@ -2,15 +2,25 @@
 
 {{#post}}
 
-  <article class="{{post_class}}">
-    <header>
-      <h1 id="post-title">About me</h1>
-    </header>
-
-    <section class="{{post_class}}">
-      {{content}}
-    </section>
-
+  <article class="page-about {{post_class}}">
+    <header class="post-cover {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}"></header>
+    {{#if @blog.logo}}
+    <div class="profile-image">
+        <img src="{{@blog.logo}}" alt="{{@blog.title}} avatar" class="avatar rounded" />
+    </div>
+    {{/if}}
+    <div class="post-card">
+        <div class="post-container">
+            <div class="post-header">
+                 <h1 id="post-title">
+                    {{{title}}}
+                </h1>
+            </div>
+             <div class="post-content">
+                {{content}}
+            </div>
+        </div>
+    </div>
   </article>
 
 {{/post}}

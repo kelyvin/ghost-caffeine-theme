@@ -18,21 +18,26 @@ img,
     border: 1px solid $primary-color;
     border-radius: 20px;
     text-shadow: none;
+
     &:hover {
         color: darken($primary-color, 15%);
         border-color: darken($primary-color, 15%);
     }
+
     &.small {
         padding: 8px 12px;
         font-size: 10px;
     }
+
     &.large {
         padding: 10px 24px;
         font-size: 16px;
     }
+
     &.secondary {
         color: $secondary-color;
         border-color: $secondary-color;
+
         &:hover {
             color: darken($secondary-color, 15%);
             border-color: darken($secondary-color, 15%);
@@ -115,6 +120,21 @@ ul {
             &:hover {
                 color: $hover-color;
             }
+        }
+    }
+}
+
+.tags {
+    a {
+        padding: 2px 4px;
+        font-size: 8px;
+        transition: all $aside-animation-time;
+        text-transform: uppercase;
+        color: $gray-lightest;
+        border-radius: 4px;
+        background-color: rgba($primary-color, .7);
+        &:hover {
+            background-color: rgba($primary-color, 1);
         }
     }
 }

@@ -4,12 +4,19 @@
     width: 100%;
     text-align: center;
     overflow: hidden;
+    background: center center no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: $primary-color;
 
     &.animated {
         transition: all $aside-animation-time $aside-animation;
     }
 
     &.expanded {
+        min-height: 100%;
         height: 100%;
         z-index: 15;
         position: fixed;
@@ -43,7 +50,7 @@
     h1 {
         color: $slate-white;
         margin: 100px 0 10px;
-        font-size: $unit * 2.5;
+        font-size: $unit * 2.75;
         @include font-shadow;
 
         &:hover {

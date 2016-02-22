@@ -3,13 +3,15 @@
 // ------------------------------
 @media only screen and (min-width:1200px) {
     .page {
-        max-width: $container-large-width;
+        .tag-header {
+            width: $container-large-width;
+        }
     }
 
-    .post {
-        .post-card {
-            max-width: $container-large-width;
-        }
+    .post .post-card,
+    .post .post-related,
+    .container-wrapper {
+        max-width: $container-large-width;
     }
 }
 
@@ -20,12 +22,13 @@
     .post {
         margin: 0;
 
-        .post-card {
+        .post-card,
+        .post-related {
             margin: 0 40px;
         }
     }
 
-    .page {
+    .container-wrapper {
         max-width: $container-small-width;
     }
 
@@ -105,15 +108,16 @@
     }
 }
 
+@media all and (max-width: 700px) {
+    .container-wrapper {
+        max-width: 100%;
+    }
+}
 
 // ------------------------------
 // < 600px ( 7" Tablet)
 // ------------------------------
 @media all and (max-width:600px) {
-    .page {
-        max-width: 100%;
-    }
-
     /* disabling element, too much information*/
     .pace,
     .post.related {
@@ -125,12 +129,19 @@
             display: none
         }
 
+        .post-related,
         .post-card {
             margin: 0 20px;
 
             .post-container {
                 padding: 20px 40px;
             }
+        }
+    }
+
+    .nav-header {
+        &.nav-header-fixed {
+            position: absolute;
         }
     }
 
@@ -172,6 +183,19 @@
             }
         }
     }
+
+    .pagination {
+        &.post-related {
+            .btn {
+                margin: 20px;
+            }
+
+            #prev-btn,
+            #next-btn {
+                float: none;
+            }
+        }
+    }
 }
 
 // ------------------------------
@@ -195,17 +219,16 @@
         }
     }
 
-    .post-related {
-        #next-btn {
-            float: none;
-        }
-    }
-
     .post-cover {
         margin-bottom: 0;
     }
 
+    .posts {
+        margin: 0 12px;
+    }
+
     .post {
+        .post-related,
         .post-card {
             margin: 0;
 
@@ -230,6 +253,10 @@
     .pagination {
         text-align: center;
         padding: 0 20px;
+
+        .btn {
+            margin: 12px;
+        }
     }
 
     .profile {

@@ -31,10 +31,6 @@
             a {
                 padding: 8px 14px;
                 font-size: 12px;
-                transition: all $aside-animation-time;
-                text-transform: uppercase;
-                color: $gray-lightest;
-                border-radius: 4px;
                 background-color: rgba($brown, .7);
 
                 &:hover {

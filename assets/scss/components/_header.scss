@@ -16,7 +16,7 @@
         > i {
             position: relative;
             top: 5px;
-            font-size: 34px;
+            font-size: 40px;
             transition: all $aside-animation-time;
             color: $pre-hover-color;
 
@@ -28,13 +28,14 @@
             &.fa-close {
                 color: $slate-white;
             }
-
-            img {
-                max-width: 36px;
-                border: 1px solid $primary-color;
-                box-shadow: 0 0 1px 1px rgba(000, 000, 000, .2);
-            }
         }
+
+        img {
+            max-width: 45px;
+            border: 1px solid $primary-color;
+            box-shadow: 0 0 1px 1px rgba(000, 000, 000, .2);
+        }
+
     }
 
     &.nav-header-fixed {

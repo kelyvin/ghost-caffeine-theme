@@ -1,6 +1,10 @@
 {{!< default}}
-<div class="page page-tag">
-    <h1>Tag: {{tag.name}}</h1>
+<div class="page page-tag container-wrapper">
+    <div class="tag-header container-wrapper">
+        <div class="tags">
+            <a href="/tag/{{tag.name}}/">{{tag.name}}</a>
+        </div>
+    </div>
     <ol class="posts">
         {{#foreach posts}}
             {{> post-list-item}}

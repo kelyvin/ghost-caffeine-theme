@@ -1,6 +1,30 @@
 .pagination {
     margin: 40px 0;
     text-align: center;
+
+    &.post-related{
+        margin: 0 auto;
+        max-width: $container-medium-width;
+        padding-top: 30px;
+
+        #prev-btn {
+            float: left;
+        }
+
+        #next-btn {
+            float: right;
+        }
+
+        .btn {
+            border: none;
+            padding: 0;
+
+            i {
+                font-size: 26px;
+                vertical-align: middle;
+            }
+        }
+    }
 }
 
 .posts.index {

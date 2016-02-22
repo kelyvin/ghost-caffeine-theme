@@ -1,0 +1,48 @@
+// This class gets appended for any static pages
+.page {
+    .tag-header {
+        position: absolute;
+        z-index: 15;
+        margin-top: -15px;
+        text-align: center;
+        width: $container-medium-width;
+
+        .tags {
+            a {
+                padding: 8px 14px;
+                font-size: 12px;
+                background-color: $primary-color;
+            }
+        }
+    }
+
+    .profile-image {
+        margin-top: -80px;
+        position: absolute;
+        text-align: center;
+        width: 100%;
+
+        img {
+            max-width: 150px;
+            border: 1px solid $primary-color;
+            box-shadow: 0 0 1px 1px rgba(000, 000, 000, .2);
+        }
+    }
+}
+
+
+.page-index,
+.page-tag {
+    max-width: $container-medium-width;
+    margin: 260px auto 0;
+}
+
+.page-about {
+    .post-cover {
+        margin-bottom: -40px;
+    }
+
+    #post-title {
+        margin-top: 60px;
+    }
+}
