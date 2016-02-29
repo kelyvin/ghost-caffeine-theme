@@ -2,34 +2,32 @@
     <div class="cover container">
         <div class="profile">
             <header id="aside-header" class="nav-header mobile">
-                <a id="aside-close-button" class="right">
+                <a id="aside-close-button" class="open-link right">
                     <i class="fa fa-close"></i>
                 </a>
             </header>
             {{#if @blog.logo}}
             <div class="profile-logo">
-                <a id="avatar-link" title="Link to homepage for {{@blog.title}}" href="{{@blog.url}}/#open">
+                <a id="avatar-link" class="open-link" title="Link to homepage for {{@blog.title}}" href="{{@blog.url}}/#open">
                     <img src="{{@blog.logo}}" alt="{{@blog.title}} avatar" class="avatar rounded hvr-buzz-out" />
                 </a>
             </div>
             {{/if}}
             <div class="profile-header">
-                <a title="Link to homepage for {{@blog.title}}" href="{{@blog.url}}/#open">
+                <a class="open-link" title="Link to homepage for {{@blog.title}}" href="{{@blog.url}}/#open">
                     <h1 class="profile-title">{{@blog.title}}</h1>
                 </a>
             </div>
             <div class="profile-body">
-                <a title="Link to homepage for {{@blog.title}}" href="{{@blog.url}}/#open">
+                <a class="open-link" title="Link to homepage for {{@blog.title}}" href="{{@blog.url}}/#open">
                     <h3 id="profile-resume"></h3>
                 </a>
                 <hr class="divider long" />
                 <p>{{@blog.description}}</p>
                 <hr class="divider short" />
-                <div class="navigation">
-                    <div class="profile contact">
+                    <div class="call-to-action-container">
                         {{navigation}}
                     </div>
-                </div>
             </div>
             {{> social}}
         </div>
@@ -39,5 +37,5 @@
     <a title="Link to homepage for {{@blog.title}}" href="{{@blog.url}}/#open">
         <h1 class="profile-title hvr-float">{{@blog.title}}</h1>
     </a>
-    {{> social}}
+    {{navigation}}
 </div>

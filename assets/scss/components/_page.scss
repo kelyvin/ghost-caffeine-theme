@@ -24,8 +24,8 @@
 
         img {
             max-width: 150px;
-            border: 1px solid $primary-color;
-            box-shadow: 0 0 1px 1px rgba(000, 000, 000, .2);
+            border: 2px solid $primary-color;
+            @include shadow(1);
         }
     }
 }

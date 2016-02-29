@@ -1,8 +1,9 @@
 'use strict';
 
 $(function() {
-    var el,
-        $posts = $('.page-index ol.posts');
+    var $posts = $('.page-index ol.posts'),
+        cardName = '.card',
+        el;
 
     el = CaffeineTheme.app;
     el.dataset.page = CaffeineTheme.context();
@@ -24,23 +25,22 @@ $(function() {
         $('.content').fitVids();
     }
 
+    // Sets up masonry effects
     if ($posts && $posts.masonry) {
         $posts.masonry({
-            itemSelector: '.card',
+            itemSelector: cardName,
             percentPosition: true
         });
     } else {
-        $posts.find('.card').css('width', '100%');
+        $posts.find(cardName).css('width', '100%');
     }
 
-    /*
-    if (CaffeineTheme.is('device', 'desktop')) {
-        $('a').not('[href*="mailto:"]').click(function() {
-            if (this.href.indexOf(location.hostname) === -1) {
-                window.open($(this).attr('href'));
-                return false;
-            }
-        });
-    }
-    */
+    $(window).load(function() {
+        $('.cover').addClass('animated');
+
+        if (window.ScrollReveal && $(cardName).length > 0) {
+            window.sr = ScrollReveal();
+            sr.reveal(cardName);
+        }
+    });
 });

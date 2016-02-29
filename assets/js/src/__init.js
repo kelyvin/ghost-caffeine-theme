@@ -12,9 +12,6 @@ $(function() {
                 return $('#search-container')[action]();
             }
         },
-        loadingBar: function(action) {
-            return $('.pace')[action]();
-        },
         context: function() {
             var className;
             className = document.body.className.split(' ')[0].split('-')[0];

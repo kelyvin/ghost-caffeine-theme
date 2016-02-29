@@ -43,7 +43,6 @@ src = {
         vendor: [
             'assets/vendor/fastclick/lib/fastclick.js',
             'assets/vendor/ghostHunter/jquery.ghostHunter.min.js',
-            'assets/vendor/pace/pace.min.js',
             'assets/vendor/fitvids/jquery.fitvids.js',
             'assets/vendor/reading-time/build/readingTime.min.js',
             'assets/vendor/prism/prism.js'
@@ -52,7 +51,8 @@ src = {
     css: {
         main: 'assets/css/' + dist.name + '.css',
         vendor: [
-            'assets/vendor/prism/themes/prism-okaidia.css'
+            'assets/vendor/prism/themes/prism-okaidia.css',
+            'assets/vendor/animate/animate.css'
         ]
     },
     fonts: {

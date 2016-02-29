@@ -74,7 +74,8 @@ img,
 
     &:hover {
         @include shadow(3);
-        @include transform(translateY(-5px));
+        -webkit-transform: translateY(-5px) !important;
+        transform: translateY(-5px) !important;
     }
 }
 
@@ -138,4 +139,20 @@ ul {
             background-color: rgba($primary-color, 1);
         }
     }
+}
+
+.back-button {
+    font-size: 20px;
+    padding: 20px;
+    background: $primary-color;
+    position: absolute;
+    border-radius: 50%;
+    margin-top: -40px;
+    margin-left: 20px;
+    z-index: 10;
+
+    i {
+        color: white;
+    }
+    @include shadow(2);
 }

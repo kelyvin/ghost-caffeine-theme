@@ -1,19 +1,21 @@
 <li class="card">
-    <div class="card-body">
-        <a href="{{url}}" title="link to {{{title}}}">
-            <header class="post-cover {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}"></header>
-            <div class="card-content">
-                <h2>{{{title}}}</h2>
-                <p class="description">{{excerpt}}&hellip;</p>
-            </div>
-        </a>
-    </div>
-    <div class="card-footer">
-         <div class="meta">
-            <time datetime="{{date format="DD MMM YYYY"}}">{{date format="DD MMM YYYY"}}</time>
-            <span class="tags">{{tags prefix="on " separator=" "}}</span>
-            - <a href="{{url}}#disqus_thread">Comments</a>
+    <div class="card-container">
+        <div class="card-body">
+            <a href="{{url}}" title="link to {{{title}}}">
+                <header class="post-cover {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}"></header>
+                <div class="card-content">
+                    <h2>{{{title}}}</h2>
+                    <p class="description">{{excerpt}}&hellip;</p>
+                </div>
+            </a>
         </div>
-        <div class="clear"></div>
+        <div class="card-footer">
+             <div class="meta">
+                <time datetime="{{date format="DD MMM YYYY"}}">{{date format="DD MMM YYYY"}}</time>
+                <span class="tags">{{tags prefix="on " separator=" "}}</span>
+                - <a href="{{url}}#disqus_thread">Comments</a>
+            </div>
+            <div class="clear"></div>
+        </div>
     </div>
 </li>

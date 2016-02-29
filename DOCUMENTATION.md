@@ -132,7 +132,7 @@ Go to Ghost Admin panel → `Code Injection` → `Blog Header` and add:
 
 ```html
 <script>
-var profile_title = 'Kelyvin Theme';
+var profile_title = 'Caffeine Theme';
 </script>
 ```
 

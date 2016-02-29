@@ -3,7 +3,7 @@
     z-index: 10;
     padding-top: 10px;
 
-    > a {
+    a {
         z-index: 10;
         left: 20px;
 
@@ -13,27 +13,33 @@
             right: 20px;
         }
 
-        > i {
+        i {
             position: relative;
-            top: 5px;
-            font-size: 40px;
+            font-size: 20px;
             transition: all $aside-animation-time;
-            color: $pre-hover-color;
+            color: $slate-white;
+            background: $primary-color;
+            border: 2px solid $slate-white;
+            border-radius: 50%;
+            padding: 12px;
+            @include shadow(2);
 
             &:hover {
-                color: $hover-color;
                 cursor: pointer;
             }
 
             &.fa-close {
-                color: $slate-white;
+                font-size: 30px;
+                box-shadow: none;
+                background: initial;
+                border: none;
             }
         }
 
         img {
             max-width: 45px;
-            border: 1px solid $primary-color;
-            box-shadow: 0 0 1px 1px rgba(000, 000, 000, .2);
+            border: 2px solid $primary-color;
+            @include shadow(2);
         }
 
     }

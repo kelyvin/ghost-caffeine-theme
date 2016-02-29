@@ -2,11 +2,9 @@
 
 $(function() {
     var openHash = "#open",
-        _animateCover,
         _expand,
         _isOpen,
         _isTagsOverlayOpen,
-        _toggleNavHeader,
         _toggleLocation,
         _toggleTagsOverlay,
         _defaultLogoNavEvent,
@@ -19,27 +17,15 @@ $(function() {
     $navHeader = $('#default-nav-header');
     $tagsButton = $('.tags-button');
     $homeButton = $navHeader.find('#home-button');
-    $cover = $('.cover');
     $tagsOverlay = $('.tags-overlay');
-
-    // Animate the cover page
-    _animateCover = function() {
-        $cover.addClass('animated');
-    };
 
     _expand = function() {
         $('main, .cover, .links > li, html').toggleClass('expanded');
-        _toggleNavHeader();
     };
 
     // Checks if the home page is currently opened
     _isOpen = function() {
         return location.hash === openHash;
-    };
-
-    // Toggle the mobile nav header
-    _toggleNavHeader = function() {
-        $navHeader.toggleClass('expanded');
     };
 
     // Toggles the current home page between the cover and the opened page
@@ -74,7 +60,6 @@ $(function() {
 
         if (CaffeineTheme.is('page', 'home')) {
             event.preventDefault();
-            _animateCover();
             _toggleLocation();
 
             return _expand();
@@ -90,7 +75,6 @@ $(function() {
 
         if (CaffeineTheme.is('page', 'home')) {
             event.preventDefault();
-            _animateCover();
             location.hash = openHash;
 
             // Only toggle the cover if it wasn't already open
@@ -101,16 +85,11 @@ $(function() {
     });
 
     $homeButton.click(_defaultLogoNavEvent);
-    $('#avatar-link, #aside-close-button').click(_defaultLogoNavEvent);
+    $('.open-link').click(_defaultLogoNavEvent);
 
     if (CaffeineTheme.is('page', 'home')) {
         if (!_isOpen()) {
-            _toggleNavHeader();
             return _expand();
-        } else {
-            _toggleNavHeader();
         }
-    } else {
-        _toggleNavHeader();
     }
 });

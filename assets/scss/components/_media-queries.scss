@@ -76,20 +76,11 @@
         }
     }
 
-    .navigation.left .links {
-        > li {
-            margin: 0;
-            > a {
-                padding: 14px 20px;
-                font-size: 16px;
-            }
-        }
-    }
-
     #avatar-link {
         display: inline-block;
         margin-top: 64px;
     }
+
     .navigation {
         width: 100%;
         &.right {
@@ -122,12 +113,6 @@
 // < 600px ( 7" Tablet)
 // ------------------------------
 @media all and (max-width:600px) {
-    /* disabling element, too much information*/
-    .pace,
-    .post.related {
-        display: none;
-    }
-
     .post {
         .reading-time {
             display: none

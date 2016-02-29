@@ -16,7 +16,6 @@
     }
 
     &.expanded {
-        min-height: 100%;
         height: 100%;
         z-index: 15;
         position: fixed;
@@ -54,7 +53,7 @@
         @include font-shadow;
 
         &:hover {
-            color: $primary-color;
+            color: $pre-hover-color;
         }
     }
 }
@@ -81,7 +80,7 @@
         img {
             width: 112px;
             border: 2px solid $primary-color;
-            box-shadow: 0 0 1px 1px rgba(000, 000, 000, .3);
+            @include shadow(2);
         }
     }
 
@@ -89,54 +88,64 @@
     opacity: 0;
 }
 
+.call-to-action-container {
+    margin: 18px 0;
+}
+
 .navigation {
-    &.left {
-        display: inline-block;
-        margin-top: 18px;
-        margin-bottom: 16px;
-        .links {
-            margin: 0;
-            list-style: none;
-            > li {
-                display: block;
-                margin: 0 1px 0 0;
-                line-height: 16px;
+    .links {
+        margin: 0;
+        list-style: none;
 
-                &.expanded {
-                    display: inline-block;
-                    margin: 0 5px;
-                    border-radius: 20px;
-                    background: $primary-color;
-                    color: $slate-white;
+        li {
+            display: inline-block;
+            line-height: 16px;
+            border-left: 1px solid $slate-white;
 
-                    @include btn-cover-with-border;
+            &:first-child {
+                border: none;
+            }
 
-                    > a {
-                        padding: 10px 20px;
-                    }
+            &.expanded {
+                display: inline-block;
+                margin: 0 5px;
+                border-radius: 20px;
+                background: $primary-color;
+                color: $slate-white;
+                @include btn-cover-with-border;
+
+                a {
+                    padding: 10px 20px;
+                    font-size: 14px;
+                    @include btn-cover;
 
                     &:hover {
-                        background: $hover-color-inverse;
+                        color: $primary-color;
                     }
                 }
 
-                > a {
-                    display: block;
-                    float: none;
-                    padding: 8px 20px;
-                    @include btn-cover;
-                    @include font-shadow;
+                &:hover {
+                    background: $hover-color-inverse;
+                }
 
-                    &:hover {
-                        color: $hover-color;
-                        text-shadow: none;
-                    }
+                &:first-child {
+                     @include btn-cover-with-border;
+                }
+            }
+
+            a {
+                display: block;
+                float: none;
+                padding: 8px 20px;
+                font-size: 18px;
+                color: $slate-white;
+
+                @include font-shadow;
+
+                &:hover {
+                    color: $pre-hover-color ;
                 }
             }
         }
-    }
-    &.right {
-        display: block;
-        margin: 8px;
     }
 }

@@ -18,10 +18,16 @@
         .btn {
             border: none;
             padding: 0;
+            text-transform: uppercase;
+            color: $slate-gray;
 
             i {
-                font-size: 26px;
+                color: white;
+                font-size: 12px;
                 vertical-align: middle;
+                padding: 5px;
+                background: $slate-gray;
+                border-radius: 50%;
             }
         }
     }
