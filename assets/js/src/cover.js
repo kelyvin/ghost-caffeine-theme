@@ -48,22 +48,15 @@ $(function() {
         return $tagsOverlay.hasClass("show");
     };
 
-    // Sets the default event when you click on the logo
-    // If on any page that is not the home page, the logo will redirect to the home page
-    // Otherwise, toggle the cover
     _defaultLogoNavEvent = function (event) {
-        var device = CaffeineTheme.device();
+        event.preventDefault();
 
         if (_isTagsOverlayOpen()) {
             _toggleTagsOverlay();
         }
 
-        if (CaffeineTheme.is('page', 'home')) {
-            event.preventDefault();
-            _toggleLocation();
-
-            return _expand();
-        }
+        _toggleLocation();
+        return _expand();
     };
 
     $tagsButton.click(function() {

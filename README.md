@@ -1,49 +1,59 @@
 # Caffeine Theme [![Codeship Status for kelyvin/caffeine-theme](https://codeship.com/projects/2670e310-6805-0133-8838-460d97cd31f0/status?branch=master)](https://codeship.com/projects/114177)
 
----
 
 ## Introduction
 
-**Caffeine Theme** is a fork of [Uno-Zen for Ghost by Kikobeats v2.5.7](https://github.com/Kikobeats/uno-zen). Huge thanks to the original creator for the original theme layout.
+**Caffeine Theme** is a Material Design inspired Ghost theme. It originally began as a fork of [Uno-Zen](https://github.com/Kikobeats/uno-zen), but has since been drastically changed. Huge thanks to the original creator for the original theme layout and inspiration.
 
-## What's Different
+## Theme Features
 
-The main difference between the caffeine-theme and uno-zen is that there are major improvements to the mobile experience and animation logic.
+Because Caffeine Theme draws inspiration from Material design practices, you'll see familiar design patterns throughout the theme, such as cards, several buttons, etc.
 
- - Better mobile experience
+Like the original Uno-zen theme that helped provide the skeleton for this project, there may still be some shared similiaries with the original project. However, there are some vast changes as well, especially around the mobile experience and animation logic. The differences include, but are not limited to:
+
+ - A mobile-first driven experience
  - Improved responsiveness for dynamic screen widths (no more hard-refreshing the page)
- - Replace dynamic search field with a search and tag overlay that can be used on both the desktop and mobile experience
- - Bigger emphasis on the cover page
- - Styling tweaks
+ - A search and tag overlay that can be used on both the desktop and mobile experience
+ - Bigger emphasis on the splash page
+ - Smoother animations and style
 
 ## Installation
 
-Please ensure that `git` is installed on your machine.
+You can install this theme in one of three ways, but the last two options require `git`.
 
-### Original approach
+### Option 1
+Go to the [github repo](https://github.com/kelyvin/caffeine-theme), click **download zip**, extract the folder, and paste it into your theme folder (`content/themes`) of your Ghost installation
+
+### Option 2
 Enter the theme folder (`content/themes`) of your Ghost installation and paste the following command:
 
 ```bash
 $ git clone https://github.com/kelyvin/caffeine-theme
 ```
 
-**NOTE:** This theme needs jQuery to work, but jQuery is not provided by the theme. Instead, you need to inject it into the `Blog Footer` in the `Code injection` of your Ghost installation:
+### Option 3
+If you have your Ghost blog hosted on git and you want to continuously get the latest updates, you can add this repo as a submodule. Create a `.gitmodules` file in your root Ghost installation and add the following like so:
+![](http://i.imgur.com/r6mN5U4.png)
+
+
+### Add JQuery and other libraries
+This theme needs jQuery to work, but jQuery is not provided by the theme. Instead, you need to inject it into the `Blog Footer` in the `Code injection` of your Ghost installation:
 
 ```html
-<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-```
-
-It should look like this:
-![](https://camo.githubusercontent.com/f600498109f9b8e7d15fadd28b51c75b1f585d0f/687474703a2f2f692e696d6775722e636f6d2f4b365a595933752e706e67)
-
-In addition, this theme also takes advantage of [Masonry](http://masonry.desandro.com/) to provide a nicer grid layout. This is not mandatory as a fallback is also provided. If you would like this feature, inject the following code as well.
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 
 ```
-<script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
+
+In addition, this theme also takes advantage of [Masonry](http://masonry.desandro.com/) to provide a nicer grid layout and [Scroll Reveal](https://scrollrevealjs.org/) for sleek scrolling animations. These are not mandatory and fallbacks are also provided for both. If you would like these feature(s), inject the following code as well.
+
+```
+<script type="text/javascript" src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/scrollreveal.js/3.0.9/scrollreveal.min.js"></script>
+
 ```
 
-### Alternative approach
-Add this repo as a submodule.
+At the end, it should probably look something like this:
+![](http://i.imgur.com/AqE46Sr.png)
 
 ## Development and Customization
 

@@ -94,13 +94,14 @@ $ git clone https://github.com/kelyvin/caffeine-theme && cd caffeine-theme && np
 
 Then run the `gulp` command in the theme terminal. This should set you up for a development scenario, and looks like this:
 
-![](http://i.imgur.com/Gf4gPR2.png)
+![](http://i.imgur.com/QLTegAH.png)
 
 With the `gulp` command you are automatically launching the task to compile the assets and reload the server when your assets change. To do this, we use [BrowserSync](http://www.browsersync.io). It is set up as middleware between the theme and Ghost. You can connect different devices and try the responsive of the website as well.
 
 You need to use the same port as your Ghost server for proxying. If your Ghost server is in a different port than `2368` you need to modify `gulpfile.js` and put the correct port.
 
-## Customization
+
+## Customizations
 
 ### Google Analytics
 
@@ -122,11 +123,11 @@ var disqus_shortname = 'YOUR_DISQUS_SHORTCUT_HERE';
 </script>
 ```
 
-### Sidebar title
+### Cover title
 
-By default, the title that you see in the open page of your blog is extracted from your blog settings (Admin panel → Blog Title).
+By default, the title that you see in the cover page of your blog is extracted from your blog settings (Admin panel → Blog Title).
 
-If you want to customize it, you can do it:
+If you want to customize it, you can do it like so:
 
 Go to Ghost Admin panel → `Code Injection` → `Blog Header` and add:
 
@@ -136,9 +137,9 @@ var profile_title = 'Caffeine Theme';
 </script>
 ```
 
-### Sidebar subtitle
+### Cover subtitle
 
-The purpose of the subtitle is describe your bio in a quick phrase. This will be shown in the mobile/tablet version instead of the bio.
+The purpose of the subtitle is to describe your bio in a quick phrase.
 
 Go to Ghost Admin panel → `Code Injection` → `Blog Header` and add:
 
@@ -150,7 +151,7 @@ var profile_resume ='Software Engineer';
 
 ### Colors
 
-Edit the file `assets/scss/modules/_variables.scss`. Remember that is necessary compile the build to load the new style, so keep running your gulp process in background.
+Edit the file `assets/scss/modules/_variables.scss`. Remember that before you deploy your changes to prod, it is necessary to compile the build to rebuild your new stylesheet, so keep running your gulp process in background.
 
 ### Social Networks
 
@@ -160,11 +161,11 @@ Edit the file `partials/social.hbs`.
 
 Go to Ghost Admin panel → `Navigation` and add/edit items.
 
-"Blog" link is always included by default, so you don't need to add it manually.
+The "Home" link is always included by default, so you don't need to add it manually.
 
 ### Favicon
 
-Create your favicons with [Favicon Generator](http://realfavicongenerator.net/) and puts it in `assets/img`.
+Create your favicons with [Favicon Generator](http://realfavicongenerator.net/)and puts it in `assets/img`.
 
 ### Cover
 
@@ -176,12 +177,8 @@ The linear gradient of the cover filter is based in `$cover-primary` and `$cover
 
 ### Custom static pages
 
-Check the [page part](http://themes.ghost.org/docs/page-context) in the Ghost Official Documentation.
-
-### Multiaccount support
-
-You can enable the multiaccount support editing [posts.hbs](https://github.com/kelyvin/caffeine-theme/blob/master/post.hbs#L11-L13) code commented inside the meta post information.
+Check out the official [documentation](http://themes.ghost.org/docs/page-context) on Ghost.org.
 
 ## Preparing for production
 
-When you consider that the development is done and you want to deploy a new version, package your code using `gulp build` command, that will minify and concatenate all the necessary code.
+When you are ready and want to deploy a new version, package your code using `gulp build` command, that will minify and concatenate all the necessary code.

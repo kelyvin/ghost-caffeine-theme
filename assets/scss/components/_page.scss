@@ -44,5 +44,15 @@
 
     #post-title {
         margin-top: 60px;
+        margin-bottom: 0
+    }
+
+    .social {
+        li {
+            a {
+                color: $pre-hover-color;
+                padding: 5px;
+            }
+        }
     }
 }

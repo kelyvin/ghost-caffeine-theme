@@ -38,6 +38,7 @@ $(function() {
     $(window).load(function() {
         $('.cover').addClass('animated');
 
+        // Sets up scroll reveal effects
         if (window.ScrollReveal && $(cardName).length > 0) {
             window.sr = ScrollReveal();
             sr.reveal(cardName);
