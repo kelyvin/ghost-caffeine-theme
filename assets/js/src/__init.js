@@ -3,7 +3,7 @@
 $(function() {
     var CaffeineTheme;
     return window.CaffeineTheme = CaffeineTheme = {
-        version: '2.0.0',
+        version: '2.1.0',
         search: {
             container: function() {
                 return $('#results');
