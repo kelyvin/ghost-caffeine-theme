@@ -3,22 +3,24 @@
 {{#post}}
 
   <article class="page-about {{post_class}}">
-    <header class="post-cover {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}"></header>
-    {{#if @blog.logo}}
-    <div class="profile-image">
-        <img src="{{@blog.logo}}" alt="{{@blog.title}} avatar" class="avatar rounded" />
-    </div>
-    {{/if}}
-    <div class="post-card">
-        <div class="post-container">
-            <div class="post-header">
-                 <h1 id="post-title">
-                    {{{title}}}
-                </h1>
-                {{> social}}
-            </div>
-             <div class="post-content">
-                {{content}}
+    {{> material-cover}}
+    <div class="profile-container animated fade-in">
+        {{#if @blog.logo}}
+        <div class="profile-image">
+            <img src="{{@blog.logo}}" alt="{{@blog.title}} avatar" class="avatar rounded" />
+        </div>
+        {{/if}}
+        <div class="post-card animated">
+            <div class="post-container">
+                <div class="post-header">
+                     <h1 id="post-title">
+                        {{{title}}}
+                    </h1>
+                    {{> social}}
+                </div>
+                 <div class="post-content">
+                    {{content}}
+                </div>
             </div>
         </div>
     </div>

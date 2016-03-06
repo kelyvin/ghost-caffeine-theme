@@ -128,9 +128,10 @@ ul {
 
 .tags {
     a {
+        @extend .animated;
+
         padding: 2px 4px;
         font-size: 8px;
-        transition: all $aside-animation-time;
         text-transform: uppercase;
         color: $gray-lightest;
         border-radius: 4px;

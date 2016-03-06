@@ -1,8 +1,8 @@
-'use strict';
+"use strict";
 
 $(function() {
     var openHash = "#open",
-        _expand,
+        _expandCover,
         _isOpen,
         _isTagsOverlayOpen,
         _toggleLocation,
@@ -14,13 +14,14 @@ $(function() {
         $cover,
         $tagsOverlay;
 
-    $navHeader = $('#default-nav-header');
-    $tagsButton = $('.tags-button');
-    $homeButton = $navHeader.find('#home-button');
-    $tagsOverlay = $('.tags-overlay');
+    $cover = $(".cover");
+    $navHeader = $("#default-nav-header");
+    $tagsButton = $(".tags-button");
+    $homeButton = $navHeader.find("#home-button");
+    $tagsOverlay = $(".tags-overlay");
 
-    _expand = function() {
-        $('main, .cover, .links > li, html').toggleClass('expanded');
+    _expandCover = function() {
+        $cover.toggleClass("expanded");
     };
 
     // Checks if the home page is currently opened
@@ -40,7 +41,7 @@ $(function() {
     // Toggles the search/tags overlay
     _toggleTagsOverlay = function() {
         $tagsOverlay.toggleClass("show");
-        $tagsButton.find('i').toggleClass("fa-search fa-close");
+        $tagsButton.find("i").toggleClass("fa-search fa-close");
     };
 
     // Checks if the search/tags overlay is visible
@@ -56,33 +57,33 @@ $(function() {
         }
 
         _toggleLocation();
-        return _expand();
+        return _expandCover();
     };
 
     $tagsButton.click(function() {
         _toggleTagsOverlay();
     });
 
-    $('.nav-blog > a').click(function(event) {
+    $(".nav-blog > a").click(function(event) {
         var isOpen = _isOpen();
 
-        if (CaffeineTheme.is('page', 'home')) {
+        if (CaffeineTheme.is("page", "home")) {
             event.preventDefault();
             location.hash = openHash;
 
             // Only toggle the cover if it wasn't already open
             if (!isOpen) {
-                return _expand();
+                return _expandCover();
             }
         }
     });
 
     $homeButton.click(_defaultLogoNavEvent);
-    $('.open-link').click(_defaultLogoNavEvent);
+    $(".open-link").click(_defaultLogoNavEvent);
 
-    if (CaffeineTheme.is('page', 'home')) {
+    if (CaffeineTheme.is("page", "home")) {
         if (!_isOpen()) {
-            return _expand();
+            return _expandCover();
         }
     }
 });

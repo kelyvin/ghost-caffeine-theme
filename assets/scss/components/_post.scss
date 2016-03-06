@@ -9,11 +9,12 @@
             > h2 {
                 margin-bottom: 16px;
                 line-height: 48px;
-                transition: all $aside-animation-time;
+                @extend .animated;
+
                 &:hover {
-                    transition: all $aside-animation-time;
                     color: $hover-color;
                 }
+
                 &:first-child {
                     margin-top: 0;
                 }
@@ -33,9 +34,10 @@
         border-top: 1px solid $gray-light;
     }
 
-    .post-cover {
+    .material-cover {
         height: 200px;
         margin-bottom: 0;
+        position: relative;
 
         &.no-cover {
             display: none;
@@ -54,21 +56,6 @@
 
     .post-container {
         padding: 20px 60px;
-    }
-}
-
-.post-cover {
-    height: $aside-height-collapsed;
-    width: 100%;
-    text-align: center;
-    background: #222 no-repeat center center;
-    background-size: cover;
-    overflow: hidden;
-    margin-bottom: -80px;
-    @include background-filter;
-
-    &.no-cover {
-        visibility: hidden;
     }
 }
 
@@ -169,7 +156,6 @@
 
 #post-title {
     margin: 30px 0 10px;
-    transition: all $aside-animation-time;
 
     i {
         vertical-align: top;

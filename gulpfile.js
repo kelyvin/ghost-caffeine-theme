@@ -51,8 +51,7 @@ src = {
     css: {
         main: 'assets/css/' + dist.name + '.css',
         vendor: [
-            'assets/vendor/prism/themes/prism-okaidia.css',
-            'assets/vendor/animate/animate.css'
+            'assets/vendor/prism/themes/prism-okaidia.css'
         ]
     },
     fonts: {

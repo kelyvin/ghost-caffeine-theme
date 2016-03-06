@@ -38,9 +38,9 @@ mark {
 // ------------------------------
 a {
     position: relative;
-    transition: all $aside-animation-time;
     text-decoration: none;
     color: $link-color;
+    @extend .animated;
     &:hover {
         color: $hover-color;
     }
@@ -197,12 +197,12 @@ pre:hover {
 }
 
 main {
+    z-index: 2;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    opacity: 1;
 
     > .content {
         > h1 {
@@ -216,6 +216,27 @@ main {
             color: lighten($gray-dark, 10%);
             text-align: center;
         }
+    }
+}
+
+.material-cover {
+    height: $aside-height-collapsed;
+    width: 100%;
+    text-align: center;
+    background: #222 no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+    margin-bottom: -80px;
+    @include background-filter;
+
+    &.no-cover {
+        visibility: hidden;
+    }
+
+    .background-container {
+        height: 100%;
+        width: 100%;
+        @include background-filter;
     }
 }
 

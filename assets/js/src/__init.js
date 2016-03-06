@@ -1,22 +1,23 @@
-'use strict';
+"use strict";
 
 $(function() {
     var CaffeineTheme;
-    return window.CaffeineTheme = CaffeineTheme = {
-        version: '2.1.0',
+
+    window.CaffeineTheme = CaffeineTheme = {
+        version: "2.1.0",
         search: {
             container: function() {
-                return $('#results');
+                return $("#results");
             },
             form: function(action) {
-                return $('#search-container')[action]();
+                return $("#search-container")[action]();
             }
         },
         context: function() {
             var className;
-            className = document.body.className.split(' ')[0].split('-')[0];
-            if (className === '') {
-                return 'error';
+            className = document.body.className.split(" ")[0].split("-")[0];
+            if (className === "") {
+                return "error";
             } else {
                 return className;
             }
@@ -30,13 +31,14 @@ $(function() {
         readTime: function() {
             var DateInDays;
             DateInDays = function(selector, cb) {
+                /*jshint unused:vars*/
                 return $(selector).each(function() {
                     var postDate, postDateInDays, postDateNow;
                     postDate = $(this).html();
                     postDateNow = new Date(Date.now());
                     postDateInDays = Math.floor((postDateNow - new Date(postDate)) / 86400000);
                     if (postDateInDays === 0) {
-                        postDateInDays = 'today';
+                        postDateInDays = "today";
                     } else if (postDateInDays === 1) {
                         postDateInDays = "yesterday";
                     } else {
@@ -51,19 +53,20 @@ $(function() {
                     });
                 });
             };
-            return DateInDays('.meta > time');
+
+            return new DateInDays(".meta > time");
         },
         device: function() {
             var h, w;
             w = window.innerWidth;
             h = window.innerHeight;
             if (w <= 480) {
-                return 'mobile';
+                return "mobile";
             }
             if (w <= 1024) {
-                return 'tablet';
+                return "tablet";
             }
-            return 'desktop';
+            return "desktop";
         }
     };
 });

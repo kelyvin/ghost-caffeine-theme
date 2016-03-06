@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 $(function() {
     var $posts = $('.page-index ol.posts'),
@@ -9,20 +9,24 @@ $(function() {
     el.dataset.page = CaffeineTheme.context();
     el.dataset.device = CaffeineTheme.device();
     CaffeineTheme.readTime();
-    if (!CaffeineTheme.is('device', 'desktop')) {
+
+    if (!CaffeineTheme.is("device", "desktop")) {
         FastClick.attach(el);
     }
+
     if (window.profile_title) {
-        $('.profile-title').text(window.profile_title);
+        $(".profile-title").text(window.profile_title);
     }
+
     if (window.profile_resume) {
-        $('#profile-resume').text(window.profile_resume);
+        $("#profile-resume").text(window.profile_resume);
     }
-    if (CaffeineTheme.is('page', 'post')) {
-        $('main').readingTime({
-            readingTimeTarget: '.reading-time > span'
+
+    if (CaffeineTheme.is("page", "post")) {
+        $("main").readingTime({
+            readingTimeTarget: ".reading-time > span"
         });
-        $('.content').fitVids();
+        $(".content").fitVids();
     }
 
     // Sets up masonry effects
@@ -32,12 +36,12 @@ $(function() {
             percentPosition: true
         });
     } else {
-        $posts.find(cardName).css('width', '100%');
+        $posts.find(cardName).css("width", "100%");
     }
 
-    $(window).load(function() {
-        $('.cover').addClass('animated');
+    $posts.addClass("animated fade-in");
 
+    $(window).load(function() {
         // Sets up scroll reveal effects
         if (window.ScrollReveal && $(cardName).length > 0) {
             window.sr = ScrollReveal();

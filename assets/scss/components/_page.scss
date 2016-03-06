@@ -30,15 +30,14 @@
     }
 }
 
-
 .page-index,
 .page-tag {
     max-width: $container-medium-width;
-    margin: 260px auto 0;
+    margin: 0 auto;
 }
 
 .page-about {
-    .post-cover {
+    .material-cover {
         margin-bottom: -40px;
     }
 

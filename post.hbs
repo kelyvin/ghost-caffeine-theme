@@ -3,8 +3,8 @@
 {{#post}}
 
   <article class="{{post_class}}">
-    <header class="post-cover {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}"></header>
-    <div class="post-card">
+    {{> material-cover}}
+    <div class="post-card animated fade-in">
         <a href="{{@blog.url}}/#open" title="Go back" class="hvr-grow">
             <div class="back-button">
                 <i class="fa fa-arrow-left"></i>

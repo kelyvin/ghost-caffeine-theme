@@ -1,7 +1,10 @@
 .cover {
-    height: $aside-height-collapsed;
-    position: absolute;
+    position: fixed;
+    height: 100%;
     width: 100%;
+    opacity: 0;
+    z-index: 0;
+    display: block;
     text-align: center;
     overflow: hidden;
     background: center center no-repeat;
@@ -11,26 +14,18 @@
     background-size: cover;
     background-color: $primary-color;
 
-    &.animated {
-        transition: all $aside-animation-time $aside-animation;
-    }
-
     &.expanded {
-        height: 100%;
+        opacity: 1;
         z-index: 15;
-        position: fixed;
-
-        .profile {
-            transform: translate3d(0, 0, 0);
-            opacity: 100;
-        }
 
         .blog-header {
             display: none;
         }
     }
 
-    &.container {
+    .background-container {
+        height: 100%;
+        width: 100%;
         font-weight: $font-weight-thin;
         text-align: center;
         color: $gray-lightest;
@@ -41,7 +36,7 @@
 }
 
 .blog-header {
-    z-index: 2;
+    z-index: 3;
     position: absolute;
     width: 100%;
     text-align: center;
@@ -83,30 +78,14 @@
             @include shadow(2);
         }
     }
-
-    transform: translate3d(0, -$aside-height-collapsed, 0);
-    opacity: 0;
 }
 
 .call-to-action-container {
     margin: 18px 0;
-}
 
-.navigation {
-    .links {
-        margin: 0;
-        list-style: none;
-
-        li {
-            display: inline-block;
-            line-height: 16px;
-            border-left: 1px solid $slate-white;
-
-            &:first-child {
-                border: none;
-            }
-
-            &.expanded {
+    .navigation {
+        .links {
+            li {
                 display: inline-block;
                 margin: 0 5px;
                 border-radius: 20px;
@@ -131,6 +110,23 @@
                 &:first-child {
                      @include btn-cover-with-border;
                 }
+            }
+        }
+    }
+}
+
+.navigation {
+    .links {
+        margin: 0;
+        list-style: none;
+
+        li {
+            display: inline-block;
+            line-height: 16px;
+            border-left: 1px solid $slate-white;
+
+            &:first-child {
+                border: none;
             }
 
             a {

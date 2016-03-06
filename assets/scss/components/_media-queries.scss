@@ -34,8 +34,6 @@
 
     .cover {
         &.expanded {
-            transform: translate3d(0, 0, 0);
-
             .nav-header {
                 &.mobile {
                     position: absolute;
@@ -48,10 +46,6 @@
                     }
                 }
             }
-        }
-
-        &.animated {
-            transition: all $aside-animation-time;
         }
     }
 
@@ -94,7 +88,6 @@
     }
     main {
         left: 0;
-        transition: all $aside-animation-time;
         transform: translate3d(0, 0, 0);
     }
 }
@@ -208,15 +201,15 @@
         }
     }
 
-    .post-cover {
-        margin-bottom: 0;
-    }
-
     .posts {
         margin: 0 12px;
     }
 
     .post {
+        .material-cover {
+            margin-bottom: 0;
+        }
+
         .post-related,
         .post-card {
             margin: 0;
