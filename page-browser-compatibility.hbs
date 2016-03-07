@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Browser Compatibility Error</title>
+        {{> meta}}
+        <link rel="stylesheet" type="text/css" href="{{asset "css/caffeine-theme.css"}}" />
+        {{ghost_head}}
+    </head>
+  <body class="page-browser-compatibility">
+    <article>
+        <section>
+            <div class="error-body">
+                <h1>
+                    Looks like your coffee's gone stale. It's time for a new cup!
+                </h1>
+                <hr class="divider short">
+                <h2>
+                     Caffeine Coding runs on the latest Chrome, Firefox, Safari, and IE10+. Your browser is outdated and it may be time to upgrade.
+                </h2>
+                <div class="call-to-action-container">
+                    <nav class="navigation left">
+                        <ul class="links">
+                            <li class="nav-blog expanded">
+                                <a href="http://browsehappy.com/" title="Browse Happy">Click here to find out more!</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </section>
+    </article>
+    {{ghost_foot}}
+    <script type="text/javascript" src="{{asset "js/caffeine-theme.js"}}"></script>
+    {{> google-analytics}}
+  </body>
+</html>

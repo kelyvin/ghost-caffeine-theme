@@ -29,7 +29,6 @@
     vertical-align: middle;
     transform: translateZ(0);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    backface-visibility: hidden;
     -moz-osx-font-smoothing: grayscale;
     transition-duration: 0.3s;
     transition-property: transform;
@@ -48,8 +47,6 @@
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
   -moz-osx-font-smoothing: grayscale;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
@@ -76,8 +73,6 @@
     transform: translateZ(0);
     vertical-align: middle;
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
 }
 
 .hvr-grow-rotate:hover,
@@ -183,8 +178,6 @@
     transform: translateZ(0);
     vertical-align: middle;
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
 }
 
 .hvr-buzz-out:hover,

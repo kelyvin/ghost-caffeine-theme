@@ -5,7 +5,7 @@ $(function() {
         openHash = "#open";
 
     window.CaffeineTheme = CaffeineTheme = {
-        version: "2.2.2",
+        version: "2.3.0",
         search: {
             container: function() {
                 return $("#results");
@@ -27,7 +27,12 @@ $(function() {
             return document.body;
         })(),
         is: function(property, value) {
-            return this.app.dataset[property] === value;
+            if (this.app.dataset) {
+                return this.app.dataset[property] === value;
+            } else {
+                return this.app.getAttribute("data-" + property) === value;
+            }
+
         },
         isOpen: function () {
             return location.hash === openHash;

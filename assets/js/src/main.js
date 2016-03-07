@@ -6,8 +6,16 @@ $(function() {
         el;
 
     el = CaffeineTheme.app;
-    el.dataset.page = CaffeineTheme.context();
-    el.dataset.device = CaffeineTheme.device();
+
+    if (el.dataset) {
+        el.dataset.page = CaffeineTheme.context();
+        el.dataset.device = CaffeineTheme.device();
+    } else {
+        $(el)
+            .attr("data-page", CaffeineTheme.context())
+            .attr("data-device", CaffeineTheme.device());
+    }
+
     CaffeineTheme.readTime();
 
     if (window.profile_title) {
@@ -49,6 +57,8 @@ $(function() {
             // Sets up scroll reveal effects
             if (window.ScrollReveal && $(cardName).length > 0) {
                 window.sr = window.ScrollReveal().reveal(cardName);
+            } else {
+                $posts.css("visibility", "visible");
             }
         }
     });
