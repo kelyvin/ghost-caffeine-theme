@@ -5,7 +5,7 @@ $(function() {
         openHash = "#open";
 
     window.CaffeineTheme = CaffeineTheme = {
-        version: "2.2.1",
+        version: "2.2.2",
         search: {
             container: function() {
                 return $("#results");
@@ -37,26 +37,20 @@ $(function() {
         },
         readTime: function() {
             var DateInDays;
-            DateInDays = function(selector, cb) {
-                /*jshint unused:vars*/
+            DateInDays = function(selector) {
                 return $(selector).each(function() {
-                    var postDate, postDateInDays, postDateNow;
-                    postDate = $(this).html();
-                    postDateNow = new Date(Date.now());
-                    postDateInDays = Math.floor((postDateNow - new Date(postDate)) / 86400000);
-                    if (postDateInDays === 0) {
-                        postDateInDays = "today";
-                    } else if (postDateInDays === 1) {
-                        postDateInDays = "yesterday";
-                    } else {
-                        postDateInDays = postDateInDays + " days ago";
-                    }
-                    $(this).html(postDateInDays);
+                    var publishDate,
+                        timeAgo;
+
+                    publishDate = $(this).attr("datetime");
+                    timeAgo = $(this).html();
+
                     $(this).mouseover(function() {
-                        return $(this).html(postDate);
+                        return $(this).html(publishDate);
                     });
+
                     return $(this).mouseout(function() {
-                        return $(this).html(postDateInDays);
+                        return $(this).html(timeAgo);
                     });
                 });
             };
