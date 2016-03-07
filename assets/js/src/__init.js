@@ -1,10 +1,11 @@
 "use strict";
 
 $(function() {
-    var CaffeineTheme;
+    var CaffeineTheme,
+        openHash = "#open";
 
     window.CaffeineTheme = CaffeineTheme = {
-        version: "2.2.0",
+        version: "2.2.1",
         search: {
             container: function() {
                 return $("#results");
@@ -27,6 +28,12 @@ $(function() {
         })(),
         is: function(property, value) {
             return this.app.dataset[property] === value;
+        },
+        isOpen: function () {
+            return location.hash === openHash;
+        },
+        getOpenHash: function() {
+            return openHash;
         },
         readTime: function() {
             var DateInDays;
@@ -67,6 +74,12 @@ $(function() {
                 return "tablet";
             }
             return "desktop";
+        },
+        hideIndexPage: function () {
+            $("#default-nav-header, .blog-header, .material-cover, .page-index").addClass("transparent");
+        },
+        showIndexPage: function () {
+            $("#default-nav-header, .blog-header, .material-cover, .page-index").removeClass("transparent");
         }
     };
 });

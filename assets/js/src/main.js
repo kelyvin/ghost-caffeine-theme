@@ -1,18 +1,14 @@
 "use strict";
 
 $(function() {
-    var $posts = $('.page-index ol.posts'),
-        cardName = '.card',
+    var $posts = $(".page-index ol.posts"),
+        cardName = ".card",
         el;
 
     el = CaffeineTheme.app;
     el.dataset.page = CaffeineTheme.context();
     el.dataset.device = CaffeineTheme.device();
     CaffeineTheme.readTime();
-
-    if (!CaffeineTheme.is("device", "desktop")) {
-        FastClick.attach(el);
-    }
 
     if (window.profile_title) {
         $(".profile-title").text(window.profile_title);
@@ -22,6 +18,22 @@ $(function() {
         $("#profile-resume").text(window.profile_resume);
     }
 
+    if (CaffeineTheme.is("page", "home")) {
+        if (!CaffeineTheme.isOpen()) {
+            CaffeineTheme.hideIndexPage();
+        }
+
+        // Sets up masonry effects
+        if ($posts && $posts.masonry) {
+            $posts.masonry({
+                itemSelector: cardName,
+                percentPosition: true
+            });
+        } else {
+            $posts.find(cardName).css("width", "100%");
+        }
+    }
+
     if (CaffeineTheme.is("page", "post")) {
         $("main").readingTime({
             readingTimeTarget: ".reading-time > span"
@@ -29,23 +41,15 @@ $(function() {
         $(".content").fitVids();
     }
 
-    // Sets up masonry effects
-    if ($posts && $posts.masonry) {
-        $posts.masonry({
-            itemSelector: cardName,
-            percentPosition: true
-        });
-    } else {
-        $posts.find(cardName).css("width", "100%");
-    }
-
-    $posts.addClass("animated fade-in");
-
     $(window).load(function() {
-        // Sets up scroll reveal effects
-        if (window.ScrollReveal && $(cardName).length > 0) {
-            window.sr = ScrollReveal();
-            sr.reveal(cardName);
+        if (CaffeineTheme.is("page", "home")) {
+            $(".blog-header").addClass("animated fade-in");
+            $posts.addClass("animated fade-in");
+
+            // Sets up scroll reveal effects
+            if (window.ScrollReveal && $(cardName).length > 0) {
+                window.sr = window.ScrollReveal().reveal(cardName);
+            }
         }
     });
 });
