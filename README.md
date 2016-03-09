@@ -1,8 +1,6 @@
 # Caffeine Theme [![Codeship Status for kelyvin/caffeine-theme](https://codeship.com/projects/2670e310-6805-0133-8838-460d97cd31f0/status?branch=master)](https://codeship.com/projects/114177)
 
-![](http://i.imgur.com/oGhcKxS.png)
-![](http://i.imgur.com/K1p0Vm1.png)
-![](http://i.imgur.com/K1p0Vm1.png)
+![](http://i.imgur.com/oGhcKxS.png) ![](http://i.imgur.com/K1p0Vm1.png) ![](http://i.imgur.com/4w5r9BN.png)
 
 ## Introduction
 
