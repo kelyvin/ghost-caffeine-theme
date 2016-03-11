@@ -1,6 +1,6 @@
 # Caffeine Theme [![Codeship Status for kelyvin/caffeine-theme](https://codeship.com/projects/2670e310-6805-0133-8838-460d97cd31f0/status?branch=master)](https://codeship.com/projects/114177)
 
-![](http://i.imgur.com/oGhcKxS.png) ![](http://i.imgur.com/K1p0Vm1.png) ![](http://i.imgur.com/4w5r9BN.png)
+![](http://i.imgur.com/a2uhb1o.jpg)
 
 ## Introduction
 
@@ -17,13 +17,14 @@ Like the original Uno-zen theme that helped provide the skeleton for this projec
  - A search and tag overlay that can be used on both the desktop and mobile experience
  - Bigger emphasis on the splash page
  - Smoother animations and style
+ - Masonry and scroll reveal support
 
 ## Installation
 
 You can install this theme in one of three ways, but the last two options require `git`.
 
 ### Option 1
-Go to the [github repo](https://github.com/kelyvin/caffeine-theme), click **download zip**, extract the folder, and paste it into your theme folder (`content/themes`) of your Ghost installation
+Download the latest release on [Github](https://github.com/kelyvin/caffeine-theme/releases), download the zip, extract the folder, and paste it into your theme folder (`content/themes`) of your Ghost installation
 
 ### Option 2
 Enter the theme folder (`content/themes`) of your Ghost installation and paste the following command:
