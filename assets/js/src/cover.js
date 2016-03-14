@@ -3,7 +3,6 @@
 $(function() {
     var _expandCover,
         _isTagsOverlayOpen,
-        _toggleLocation,
         _toggleTagsOverlay,
         _defaultLogoNavEvent,
         $navHeader,
@@ -20,14 +19,12 @@ $(function() {
 
     _expandCover = function() {
         $cover.toggleClass("expanded");
-    };
 
-    // Toggles the current home page between the cover and the opened page
-    _toggleLocation = function() {
-        if (CaffeineTheme.isOpen()) {
-            location.hash = "";
+        // Toggles the current page between the cover and the current page
+        if ($cover.hasClass("expanded")) {
+            CaffeineTheme.close();
         } else {
-            location.hash = CaffeineTheme.getOpenHash();
+            CaffeineTheme.open();
         }
     };
 
@@ -45,11 +42,11 @@ $(function() {
     _defaultLogoNavEvent = function (event) {
         event.preventDefault();
         CaffeineTheme.showIndexPage();
+
         if (_isTagsOverlayOpen()) {
             _toggleTagsOverlay();
         }
 
-        _toggleLocation();
         return _expandCover();
     };
 
@@ -58,15 +55,12 @@ $(function() {
     });
 
     $(".nav-blog > a").click(function(event) {
-        var isOpen = CaffeineTheme.isOpen();
-
         if (CaffeineTheme.is("page", "home")) {
             event.preventDefault();
-            location.hash = CaffeineTheme.getOpenHash();
             CaffeineTheme.showIndexPage();
 
             // Only toggle the cover if it wasn't already open
-            if (!isOpen) {
+            if (!CaffeineTheme.isOpen()) {
                 return _expandCover();
             }
         }

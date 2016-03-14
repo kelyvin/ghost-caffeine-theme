@@ -149,6 +149,18 @@ var profile_resume ='Software Engineer';
 </script>
 ```
 
+### Tags Overlay
+
+To purpose of the tags overlay is to display a list of popular tags that you want your users to easily find and navigate to. You can continuously add to this list to create an "infinite" list of tags.
+
+Go to Ghost Admin panel → `Code Injection` → `Blog Header` and add:
+
+```html
+<script>
+var tag_names = ['code', 'career'];
+</script>
+```
+
 ### Colors
 
 Edit the file `assets/scss/modules/_variables.scss`. Remember that before you deploy your changes to prod, it is necessary to compile the build to rebuild your new stylesheet, so keep running your gulp process in background.

@@ -121,6 +121,14 @@
         }
     }
 
+    .post-content {
+        p {
+            img {
+                width: 100%;
+            }
+        }
+    }
+
     .nav-header {
         &.nav-header-fixed {
             position: absolute;
@@ -267,7 +275,7 @@
 
     blockquote {
         > p {
-            margin: 32px -16px;
+            margin: 32px 10px;
         }
     }
 }
