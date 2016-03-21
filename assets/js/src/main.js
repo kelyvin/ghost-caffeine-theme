@@ -59,9 +59,11 @@ $(function() {
             percentPosition: true
         });
 
-        $postsGrid.imagesLoaded().progress( function() {
-            $postsGrid.masonry("layout");
-        });
+        if ($postsGrid.imagesLoaded) {
+            $postsGrid.imagesLoaded().progress(function() {
+                $postsGrid.masonry("layout");
+            });
+        }
     } else {
         $posts.find(cardName).css("width", "100%");
     }
