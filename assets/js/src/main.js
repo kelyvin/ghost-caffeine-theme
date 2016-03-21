@@ -54,9 +54,13 @@ $(function() {
 
     // Sets up masonry effects
     if ($posts && $posts.masonry) {
-        $posts.masonry({
+        var $postsGrid = $posts.masonry({
             itemSelector: cardName,
             percentPosition: true
+        });
+
+        $postsGrid.imagesLoaded().progress( function() {
+            $postsGrid.masonry("layout");
         });
     } else {
         $posts.find(cardName).css("width", "100%");
