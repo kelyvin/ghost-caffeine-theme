@@ -1,6 +1,6 @@
 /**
  * caffeine-theme - Minimalist and Elegant theme for Ghost
- * @version 2.4.2
+ * @version 2.5.0
  * @link    https://github.com/kelyvin/caffeine-theme
  * @author  Kelyvin (https://github.com/kelyvin)
  * @license MIT
