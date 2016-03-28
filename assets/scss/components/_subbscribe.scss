@@ -1,0 +1,275 @@
+/*
+===============================================================================
+  Subbscribe style
+===============================================================================
+*/
+
+#subbscribe {
+    @mixin border-radius ($radius: 3px) {
+        -webkit-border-radius: $radius;
+        -moz-border-radius:    $radius;
+        border-radius:         $radius;
+        -moz-background-clip:    padding;
+        -webkit-background-clip: padding-box;
+        background-clip:         padding-box;
+    }
+
+    $border-color:      #e9e9e9;
+    $text-color:        #7B8993;
+    $error:         #FD392B;
+    $success:       #9FCE70;
+
+    padding: 0;
+    margin: 0;
+
+    color: $text-color;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    border: 1px solid $border-color;
+    font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 300;
+    font-size: 17px;
+
+    font-size: 15px;
+    box-shadow: 0 1px 2px $border-color;
+    @include border-radius();
+    background-color: #fff;
+    z-index: 100001;
+
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+
+    a {
+        color: $text-color;
+        text-decoration: underline;
+    }
+
+    a:hover, a:focus, a:visited, a:active {
+        color: $text-color;
+    }
+
+    .subbscribe-alert {
+        font-size: 12px;
+        font-weight: 900;
+        margin-bottom: 10px;
+    }
+
+    .subbscribe-error {
+        color: $error;
+    }
+
+    .subbscribe-success {
+        color: $success;
+    }
+
+    .animate {
+      -moz-transition: all 0.2s ease-in;
+      -webkit-transition: all 0.2s ease-in;
+      -o-transition: all 0.2s ease-in;
+      transition: all 0.2s ease-in;
+    }
+
+    .subb-title {
+        padding: 12px 12px 10px 12px;
+        font-weight: bold;
+        border: 1px solid $border-color;
+        border-width: 0 0 1px 0;
+
+        .close-x {
+            float: right;
+            margin-top: 5px;
+            color: darken($border-color, 5%);
+            cursor: pointer;
+        }
+
+    }
+
+    .subb-body {
+
+        padding: 15px;
+        position: relative;
+        .subb-thumbnail {
+            width: 40px;
+            height: 40px;
+            display: inline-block;
+            float: left;
+            margin-bottom: 15px;
+
+            img {
+                @include border-radius(40px);
+            }
+        }
+
+        .subb-button {
+            float: right;
+            margin-top: 5px;
+            color: #fff;
+            border: none;
+            font-weight: bold;
+            padding: 9px 10px 9px 10px;
+            font-size: 12px;
+            cursor: pointer;
+            @include border-radius();
+        }
+
+        .subb-button:hover {
+            @extend .animate;
+        }
+
+        .subb-button:disabled {
+            opacity: .5;
+        }
+
+        .subb-hidden {
+
+            display: block;
+
+            .subb-site {
+                float: left;
+                font-weight: bold;
+                font-size: 14px;
+                margin-top: 12px;
+                margin-left: 10px;
+            }
+
+        }
+
+        .subb-form {
+
+            p {
+                margin-top: 5px;
+                margin-bottom: 15px;
+                font-size: 13px;
+                font-weight: 500 !important;
+                width: 100%;
+                color: $text-color;
+            }
+
+            input {
+                text-indent: 8px;
+                font-weight: 500;
+                margin-bottom: 5px;
+                @include border-radius();
+                border: 1px solid darken($border-color, 5%);
+                padding: 7px;
+                font-size: 12px;
+                display:block;
+                color: darken( $text-color, 15% );
+                width:100%;
+                padding:5px 0;          }
+                padding-left: 5px;
+                color: darken( $text-color, 10% );
+
+                input.error {
+                    border-color: $error;
+                }
+
+                input:focus {
+                    outline: 0 none;
+                    resize: none !important;
+                    box-shadow: none !important;
+                    @extend .animate;
+                }
+
+            }
+
+            .footer {
+                font-size: 10px;
+                text-align: right
+            }
+
+    }
+
+}
+
+
+/*
+===============================================================================
+  Animations
+===============================================================================
+*/
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes slideInRight {
+  0% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    visibility: visible;
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
+    visibility: visible;
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+.slideInRight {
+  -webkit-animation-name: slideInRight;
+  animation-name: slideInRight;
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+}
+
+
+/*
+===============================================================================
+  Media queries
+===============================================================================
+*/
+
+@media (max-width: 550px) {
+
+    #subbscribe {
+        width: -webkit-calc(100% - 8px);
+        width:    -moz-calc(100% - 8px);
+        width:         calc(100% - 8px);
+    }
+
+}

@@ -161,6 +161,36 @@ var tag_names = ['code', 'career'];
 </script>
 ```
 
+### Mailchimp
+
+This theme supports Mailchimp subscribing. We are using [Hello Byte's subbscribe](https://github.com/shlomnissan/subbscribe) library to create an opt-in popup form. Due to its lack of support for a package manager, I have included its assets as part of this project. I will try to keep that updated regularly.
+
+To enable this feature, you'll need to obtain your Mailchimp embed signup form action URL, which is documented [here](http://kb.mailchimp.com/lists/signup-forms/host-your-own-signup-forms). Then inject it into your blog header like the example below.
+
+Go to Ghost Admin panel → `Code Injection` → `Blog Header` and add:
+
+```html
+<script>
+var mailchimp_url = "//1bytebeta.us9.list-manage.com/subscribe/post?u=1c261e60d8259c0c636801494&amp;id=7fa99bf359";
+</script>
+```
+
+To modify its contents, go to `cover.js` and modify the code block below to your liking:
+
+```
+if (window.mailchimp_url) {
+    $("body").subbscribe({
+        title: "Never miss a post!",
+        text: "Stay up to the date with the latest posts from Caffeine Coding!",
+        name: "<a href='https://www.facebook.com/caffeinecoding' target='_blank'>@caffeinecoding</a>",
+        color: "#56817A",
+        thumbnail: "http://i.imgur.com/39erIwp.png",
+        list: "MailChimp",
+        url : window.mailchimp_url
+    });
+}
+```
+
 ### Colors
 
 Edit the file `assets/scss/modules/_variables.scss`. Remember that before you deploy your changes to prod, it is necessary to compile the build to rebuild your new stylesheet, so keep running your gulp process in background.

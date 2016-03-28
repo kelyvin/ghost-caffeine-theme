@@ -129,10 +129,14 @@
                 border: none;
             }
 
+            &.hide {
+                display: none;
+            }
+
             a {
                 display: block;
                 float: none;
-                padding: 8px 20px;
+                padding: 8px 20px 8px 22px;
                 font-size: 18px;
                 color: $slate-white;
 

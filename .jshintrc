@@ -38,6 +38,7 @@
     "globals": {
         "$": true,
         "CaffeineTheme": true,
-        "ScrollReveal": true
+        "ScrollReveal": true,
+        "jQuery": true
     }
 }

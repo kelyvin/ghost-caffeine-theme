@@ -54,7 +54,7 @@ $(function() {
         _toggleTagsOverlay();
     });
 
-    $(".nav-blog > a").click(function(event) {
+    $(".home-link").click(function(event) {
         if (CaffeineTheme.is("page", "home")) {
             event.preventDefault();
             CaffeineTheme.showIndexPage();
@@ -63,6 +63,22 @@ $(function() {
             if (!CaffeineTheme.isOpen()) {
                 return _expandCover();
             }
+        }
+    });
+
+    $(".subscribe-link").click(function(event) {
+        event.preventDefault();
+
+        if (window.mailchimp_url) {
+            $("body").subbscribe({
+                title: "Never miss a post!",
+                text: "Stay up to the date with the latest posts from Caffeine Coding!",
+                name: "<a href='https://www.facebook.com/caffeinecoding' target='_blank'>@caffeinecoding</a>",
+                color: "#56817A",
+                thumbnail: "http://i.imgur.com/39erIwp.png",
+                list: "MailChimp",
+                url : window.mailchimp_url
+            });
         }
     });
 

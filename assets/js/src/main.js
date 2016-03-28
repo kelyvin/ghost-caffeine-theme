@@ -39,6 +39,11 @@ $(function() {
         }
     }
 
+    // Subscribe button
+    if (window.mailchimp_url) {
+        $(".subscribe-button").removeClass("hide");
+    }
+
     if (CaffeineTheme.is("page", "home")) {
         if (!CaffeineTheme.isOpen()) {
             CaffeineTheme.hideIndexPage();

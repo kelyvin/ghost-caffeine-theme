@@ -41,6 +41,7 @@ src = {
             "assets/js/src/search.js"
         ],
         vendor: [
+            "assets/js/src/libs/subbscribe.js",
             "assets/vendor/ghostHunter/jquery.ghostHunter.min.js",
             "assets/vendor/fitvids/jquery.fitvids.js",
             "assets/vendor/reading-time/build/readingTime.min.js",

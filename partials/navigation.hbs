@@ -1,12 +1,15 @@
 <nav class="navigation">
     <ul class="links">
         <li class="nav-blog {{#if current}} nav-current{{/if}}">
-            <a href="{{@blog.url}}/#open" title="{{@blog.title}} blog">Home</a>
+            <a class="home-link" href="{{@blog.url}}/#open" title="{{@blog.title}} blog">Home</a>
         </li>
         {{#foreach navigation}}
         <li class="nav-{{slug}} {{#if current}} nav-current{{/if}}">
             <a href="{{this.url}}">{{label}}</a>
         </li>
         {{/foreach}}
+        <li class="subscribe-button nav-blog hide {{#if current}} nav-current{{/if}}">
+            <a class="subscribe-link" href="{{@blog.url}}/#open" title="subscribe">Subscribe</a>
+        </li>
     </ul>
 </nav>

@@ -20,6 +20,8 @@ Like the original Uno-zen theme that helped provide the skeleton for this projec
  - Bigger emphasis on the splash page
  - Smoother animations and style
  - Masonry and scroll reveal support
+ - Mailchimp integration
+ - Use font-awesome to get the latest icons
 
 ## Installation
 
