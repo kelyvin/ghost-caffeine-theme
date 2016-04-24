@@ -3,6 +3,7 @@
 $(function() {
     var $posts = $("ol.posts"),
         cardName = ".card",
+        $postsGrid,
         el;
 
     el = CaffeineTheme.app;
@@ -59,15 +60,19 @@ $(function() {
 
     // Sets up masonry effects
     if ($posts && $posts.masonry) {
-        var $postsGrid = $posts.masonry({
+        $postsGrid = $posts.masonry({
             itemSelector: cardName,
             percentPosition: true
         });
 
         if ($postsGrid.imagesLoaded) {
-            $postsGrid.imagesLoaded().progress(function() {
-                $postsGrid.masonry("layout");
-            });
+            $postsGrid.imagesLoaded()
+                .done( function( instance ) {
+                    $postsGrid.masonry("layout");
+                })
+                .progress(function() {
+                    $postsGrid.masonry("layout");
+                });
         }
     } else {
         $posts.find(cardName).css("width", "100%");
@@ -82,7 +87,13 @@ $(function() {
 
         // Sets up scroll reveal effects
         if (window.ScrollReveal && $(cardName).length > 0) {
-            window.sr = window.ScrollReveal().reveal(cardName);
+            window.sr = window.ScrollReveal().reveal(cardName, {
+                afterReveal: function () {
+                    if ($postsGrid) {
+                        $postsGrid.masonry("layout");
+                    }
+                }
+            });
         } else {
             $posts.css("visibility", "visible");
         }
