@@ -191,6 +191,27 @@ if (window.mailchimp_url) {
 }
 ```
 
+### Notifications
+
+This theme has support with [toastr](https://github.com/CodeSeven/toastr) to create custom notifications on your blog for your users to see. You can configure the notification through the Ghost admin panel, as seen in the example below:
+
+Go to Ghost Admin panel → `Code Injection` → `Blog Header` and add:
+
+```html
+<script>
+var notificationOptions = {
+    type: "info",
+    message: "I want to show this message",
+    isShownOnce: true,
+    escapeHtml: false
+};
+</script>
+```
+
+The `type` will define the type of notification to render, the `message` will display the message to render, `escapeHtml` will specify whether to escape the message to render HTML, and `isShownOnce` will set whether to only show our users the notification once.
+
+**Note**: `isShownOnce` is set by a cookie with a value that is set to the `message`. So if your message changes, the cookie value will be set to the new message. We determine whether to show the notification based on whether the current notification message is equal to their last visit.
+
 ### Colors
 
 Edit the file `assets/scss/modules/_variables.scss`. Remember that before you deploy your changes to prod, it is necessary to compile the build to rebuild your new stylesheet, so keep running your gulp process in background.

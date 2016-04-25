@@ -85,6 +85,44 @@ $(function() {
         },
         showIndexPage: function () {
             $("#default-nav-header, .blog-header, .material-cover, .page-index").removeClass("transparent");
+        },
+        showNotification: function() {
+            if (window.notificationOptions && window.toastr) {
+                var message = window.notificationOptions.message || "",
+                    type = window.notificationOptions.type || "info",
+                    isShownOnce = window.notificationOptions.isShownOnce || true,
+                    notificationCookie = "notification",
+                    cookieValue = window.Cookies.get(notificationCookie),
+                    setNotificationCookie;
+
+                setNotificationCookie = function () {
+                    if (cookieValue) {
+                        window.Cookies.remove(notificationCookie);
+                    }
+
+                    if (isShownOnce) {
+                        window.Cookies.set(notificationCookie, message);
+                    }
+                };
+
+                window.toastr.options = {
+                    "closeButton": true,
+                    "debug": false,
+                    "newestOnTop": false,
+                    "progressBar": true,
+                    "positionClass": "toast-bottom-right",
+                    "preventDuplicates": true,
+                    "onclick": null,
+                    "escapeHtml": window.notificationOptions.escapeHtml || false,
+                    "timeOut": window.notificationOptions.timeOut || "20000",
+                    "extendedTimeOut": window.notificationOptions.extendedTimeOut ||  "5000",
+                    "onHidden": setNotificationCookie
+                  };
+
+                if (cookieValue === undefined || cookieValue !== encodeURI(message)) {
+                    window.toastr[type](message);
+                }
+            }
         }
     };
 });

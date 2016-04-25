@@ -12,16 +12,21 @@ You can check out the theme in action on my official blog [Caffeine Coding](http
 
 Because Caffeine Theme draws inspiration from Material design practices, you'll see familiar design patterns throughout the theme, such as cards, several buttons, etc.
 
-Like the original Uno-zen theme that helped provide the skeleton for this project, there may still be some shared similiaries with the original project. However, there are some vast changes as well, especially around the mobile experience and animation logic. The differences include, but are not limited to:
+Like the original Uno-zen theme that helped provide the skeleton for this project, there may still be some shared similiaries with the original project. However, there are some vast changes as well, especially around the mobile experience and animation logic.
 
- - A mobile-first driven experience
+The following is a list of key differences that include, but are not limited to:
+
+ - **Masonry** support for pinterest-esque layouts
+ - **Scroll reveal** support for Google+ like rendering
+ - **Mailchimp** integration and support for email subscriptions
+ - **Font-awesome** support to use the latest icons from Font Awesome
+ - **Notifications** support to keep your users informed
+ - **Prismjs** support for syntax highlighting in your posts
+ - Mobile-first driven experience
  - Improved responsiveness for dynamic screen widths (no more hard-refreshing the page)
  - A search and tag overlay that can be used on both the desktop and mobile experience
  - Bigger emphasis on the splash page
  - Smoother animations and style
- - Masonry and scroll reveal support
- - Mailchimp integration
- - Use font-awesome to get the latest icons
 
 ## Installation
 

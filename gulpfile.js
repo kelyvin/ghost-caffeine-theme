@@ -42,10 +42,12 @@ src = {
         ],
         vendor: [
             "assets/js/src/libs/subbscribe.js",
+            "assets/vendor/js-cookie/src/js.cookie.js",
             "assets/vendor/ghostHunter/jquery.ghostHunter.min.js",
             "assets/vendor/fitvids/jquery.fitvids.js",
             "assets/vendor/reading-time/build/readingTime.min.js",
-            "assets/vendor/prism/prism.js"
+            "assets/vendor/prism/prism.js",
+            "assets/vendor/toastr/toastr.min.js"
         ]
     },
     css: {

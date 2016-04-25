@@ -47,6 +47,10 @@ $(function() {
             _toggleTagsOverlay();
         }
 
+        if (CaffeineTheme.is("page", "home")) {
+            CaffeineTheme.showNotification();
+        }
+
         return _expandCover();
     };
 
@@ -68,6 +72,10 @@ $(function() {
 
     $(".subscribe-link").click(function(event) {
         event.preventDefault();
+
+        if (window.toastr) {
+            window.toastr.remove();
+        }
 
         if (window.mailchimp_url) {
             $("body").subbscribe({

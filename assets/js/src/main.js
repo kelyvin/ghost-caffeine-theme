@@ -67,7 +67,7 @@ $(function() {
 
         if ($postsGrid.imagesLoaded) {
             $postsGrid.imagesLoaded()
-                .done( function( instance ) {
+                .done(function() {
                     $postsGrid.masonry("layout");
                 })
                 .progress(function() {
@@ -81,6 +81,10 @@ $(function() {
     $(window).load(function() {
         if (CaffeineTheme.is("page", "home")) {
             $(".blog-header").addClass("animated fade-in");
+
+            if (CaffeineTheme.isOpen()) {
+                CaffeineTheme.showNotification();
+            }
         }
 
         $posts.addClass("animated fade-in");
