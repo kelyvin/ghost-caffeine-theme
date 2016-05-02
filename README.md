@@ -22,6 +22,7 @@ The following is a list of key differences that include, but are not limited to:
  - **Font-awesome** support to use the latest icons from Font Awesome
  - **Page notifications** support to keep your users informed when they hit your home page
  - **Prismjs** support for syntax highlighting in your posts
+ - Special browser compatibility page for IE9 and below.
  - Mobile-first driven experience
  - Improved responsiveness for dynamic screen widths (no more hard-refreshing the page)
  - A search and tag overlay that can be used on both the desktop and mobile experience
@@ -302,6 +303,12 @@ Create your favicons with [Favicon Generator](http://realfavicongenerator.net/)a
 ### Cover
 
 Go to Ghost Admin panel → General → `Blog Cover`
+
+### Browser Compatibility Page
+
+This theme includes a special browser compatibility page for users who use IE9 and below. You can enable it by creating a static page with the post url as `browser-compatbility`, as seen in the example below.
+
+![](http://i.imgur.com/unIDJxOl.png)
 
 ### Custom static pages
 
