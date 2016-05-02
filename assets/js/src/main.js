@@ -78,6 +78,11 @@ $(function() {
         $posts.find(cardName).css("width", "100%");
     }
 
+    //  Check if local store is enabled. This is required.
+    if (!store.enabled) {
+        return;
+    }
+
     $(window).load(function() {
         if (CaffeineTheme.is("page", "home")) {
             $(".blog-header").addClass("animated fade-in");

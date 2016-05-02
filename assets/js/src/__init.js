@@ -5,7 +5,7 @@ $(function() {
         openHash = "#open";
 
     window.CaffeineTheme = CaffeineTheme = {
-        version: "2.6.0",
+        version: "2.6.1",
         search: {
             container: function() {
                 return $("#results");
@@ -91,17 +91,17 @@ $(function() {
                 var message = window.notificationOptions.message || "",
                     type = window.notificationOptions.type || "info",
                     isShownOnce = window.notificationOptions.isShownOnce || true,
-                    notificationCookie = "notification",
-                    cookieValue = window.Cookies.get(notificationCookie),
-                    setNotificationCookie;
+                    notificationStore = "notification",
+                    storeValue = window.store.get(notificationStore),
+                    setNotificationStore;
 
-                setNotificationCookie = function () {
-                    if (cookieValue) {
-                        window.Cookies.remove(notificationCookie);
+                setNotificationStore = function () {
+                    if (storeValue) {
+                         window.store.remove(notificationStore);
                     }
 
                     if (isShownOnce) {
-                        window.Cookies.set(notificationCookie, message);
+                        window.store.set(notificationStore, message);
                     }
                 };
 
@@ -114,12 +114,12 @@ $(function() {
                     "preventDuplicates": true,
                     "onclick": null,
                     "escapeHtml": window.notificationOptions.escapeHtml || false,
-                    "timeOut": window.notificationOptions.timeOut || "20000",
-                    "extendedTimeOut": window.notificationOptions.extendedTimeOut ||  "5000",
-                    "onHidden": setNotificationCookie
-                  };
+                    "timeOut": window.notificationOptions.timeOut || "25000",
+                    "extendedTimeOut": window.notificationOptions.extendedTimeOut ||  "10000",
+                    "onHidden": setNotificationStore
+                };
 
-                if (cookieValue === undefined || cookieValue !== encodeURI(message)) {
+                if (storeValue === undefined || storeValue !== message) {
                     window.toastr[type](message);
                 }
             }

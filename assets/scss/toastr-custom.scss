@@ -6,6 +6,7 @@
 
     > .toast {
         background-image: none !important;
+        @include shadow;
 
         &:before {
             position: fixed;
@@ -17,10 +18,15 @@
             padding-right: 0.5em;
             margin: auto 0.5em auto -1.5em;
         }
+
+        &:hover {
+            @include shadow(2);
+        }
     }
 
     > .toast-info {
         background-color: $primary-color;
+        opacity: 1;
         &:before {
             content: "\f01c";
         }

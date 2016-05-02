@@ -62,6 +62,7 @@ $(function() {
         if (CaffeineTheme.is("page", "home")) {
             event.preventDefault();
             CaffeineTheme.showIndexPage();
+            CaffeineTheme.showNotification();
 
             // Only toggle the cover if it wasn't already open
             if (!CaffeineTheme.isOpen()) {
