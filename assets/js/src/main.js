@@ -45,17 +45,30 @@ $(function() {
         $(".subscribe-button").removeClass("hide");
     }
 
+    // "Home" page setup
     if (CaffeineTheme.is("page", "home")) {
         if (!CaffeineTheme.isOpen()) {
             CaffeineTheme.hideIndexPage();
         }
     }
 
+    // "Post" page setup
     if (CaffeineTheme.is("page", "post")) {
         $("main").readingTime({
             readingTimeTarget: ".reading-time > span"
         });
         $(".content").fitVids();
+
+        $("#back-button").on("click", function (event) {
+            var lastPageNum = CaffeineTheme.getLastPageNum();
+            event.preventDefault();
+
+            if (lastPageNum.length > 0) {
+                CaffeineTheme.redirect(lastPageNum);
+            } else {
+                window.history.back();
+            }
+        });
     }
 
     // Sets up masonry effects
@@ -79,7 +92,7 @@ $(function() {
     }
 
     //  Check if local store is enabled. This is required.
-    if (!store.enabled) {
+    if (!window.store.enabled) {
         return;
     }
 
@@ -106,5 +119,7 @@ $(function() {
         } else {
             $posts.css("visibility", "visible");
         }
+
+        CaffeineTheme.setLastPageNum();
     });
 });

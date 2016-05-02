@@ -34,6 +34,17 @@ $(function() {
             }
 
         },
+        redirect: function (pageNum) {
+            var redirectUrl = "";
+
+            if (pageNum > 1) {
+                redirectUrl += "/page/" + pageNum + "/#open";
+            } else {
+                redirectUrl += "/#open";
+            }
+
+            window.location.href = redirectUrl;
+        },
         isOpen: function () {
             return location.hash === openHash;
         },
@@ -45,6 +56,18 @@ $(function() {
         },
         close: function() {
              window.history.replaceState(null, null, "#");
+        },
+        getLastPageNum: function() {
+            var pageNum = window.store.get("pageNum") || "";
+
+            return pageNum;
+        },
+        setLastPageNum: function() {
+            var pageNum = $("#pageNum").text() || "";
+
+            if (pageNum.length > 0) {
+                window.store.set("pageNum", pageNum);
+            }
         },
         readTime: function() {
             var DateInDays;

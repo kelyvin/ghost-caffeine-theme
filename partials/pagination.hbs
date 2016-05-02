@@ -2,7 +2,7 @@
     {{#if prev}}
     <a rel="next" class="newer btn small hvr-grow" href="{{page_url prev}}#open"><i class="fa fa-arrow-left"></i> Newer Posts</a>
     {{/if}}
-    <span class="index">Page {{page}} of {{pages}}</span>
+    <div class="index">Page <span id="pageNum">{{page}}</span> of {{pages}}</div>
     {{#if next}}
     <a rel="prev" class="older btn small hvr-grow" href="{{page_url next}}#open">Older Posts <i class="fa fa-arrow-right"></i></a>
     {{/if}}
