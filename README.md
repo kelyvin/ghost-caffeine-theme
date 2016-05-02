@@ -56,9 +56,9 @@ This theme needs jQuery to work, but jQuery is not provided by the theme. Instea
 
 ```
 
-In addition, this theme also takes advantage of [Masonry](http://masonry.desandro.com/) to provide a nicer grid layout and [Scroll Reveal](https://scrollrevealjs.org/) for sleek scrolling animations. These are not mandatory and fallbacks are also provided for both. If you would like these feature(s), inject the following code as well.
+In addition, this theme also takes advantage of [Masonry](http://masonry.desandro.com/) to provide a nicer grid layout and [Scroll Reveal](https://scrollrevealjs.org/) for sleek scrolling animations. These are not mandatory and fallbacks are also provided for both. If you would like these feature(s), inject the following code as well. (Note: imagesloaded is not necessary, but recommended for smooth masonry layouts). 
 
-```
+```html
 <script type="text/javascript" src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
 <script type="text/javascript" src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/scrollreveal.js/3.0.9/scrollreveal.min.js"></script>
@@ -247,7 +247,7 @@ var mailchimp_url = "//1bytebeta.us9.list-manage.com/subscribe/post?u=1c261e60d8
 
 To modify its contents, go to `cover.js` and modify the code block below to your liking:
 
-```
+```javascript
 if (window.mailchimp_url) {
     $("body").subbscribe({
         title: "Never miss a post!",
@@ -280,7 +280,7 @@ var notificationOptions = {
 
 The `type` will define the type of notification to render, the `message` will display the message to render, `escapeHtml` will specify whether to escape the message to render HTML, and `isShownOnce` will set whether to only show our users the notification once.
 
-**Note**: `isShownOnce` is set by a cookie with a value that is set to the `message`. So if your message changes, the cookie value will be set to the new message. We determine whether to show the notification based on whether the current notification message is equal to their last visit.
+**Note**: `isShownOnce` will be determined by setting a value in local storage that is set to the `message`. So if your message changes, the local storage value will be set to the new message. We determine whether to show the notification based on whether the current notification message is equal to their last visit.
 
 ### Colors
 
