@@ -298,7 +298,7 @@ The "Home" link is always included by default, so you don't need to add it manua
 
 ### Favicon
 
-Create your favicons with [Favicon Generator](http://realfavicongenerator.net/)and puts it in `assets/img`.
+Create your favicons with [Favicon Generator](http://realfavicongenerator.net/) and put it in `assets/img`.
 
 ### Cover
 
