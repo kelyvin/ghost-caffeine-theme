@@ -34,6 +34,10 @@ src = {
         files: ["assets/scss/**/**"]
     },
     js: {
+        fonts: [
+            "assets/vendor/fontfaceobserver/fontfaceobserver.js",
+            "assets/js/src/fonts.js"            
+        ],
         main: [
             "assets/js/src/__init.js",
             "assets/js/src/main.js",
@@ -80,7 +84,7 @@ gulp.task("css", ["fonts"], function() {
 });
 
 gulp.task("js", function() {
-    gulp.src(src.js.main).pipe(changed(dist.js)).pipe(addsrc(src.js.vendor)).pipe(concat("" + dist.name + ".js")).pipe(uglify({
+    gulp.src(src.js.fonts).pipe(addsrc(src.js.main)).pipe(changed(dist.js)).pipe(addsrc(src.js.vendor)).pipe(concat("" + dist.name + ".js")).pipe(uglify({
         mangle: false
     })).pipe(header(banner, {
         pkg: pkg
@@ -102,5 +106,6 @@ gulp.task("default", function() {
     gulp.start(["build", "server"]);
     gulp.watch(src.sass.files, ["css"]);
     gulp.watch(src.js.main, ["js"]);
+    gulp.watch(src.js.fonts, ["js"]);
     return gulp.watch(src.js.vendor, ["js"]);
 });
