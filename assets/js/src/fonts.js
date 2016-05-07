@@ -1,9 +1,6 @@
 "use strict";
 
 (function (w) {
-    if (w.document.documentElement.className.indexOf("fonts-loaded") > -1) {
-        return;
-    }
     var font1 = new w.FontFaceObserver("Raleway", {
         weight: 400
     });
@@ -23,9 +20,19 @@
     w.Promise
         .all([font1.check(), font2.check(), font3.check(), font4.check()])
         .then(function () {
-            w.document.documentElement.className += " fonts-loaded";
+            if (w.document.documentElement.className.indexOf("fonts-loaded") == -1) {
+                w.document.documentElement.className += " fonts-loaded";
+            }
+            try {
+                var storage = window.sessionStorage;
+                if (storage) {
+                    storage.setItem('fonts-loaded', '1');
+                }
+            }
+            catch (e) {
+            }
         })
-        .catch(function(){
+        .catch(function () {
             w.document.documentElement.className += " fonts-unavailable";
         });
 } (this));
