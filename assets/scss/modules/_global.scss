@@ -16,9 +16,13 @@ body {
 }
 
 body {
-    font-family: $sans-font;
+    font-family: $sans-font-fallback;
     color: $gray-darker;
     background: $gray-lighter;
+}
+
+.fonts-loaded body {
+    font-family: $sans-font;
 }
 
 mark {
@@ -51,11 +55,19 @@ h2,
 h3,
 h4,
 h5,
-h5 {
-    font-family: $serif-font;
+h6 {
+    font-family: $serif-font-fallback;
     -webkit-font-smoothing: antialiased;
     font-weight: lighter;
     color: $gray-darkest;
+}
+
+.fonts-loaded h1,
+.fonts-loaded h2,
+.fonts-loaded h3,
+.fonts-loaded h4,
+.fonts-loaded h6 {
+    font-family: $serif-font;
 }
 
 h1 {
@@ -92,9 +104,13 @@ h6 {
 p {
     margin-bottom: 20px;
     line-height: 26px;
+    font-size: 90%;
     > code {
         @include inline-code-style;
     }
+}
+.fonts-loaded p{
+    font-size: 100%;
 }
 
 strong {
