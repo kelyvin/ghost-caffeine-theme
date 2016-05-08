@@ -44,7 +44,7 @@
     &:hover {
         border: 1px solid $primary-color;
     }
-    @extend btn-cover;
+    @include btn-cover;
 }
 
 @mixin placeholder {

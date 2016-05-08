@@ -5,7 +5,7 @@ $(function() {
         openHash = "#open";
 
     window.CaffeineTheme = CaffeineTheme = {
-        version: "2.6.1",
+        version: "2.6.2",
         search: {
             container: function() {
                 return $("#results");
@@ -58,14 +58,18 @@ $(function() {
              window.history.replaceState(null, null, "#");
         },
         getLastPageNum: function() {
-            var pageNum = window.store.get("pageNum") || "";
+            var pageNum = "";
+
+            if (window.store && window.store.enabled) {
+                pageNum = window.store.get("pageNum") || "";
+            }
 
             return pageNum;
         },
         setLastPageNum: function() {
             var pageNum = $("#pageNum").text() || "";
 
-            if (pageNum.length > 0) {
+            if (pageNum.length > 0 && window.store && window.store.enabled) {
                 window.store.set("pageNum", pageNum);
             }
         },
@@ -115,16 +119,18 @@ $(function() {
                     type = window.notificationOptions.type || "info",
                     isShownOnce = window.notificationOptions.isShownOnce || true,
                     notificationStore = "notification",
-                    storeValue = window.store.get(notificationStore),
+                    storeValue = "",
                     setNotificationStore;
 
                 setNotificationStore = function () {
-                    if (storeValue) {
-                         window.store.remove(notificationStore);
-                    }
+                    if (window.store && window.store.enabled) {
+                         if (storeValue) {
+                             window.store.remove(notificationStore);
+                        }
 
-                    if (isShownOnce) {
-                        window.store.set(notificationStore, message);
+                        if (isShownOnce) {
+                            window.store.set(notificationStore, message);
+                        }
                     }
                 };
 
@@ -141,6 +147,10 @@ $(function() {
                     "extendedTimeOut": window.notificationOptions.extendedTimeOut ||  "10000",
                     "onHidden": setNotificationStore
                 };
+
+                if (window.store && window.store.enabled) {
+                    storeValue = window.store.get(notificationStore) || "";
+                }
 
                 if (storeValue === undefined || storeValue !== message) {
                     window.toastr[type](message);
