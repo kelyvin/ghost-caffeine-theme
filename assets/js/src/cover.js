@@ -78,15 +78,17 @@ $(function() {
             window.toastr.remove();
         }
 
-        if (window.mailchimp_url) {
+        if (window.mailchimpOptions && window.mailchimpOptions.url) {
+            var options = window.mailchimpOptions;
+
             $("body").subbscribe({
-                title: "Never miss a post!",
-                text: "Stay up to the date with the latest posts from Caffeine Coding!",
-                name: "<a href='https://www.facebook.com/caffeinecoding' target='_blank'>@caffeinecoding</a>",
-                color: "#56817A",
-                thumbnail: "http://i.imgur.com/39erIwp.png",
+                title: options.title || "Never miss a post!",
+                text: options.text || "Stay up to the date with the latest posts!",
+                name: options.name || "<a href='https://www.facebook.com/caffeinecoding' target='_blank'>@caffeinecoding</a>",
+                color: options.color || "#56817A",
+                thumbnail: options.thumbnail || "http://i.imgur.com/39erIwp.png",
                 list: "MailChimp",
-                url : window.mailchimp_url
+                url : options.url
             });
         }
     });

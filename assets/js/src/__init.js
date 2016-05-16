@@ -156,6 +156,34 @@ $(function() {
                     window.toastr[type](message);
                 }
             }
+        },
+        getGridWidth: function(numColumns) {
+            var width = null;
+
+            if (!isNaN(numColumns) && numColumns > 0 && numColumns !== 2) {
+                width = Math.floor((100 - 2 * numColumns) / numColumns);
+                width += "%";
+            }
+
+            return width;
+        },
+        mediaQueryListener: function (mediaQuery, onMatch, onNoMatch) {
+            var mq = window.matchMedia(mediaQuery);
+
+            if(mq.matches) {
+                onMatch.call(this);
+            } else {
+                onNoMatch.call(this);
+            }
+
+            mq.addListener(function(changed) {
+                if(changed.matches) {
+                    onMatch.call(this);
+
+                } else {
+                    onNoMatch.call(this);
+                }
+            });
         }
     };
 });

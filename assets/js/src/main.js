@@ -41,7 +41,7 @@ $(function() {
     }
 
     // Subscribe button
-    if (window.mailchimp_url) {
+    if (window.mailchimpOptions && window.mailchimpOptions.url) {
         $(".subscribe-button").removeClass("hide");
     }
 
@@ -78,6 +78,21 @@ $(function() {
             percentPosition: true
         });
 
+        if (window.gridOptions) {
+            var gridOptions = window.gridOptions,
+                width = CaffeineTheme.getGridWidth(gridOptions.columns),
+                fullColumnWidth = function() {
+                    $posts.find(cardName).css("width", "100%");
+                },
+                gridColumnWidth = function() {
+                    $posts.find(cardName).css("width", width);
+                };
+
+            if (width) {
+                CaffeineTheme.mediaQueryListener("all and (max-width: 700px)", fullColumnWidth, gridColumnWidth);
+            }
+        }
+
         if ($postsGrid.imagesLoaded) {
             $postsGrid.imagesLoaded()
                 .done(function() {
@@ -88,7 +103,7 @@ $(function() {
                 });
         }
     } else {
-        $posts.find(cardName).css("width", "100%");
+        $posts.find(cardName).css("width", CaffeineTheme.getGridWidth(1));
     }
 
     $(window).load(function() {
