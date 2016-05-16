@@ -38,8 +38,12 @@
 
         img {
             max-width: 45px;
-            border: 2px solid $primary-color;
+            border: 2px solid $slate-white;
             @include shadow(2);
+
+            &.avatar {
+                border: 2px solid $primary-color;
+            }
         }
 
     }

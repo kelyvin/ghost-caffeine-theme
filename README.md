@@ -121,6 +121,23 @@ var profile_resume ='Software Engineer';
 </script>
 ```
 
+### Header icon
+
+On every page there is an icon on the upper-left hand corner that will open the splash screen. If you'd rather set your own icon, overwrite the `icon.png` within `assets/img/icon`. Or, if you rather not use an icon, you can simply open up the `partials/header.hbs` and uncomment the following line:
+
+```html
+<img src="{{@blog.logo}}" alt="{{@blog.title}} avatar" class="avatar rounded hvr-buzz-out" />
+```
+and delete the following line:
+
+```html
+ <img src="{{asset "img/icons/icon.png"}}" alt="{{@blog.title}} icon" class="icon rounded hvr-buzz-out" />
+```
+
+### Favicons
+
+Create your favicons with [Favicon Generator](http://realfavicongenerator.net/) and place them in in `assets/img/icons` or whatever folder you feel comfortable with.
+
 ### Tags Overlay
 
 To purpose of the tags overlay is to display a list of popular tags that you want your users to easily find and navigate to. You can continuously add to this list to create an "infinite" list of tags.
@@ -209,10 +226,6 @@ The `type` will define the type of notification to render, the `message` will di
 Go to Ghost Admin panel → `Navigation` and add/edit items.
 
 The "Home" link is always included by default, so you don't need to add it manually.
-
-### Favicon
-
-Create your favicons with [Favicon Generator](http://realfavicongenerator.net/) and put it in `assets/img`.
 
 ### Cover
 
