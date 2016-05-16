@@ -79,29 +79,6 @@
 }
 
 .post-content {
-    a {
-        padding: 0 4px;
-        transition: all .5s;
-        &::after {
-            position: absolute;
-            bottom: -.5px;
-            left: 0;
-            width: 100%;
-            height: 0;
-            content: "";
-            border-bottom: 1px dashed $primary-color;
-        }
-        &:hover {
-            color: $slate-white;
-            border-color: $hover-color;
-            background: $primary-color;
-        }
-        &:hover,
-        &:active {
-            outline: 0;
-        }
-    }
-
     p {
         img {
             max-width: 100%;
@@ -116,8 +93,9 @@
     }
 
     a {
-        padding: 0 4px;
         transition: all .5s;
+        text-decoration: underline;
+
         &::after {
             position: absolute;
             bottom: -.5px;
@@ -125,16 +103,11 @@
             width: 100%;
             height: 0;
             content: "";
-            border-bottom: 1px dashed $primary-color;
         }
-        &:hover {
-            color: $slate-white;
-            border-color: $hover-color;
-            background: $primary-color;
-        }
+
         &:hover,
-        &:active {
-            outline: 0;
+        &:visited {
+            color: $gray-dark;
         }
     }
 
