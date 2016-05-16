@@ -6,7 +6,7 @@
 
 **Caffeine Theme** is a Material Design inspired Ghost theme. It originally began as a fork of [Uno-Zen](https://github.com/Kikobeats/uno-zen), but has since been drastically changed. Huge thanks to the original creator for the original theme layout and inspiration.
 
-**The theme is super easy to configure. With almost no code change necessary! Simply follow the customization options described by [clicking here](#Customizations).**
+**The theme is super easy to configure,** with almost no code change necessary! Simply follow the customization options [below](#customizations).
 
 You can check out the theme in action on my official blog [Caffeine Coding](https://www.caffeinecoding.com)
 
