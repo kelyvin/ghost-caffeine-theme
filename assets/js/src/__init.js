@@ -5,7 +5,7 @@ $(function() {
         openHash = "#open";
 
     window.CaffeineTheme = CaffeineTheme = {
-        version: "2.6.3",
+        version: "2.7.0",
         search: {
             container: function() {
                 return $("#results");
