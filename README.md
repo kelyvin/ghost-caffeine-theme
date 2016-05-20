@@ -343,13 +343,15 @@ With your local Ghost running, open another terminal and enter in the folder `co
 $ git clone https://github.com/kelyvin/caffeine-theme && cd caffeine-theme && npm install && bower install
 ```
 
-Then run the `gulp` command in the theme terminal. This should set you up for a development scenario, and looks like this:
+Then run `npm start` or the `gulp` command in the theme terminal. This should set you up for a development scenario, and looks like this:
 
 ![](http://i.imgur.com/QLTegAH.png)
 
 With the `gulp` command you are automatically launching the task to compile the assets and reload the server when your assets change. To do this, we use [BrowserSync](http://www.browsersync.io). It is set up as middleware between the theme and Ghost. You can connect different devices and try the responsive of the website as well.
 
 You need to use the same port as your Ghost server for proxying. If your Ghost server is in a different port than `2368` you need to modify `gulpfile.js` and put the correct port.
+
+**Note: I recommend using the `npm start` command since it will automatically run `npm install` and `bower install` for simplicity's sake.**
 
 ### Colors
 

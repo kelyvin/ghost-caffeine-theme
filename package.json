@@ -12,7 +12,9 @@
     "url": "https://github.com/kelyvin/caffeine-theme"
   },
   "scripts": {
-    "test": "gulp build"
+    "start": "npm install && gulp",
+    "test": "gulp build",
+    "postinstall": "bower install"
   },
   "bugs": {
     "url": "https://github.com/kelyvin/caffeine-theme/issues"
