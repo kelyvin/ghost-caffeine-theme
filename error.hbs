@@ -6,6 +6,7 @@
         <title>404 Page not found</title>
         {{> meta}}
         <link rel="stylesheet" type="text/css" href="{{asset "css/caffeine-theme.css"}}" />
+        {{> head-css}}
         {{ghost_head}}
     </head>
   <body class="page-error">
@@ -32,7 +33,6 @@
         </section>
     </article>
     {{ghost_foot}}
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway:400,700|Roboto+Slab:300,400" />
     <script type="text/javascript" src="{{asset "js/caffeine-theme.js"}}"></script>
     {{> google-analytics}}
   </body>

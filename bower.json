@@ -29,7 +29,8 @@
     "prism": "~1.3.0",
     "bourbon": "~4.2.6",
     "toastr": "^2.1.2",
-    "store-js": "^1.3.20"
+    "store-js": "^1.3.20",
+    "fontfaceobserver": "^1.7.1"
   },
   "ignore": [
     "**/.*",

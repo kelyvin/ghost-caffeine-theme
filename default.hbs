@@ -9,7 +9,9 @@
         <title>{{meta_title}}</title>
         {{> meta}}
         <link rel="stylesheet" type="text/css" href="{{asset "css/caffeine-theme.css"}}" />
+        {{> head-css}}
         {{ghost_head}}
+        {{> headscript}}
     </head>
     <body class="{{body_class}}">
         {{> header}}
@@ -23,7 +25,6 @@
         {{> tags-overlay}}
         {{ghost_foot}}
         <script src="{{asset "js/caffeine-theme.js"}}" type="text/javascript" charset="utf-8"></script>
-        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway:400,700|Roboto+Slab:300,400" />
         {{> google-analytics}}
         {{> disqus-comment-count}}
     </body>
