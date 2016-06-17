@@ -18,12 +18,16 @@ body {
 
     &.page-browser-compatibility {
         @include background-filter;
-        background: url("/assets/img/backgrounds/browser-compatibility.jpg") center/cover no-repeat;
+        background-image: url("/assets/img/backgrounds/browser-compatibility.jpg");
+        background-position: center; 
+        background-repeat: no-repeat;  
+        background-size: cover;  
 
         .error-body {
             text-align: left;
             margin: 100px 20px 20px;
             padding: 20px;
+            background-color: #bbb;
             background-color: rgba(0,0,0,.2);
         }
     }
