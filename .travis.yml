@@ -4,8 +4,10 @@ node_js:
 branches:
   only:
     - master
-before_script:
+before_install:
   - npm install -g bower
   - npm install -g gulp
+install:
+  - npm install
   - bower install
 script: gulp
