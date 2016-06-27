@@ -5,9 +5,7 @@ branches:
   only:
     - master
 before_script:
-  - npm install -g gulp
   - npm install -g bower
-install:
-  - npm install
+  - npm install -g gulp
   - bower install
 script: gulp
