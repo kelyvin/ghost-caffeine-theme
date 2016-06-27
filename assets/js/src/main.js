@@ -45,13 +45,6 @@ $(function() {
         $(".subscribe-button").removeClass("hide");
     }
 
-    // "Home" page setup
-    if (CaffeineTheme.is("page", "home")) {
-        if (!CaffeineTheme.isOpen()) {
-            CaffeineTheme.hideIndexPage();
-        }
-    }
-
     // "Post" page setup
     if (CaffeineTheme.is("page", "post")) {
         $("main").readingTime({

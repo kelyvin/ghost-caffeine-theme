@@ -221,15 +221,27 @@ The `type` will define the type of notification to render, the `message` will di
 
 **Note**: `isShownOnce` will be determined by setting a value in local storage that is set to the `message`. So if your message changes, the local storage value will be set to the new message. We determine whether to show the notification based on whether the current notification message is equal to their last visit.
 
+### Cover
+
+Go to Ghost Admin panel → General → `Blog Cover`
+
+#### Disable Cover
+
+If you'd like to disable the cover and go directly to the home page, you can simply add the following code to the code injection.
+
+Go to Ghost Admin panel → `Code Injection` → `Blog Header` and add:
+
+```html
+<script>
+var disableCover = true;
+</script>
+```
+
 ### Links
 
 Go to Ghost Admin panel → `Navigation` and add/edit items.
 
 The "Home" link is always included by default, so you don't need to add it manually.
-
-### Cover
-
-Go to Ghost Admin panel → General → `Blog Cover`
 
 ### Browser Compatibility Page
 
