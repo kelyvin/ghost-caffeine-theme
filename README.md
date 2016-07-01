@@ -1,6 +1,6 @@
 # Caffeine Theme [![Build Status](https://travis-ci.org/kelyvin/caffeine-theme.svg?branch=master)](https://travis-ci.org/kelyvin/caffeine-theme)
 
-![](http://i.imgur.com/a2uhb1ol.jpg)
+![Caffeine Coding](http://i.imgur.com/NiugCmL.png)
 
 ## Introduction
 
