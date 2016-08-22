@@ -9,13 +9,15 @@ $(function() {
         $tagsButton,
         $homeButton,
         $cover,
-        $tagsOverlay;
+        $tagsOverlay,
+        $searchField;
 
     $cover = $(".cover");
     $navHeader = $("#default-nav-header");
     $tagsButton = $(".tags-button");
     $homeButton = $navHeader.find("#home-button");
     $tagsOverlay = $(".tags-overlay");
+    $searchField = $("#search-field");
 
     _expandCover = function() {
         $cover.toggleClass("expanded");
@@ -32,6 +34,7 @@ $(function() {
     _toggleTagsOverlay = function() {
         $tagsOverlay.toggleClass("show");
         $tagsButton.find("i").toggleClass("fa-search fa-close");
+        $searchField.focus();
     };
 
     // Checks if the search/tags overlay is visible
