@@ -86,8 +86,8 @@ This theme needs jQuery to work, but jQuery is not provided by the theme. Instea
 In addition, this theme also takes advantage of [Masonry](http://masonry.desandro.com/) to provide a nicer grid layout and [Scroll Reveal](https://scrollrevealjs.org/) for sleek scrolling animations. These are not mandatory and fallbacks are also provided for both. If you would like these feature(s), inject the following code as well. (Note: imagesloaded is not necessary, but recommended for smooth masonry layouts).
 
 ```html
-<script type="text/javascript" src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
-<script type="text/javascript" src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
+<script type="text/javascript" src="https://unpkg.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
+<script type="text/javascript" src="https://unpkg.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/scrollreveal.js/3.0.9/scrollreveal.min.js"></script>
 
 ```
