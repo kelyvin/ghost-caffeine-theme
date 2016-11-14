@@ -36,7 +36,7 @@ src = {
     js: {
         fonts: [
             "assets/vendor/fontfaceobserver/fontfaceobserver.js",
-            "assets/js/src/fonts.js"            
+            "assets/js/src/fonts.js"
         ],
         main: [
             "assets/js/src/__init.js",
