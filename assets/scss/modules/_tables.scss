@@ -1,0 +1,24 @@
+table {
+    font-size: 14px;
+    border-top: 1px solid $gray-light;
+    width: 100%;
+
+    thead {
+        background-color: lighten($primary-color, 30%);
+        color: $slate-gray;
+        text-align: left;
+        font-weight: $font-weight-bold;
+    }
+
+    tfoot {
+        font-style: italic;
+    }
+
+    tr {
+        border-bottom: 1px solid $gray-light;
+    }
+
+    th, td {
+        padding: 12px 18px;
+    }
+}
