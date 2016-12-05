@@ -28,7 +28,8 @@ You can check out the theme in action on my official blog [Caffeine Coding](http
     * [Links](#links)
     * [Browser Compatibility Page](#browser-compatibility-page)
     * [Custom Static Pages](#custom-static-pages)
-    * [Social Networks](Social Networks)
+    * [Social Networks](#social-networks)
+    * [AMP Support](#amp-support)
 * [Developing and Contributing](#developing-and-contributing)
     * [Building](#building)
     * [Colors](#colors)
@@ -281,6 +282,23 @@ Check out the official [documentation](http://themes.ghost.org/docs/page-context
 
 ### Social Networks
 This one isn't as easily to customize through the Ghost admin. So you'll have to get your hands a litle dirty. You can edit the file `partials/social.hbs` with all the social networks you want to show, following the same HTML markup pattern that you see. You can find the right social icon for you by searching through [Font Awesome's icon list](http://fontawesome.io/icons/).
+
+### AMP Support
+As of Ghost v0.10.0, Ghost supports and will automatically render AMP (accelerated mobile pages) versions of your posts. You can read more about the [AMP project here](https://www.ampproject.org/).
+
+Included in this theme is an `amp.hbs` file that represents the AMP template. This template is simply a clone of [Ghost's default template](http://themes.ghost.org/v0.10.0/docs/amp) but with some some slight modifications to better fit the style of this theme.
+
+For example, if you'd like to change the default header color to match your theme's default color, simply open up `amp.hbs` and modify the following line with the HEX color of your choice:
+
+```CSS
+.main-header {
+    ...
+    background: #56817A no-repeat center center;
+    ...
+}
+```
+
+To see how the AMP version of a post looks, append `/amp` to the end of the URL of your post. So if you had a blog post with the url: `https://www.caffeinecoding.com/why-intuit/`, it's AMP equivalent would be: `https://www.caffeinecoding.com/why-intuit/amp`.
 
 ## Developing and Contributing
 There may be a situation where you want to pull the code and modify the code directly, or you may even want to contribute! You may do this to simply change the base colors, add additional features, or even help me fix some bugs! Follow the instructions below on how to get started with this.

@@ -185,6 +185,11 @@ pre:hover {
     color: $gray-darkest;
 }
 
+iframe {
+    width: 100%;
+    min-height: 500px;
+}
+
 .clear {
     clear: both;
 }
