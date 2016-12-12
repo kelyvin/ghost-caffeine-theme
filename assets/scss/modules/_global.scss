@@ -105,6 +105,8 @@ p {
     margin-bottom: 20px;
     line-height: 26px;
     font-size: 90%;
+    word-wrap: break-word;
+
     > code {
         @include inline-code-style;
     }

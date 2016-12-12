@@ -1,7 +1,9 @@
 table {
+    display: block;
     font-size: 14px;
     border-top: 1px solid $gray-light;
     width: 100%;
+    overflow: auto;
 
     thead {
         background-color: lighten($primary-color, 30%);
