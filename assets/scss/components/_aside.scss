@@ -89,7 +89,7 @@
                 display: inline-block;
                 margin: 5px;
                 border-radius: 20px;
-                background: $primary-color;
+                background: rgba($primary-color, .7);
                 color: $slate-white;
                 @include btn-cover-with-border;
 

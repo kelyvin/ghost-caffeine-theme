@@ -31,7 +31,7 @@ $(function() {
     if (window.tag_names) {
         for (var i = 0; i < window.tag_names.length; i++) {
             var tag = window.tag_names[i],
-                link = "/tag/" + tag + "/" + CaffeineTheme.getOpenHashFragment();
+                link = "/tag/" + tag + "/";
 
             $("<a>", {
                 "href": link,
