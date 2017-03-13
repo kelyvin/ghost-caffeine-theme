@@ -3,6 +3,7 @@ table {
     font-size: 14px;
     width: 100%;
     overflow: auto;
+    margin-bottom: 20px;
 
     thead {
         background-color: lighten($primary-color, 30%);
