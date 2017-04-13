@@ -25,13 +25,15 @@ PORT = {
 dist = {
     name: _s.slugify(pkg.name),
     css: "assets/css",
-    js: "assets/js"
+    js: "assets/js",
+    ampcss: "partials"
 };
 
 src = {
     sass: {
         main: "assets/scss/" + dist.name + ".scss",
-        files: ["assets/scss/**/**"]
+        files: ["assets/scss/**/**"],
+        amp: "assets/scss/" + dist.name + "-amp.scss",
     },
     js: {
         fonts: [
@@ -83,6 +85,14 @@ gulp.task("css", ["fonts"], function() {
     })).pipe(gulp.dest(dist.css));
 });
 
+gulp.task("amp-css", function() {
+    gulp.src(src.sass.amp).pipe(sass().on("error", gutil.log)).pipe(prefix()).pipe(strip({
+        all: true
+    })).pipe(cssmin())
+       .pipe(concat("amp-theme.hbs"))
+       .pipe(gulp.dest(dist.ampcss));
+});
+
 gulp.task("js", function() {
     gulp.src(src.js.fonts).pipe(addsrc(src.js.main)).pipe(changed(dist.js)).pipe(addsrc(src.js.vendor)).pipe(concat("" + dist.name + ".js")).pipe(uglify({
         mangle: false
@@ -100,11 +110,11 @@ gulp.task("server", function() {
     });
 });
 
-gulp.task("build", ["css", "js"]);
+gulp.task("build", ["css", "js", "amp-css"]);
 
 gulp.task("default", function() {
     gulp.start(["build", "server"]);
-    gulp.watch(src.sass.files, ["css"]);
+    gulp.watch(src.sass.files, ["css", "amp-css"]);
     gulp.watch(src.js.main, ["js"]);
     gulp.watch(src.js.fonts, ["js"]);
     return gulp.watch(src.js.vendor, ["js"]);
