@@ -38,6 +38,66 @@
     margin: 0 auto;
 }
 
+.page-author {
+    margin: 0 auto;
+
+    .profile-container {
+        margin-top: 40px;
+    }
+
+    .author-header {
+        text-align: center;
+
+        h1 {
+            margin-top: 60px;
+            margin-bottom: 0;
+
+            i {
+                font-size: 25px;
+                vertical-align: text-top;
+            }
+        }
+    }
+
+    .author-posts {
+        max-width: $container-medium-width;
+        background: white;
+        margin: 0 auto;
+        @include transition(all 250ms);
+        @include shadow(2);
+    }
+
+    .author-posts-list {
+        padding: 0;
+        margin: 0 20px;
+        list-style-type: none;
+        text-align: left;
+
+        li {
+            padding-bottom: 10px;
+
+            a {
+                color: $gray-darkest;
+
+                h2 {
+                    margin-bottom: 12px;
+                }
+
+                &:hover {
+                    h2, p {
+                        color: $hover-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .profile-image {
+        // position: relative;
+        // margin-bottom: -80px;
+    }
+}
+
 .page-about {
     .material-cover {
         margin-bottom: -40px;

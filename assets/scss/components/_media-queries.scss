@@ -8,8 +8,8 @@
         }
     }
 
-    .post .post-card,
-    .post .post-related,
+    .post-card,
+    .post-related,
     .container-wrapper {
         max-width: $container-large-width;
     }
@@ -21,11 +21,11 @@
 @media all and (max-width:1024px) {
     .post {
         margin: 0;
+    }
 
-        .post-card,
-        .post-related {
-            margin: 0 40px;
-        }
+    .post-card,
+    .post-related {
+        margin: 0 40px;
     }
 
     .container-wrapper {
@@ -100,6 +100,14 @@
     .card {
         width: 100%;
     }
+
+    .post {
+        .author-credit {
+            .author-info {
+                width: 70%;
+            }
+        }
+    }
 }
 
 // ------------------------------
@@ -107,13 +115,19 @@
 // ------------------------------
 @media all and (max-width:600px) {
     .post {
-        .post-related,
-        .post-card {
-            margin: 0 20px;
-
-            .post-container {
-                padding: 20px 40px;
+        .author-credit {
+            .author-info {
+                width: 65%;
             }
+        }
+    }
+
+    .post-related,
+    .post-card {
+        margin: 0 20px;
+
+        .post-container {
+            padding: 20px 40px;
         }
     }
 
@@ -222,14 +236,13 @@
             margin-bottom: 0;
         }
 
-        .post-related,
-        .post-card {
-            margin: 0;
+        .author-credit {
+            text-align: center;
 
-            .post-container {
-                padding: 20px;
+            .author-image {
+                margin-right: 0;
+                display: block;
             }
-
         }
 
         &.newer,
@@ -242,6 +255,16 @@
         &.older {
             margin: 0 0 10px;
         }
+    }
+
+    .post-related,
+    .post-card {
+        margin: 0;
+
+        .post-container {
+            padding: 20px;
+        }
+
     }
 
     .pagination {

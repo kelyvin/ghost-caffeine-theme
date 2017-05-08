@@ -46,20 +46,54 @@
     }
 }
 
-.post {
-    .post-card {
-        max-width: $container-medium-width;
-        background: white;
-        margin: 0 auto;
-        @include transition(all 250ms);
-        @include shadow(2);
-    }
+.post-card {
+    max-width: $container-medium-width;
+    background: white;
+    margin: 0 auto;
+    @include transition(all 250ms);
+    @include shadow(2);
 
     .post-container {
         padding: 20px 60px;
     }
 }
 
+.post {
+    .author-credit {
+        border-top: 2px solid $primary-color;
+        padding: 30px 0 20px 10px;
+        margin-top: 40px;
+
+        h4,
+        p {
+            margin: 0;
+            color: $gray-darker;
+        }
+
+        .author-image {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 34px;
+
+            img {
+                max-width: 70px;
+                border: 1px solid $primary-color;
+            }
+        }
+
+        .author-info {
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 14px;
+            width: 75%;
+
+            .author-name {
+                color: $gray-darker;
+            }
+
+        }
+    }
+}
 
 .posts,
 .post-header {
