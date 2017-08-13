@@ -1,6 +1,6 @@
 {
   "name": "caffeine-theme",
-  "description": "Minimalist and Elegant theme for Ghost",
+  "description": "Material Design Inspired theme for Ghost",
   "homepage": "https://github.com/kelyvin/caffeine-theme",
   "version": "2.9.0",
   "author": {
@@ -22,10 +22,13 @@
   "keywords": [
     "elegant",
     "ghost",
-    "minimalism",
+    "minimal",
     "theme",
-    "uno",
-    "zen"
+    "blog",
+    "caffeine",
+    "material",
+    "design",
+    "ghost.org"
   ],
   "devDependencies": {
     "browser-sync": "2.18.12",
@@ -45,7 +48,7 @@
     "underscore.string": "3.3.4"
   },
   "engines": {
-    "node": "~0.10.0 || ~0.12.0 || ^4.2.0"
+    "node":  "^4.2.0 || ^6.10.0"
   },
   "license": "MIT"
 }
