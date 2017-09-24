@@ -1,6 +1,6 @@
 <footer class="comments">
     <div id="disqus_thread"></div>
-    <script type="text/javascript">
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/2.2.0/jquery.min.js">
         var disqus_run_count = 0;
         var disqus = {
             load: function disqus() {
@@ -14,7 +14,7 @@
                 disqus_run_count++;
             }
         };
-        $(document).ready(function () {
+        $(window).load(function () {
             var target = document.getElementsByClassName('post-content')[0].scrollHeight;
             var current = 0;
 
@@ -36,8 +36,7 @@
                     }
                 })
             }
-        });
-
+        })
     </script>
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
         Disqus.</a></noscript>
