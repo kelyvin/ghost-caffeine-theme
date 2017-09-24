@@ -14,7 +14,7 @@
                 disqus_run_count++;
             }
         };
-        $(window).load(function () {
+        $(document).ready(function () {
             var target = document.getElementsByClassName('post-content')[0].scrollHeight;
             var current = 0;
 
@@ -36,7 +36,8 @@
                     }
                 })
             }
-        })
+        });
+
     </script>
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
         Disqus.</a></noscript>
