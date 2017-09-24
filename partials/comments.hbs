@@ -14,29 +14,18 @@
                 disqus_run_count++;
             }
         };
-        $(window).load(function () {
-            var target = document.getElementsByClassName('post-content')[0].scrollHeight;
-            var current = 0;
-
-            // 若页面达不到能滚动的高度，则直接加载。（页面高度小于窗口高度）
-            if (target < $(window).height()) {
-                disqus.load();
-            } else {
-
-                $(window).scroll(function () {
-                    current = $(window).scrollTop();
-
-                    //因为当前到达的高度取得是窗口顶端，所以加上 $(window).height()
-                    if (current > target - $(window).height()) {
-
-                        //未加载过评论框才能触发加载
-                        if (disqus_run_count == 0) {
-                            disqus.load();
-                        }
-                    }
-                })
-            }
-        })
+        (function (){
+            var content = document.querySelector('.post-content');
+            var extra_height = (content.getBoundingClientRect().top + window.scrollY + content.clientHeight) / 4;
+            var footer_top = document.querySelector('.post-footer').getBoundingClientRect().top + window.scrollY;
+            var load_pos = footer_top - extra_height;
+            document.addEventListener('scroll', function _func() {
+                if (load_pos - window.scrollY <= window.screen.availHeight) {
+                    disqus.load();
+                    document.removeEventListener('scroll', _func);
+                }
+            });
+        })();
     </script>
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
         Disqus.</a></noscript>
