@@ -8,6 +8,9 @@
     "email": "kelyvin@caffeinecoding.com",
     "url": "https://github.com/kelyvin"
   },
+  "config": {
+    "posts_per_page": 6
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/kelyvin/caffeine-theme"
