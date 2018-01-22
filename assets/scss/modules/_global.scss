@@ -187,6 +187,16 @@ pre:hover {
     color: $gray-darkest;
 }
 
+// Override youtube style injection
+.fluid-width-video-wrapper {
+    padding-top: 0 !important;
+
+    iframe {
+        position: relative !important;
+    }
+}
+
+
 iframe {
     width: 100%;
     min-height: 500px;
