@@ -62,6 +62,12 @@ $(function() {
                 window.history.back();
             }
         });
+    } else if (CaffeineTheme.is("page", "page")) {
+        // If static page, back button takes you back to the home page
+        $("#back-button").on("click", function (event) {
+            event.preventDefault();
+            CaffeineTheme.redirect(0);
+        });
     }
 
     // Sets up masonry effects

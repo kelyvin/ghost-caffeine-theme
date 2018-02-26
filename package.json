@@ -52,7 +52,7 @@
     "underscore.string": "3.3.4"
   },
   "engines": {
-    "node": "^4.2.0 || ^6.10.0"
+    "node": "^8.9.4"
   },
   "license": "MIT"
 }
