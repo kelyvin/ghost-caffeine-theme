@@ -3,7 +3,7 @@
 <article class="page-template page-author">
     {{> material-cover}}
     <div class="profile-container animated fade-in">
-        {{#author}}
+        {{#primary_author}}
             <div class="profile-image">
                 {{#if profile_image}}
                     <img src="{{img_url profile_image}}" alt="{{name}}'s picture" class="avatar rounded" />
@@ -11,10 +11,10 @@
                     <img src="/ghost/img/user-image.png" class="avatar rounded" />
                 {{/if}}
             </div>
-        {{/author}}
+        {{/primary_author}}
         <div class="post-card animated">
             <div class="post-container">
-                {{#author}}
+                {{#primary_author}}
                     <div class="author-header">
                         <h1>
                             {{name}}
@@ -25,7 +25,7 @@
 
                         <p>{{#if bio}}{{bio}}{{/if}}</p>
                     </div>
-                {{/author}}
+                {{/primary_author}}
                 <ol class="author-posts-list">
                 {{#foreach posts}}
                     <li>

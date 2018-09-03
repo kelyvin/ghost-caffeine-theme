@@ -32,7 +32,8 @@
     "caffeine",
     "material",
     "design",
-    "ghost.org"
+    "ghost.org",
+    "ghost-theme"
   ],
   "devDependencies": {
     "browser-sync": "2.18.12",

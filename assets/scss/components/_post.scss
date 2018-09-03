@@ -113,13 +113,21 @@
 }
 
 .post-content {
-    p {
-        img {
+    .kg-image-card {
+        margin: 30px auto;
+
+        .kg-image {
             max-width: 100%;
-            margin: 24px auto;
+            margin: 12px auto;
             text-align: center;
             border-radius: $border-radius;
             display: block;
+        }
+
+        figcaption {
+            text-align: center;
+            font-size: 14px;
+            color: $gray-dark;
         }
     }
 
