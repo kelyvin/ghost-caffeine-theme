@@ -314,3 +314,12 @@ hr {
 .hide {
     display: none;
 }
+
+.kg-width-full,
+.kg-width-wide,
+.kg-gallery-container,
+.kg-gallery-image,
+.kg-gallery-row {
+    // required by gcsan to properly validate the theme
+    width: inherit;
+}

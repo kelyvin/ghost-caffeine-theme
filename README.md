@@ -11,8 +11,10 @@
 You can check out the theme in action on my official blog [Caffeine Coding](https://www.caffeinecoding.com)
 
 
-## Ghost Version Spport
-This theme has been upgraded to v3.0 to support the latest version of `Ghost v1.*`. If you are still on `Ghost v0.11.*`, you can download [Caffeine Theme v2.9.0](https://github.com/kelyvin/caffeine-theme/releases/tag/v2.9.0) release.
+## Ghost Versions Support
+This theme has been upgraded to `v4.0.0` to support the latest version of `Ghost v2.*`. If you still need theme support for `Ghost v1.*`, you can download the [Caffeine Theme v3.0.6](https://github.com/kelyvin/caffeine-theme/releases/tag/v3.0.6) release. If you are still on `Ghost v0.11.*`, you can download [Caffeine Theme v2.9.0](https://github.com/kelyvin/caffeine-theme/releases/tag/v2.9.0) release.
+
+**Note**: because this theme maintains a certain style, you will not be able to take advantage of the [Image Size Options](https://themes.ghost.org/docs/ghost-editor#section-image-size-options) of Ghost v2. If you'd like to have more image sizing options, please provide a potential solution (that works well with the design) and make a pull request.
 
 ### Table of Contents
 
