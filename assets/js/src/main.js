@@ -47,10 +47,7 @@ $(function() {
 
     // "Post" page setup
     if (CaffeineTheme.is("page", "post")) {
-        $("main").readingTime({
-            readingTimeTarget: ".reading-time > span"
-        });
-        $(".content").fitVids();
+        fitvids(".content");
 
         $("#back-button").on("click", function (event) {
             var lastPageNum = CaffeineTheme.getLastPageNum();
