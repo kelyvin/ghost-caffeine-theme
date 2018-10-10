@@ -17,8 +17,7 @@
   },
   "scripts": {
     "start": "npm install && gulp",
-    "test": "gulp build",
-    "postinstall": "bower install"
+    "test": "gulp build"
   },
   "bugs": {
     "url": "https://github.com/kelyvin/caffeine-theme/issues"
@@ -53,5 +52,15 @@
   "engines": {
     "node": "^8.9.4"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "bourbon": "^4.2.7",
+    "fitvids": "^2.0.0",
+    "font-awesome": "^4.7.0",
+    "fontfaceobserver": "^2.0.13",
+    "ghosthunter": "git://github.com/jamalneufeld/ghostHunter.git",
+    "prismjs": "^1.15.0",
+    "store": "^2.0.12",
+    "toastr": "^2.1.4"
+  }
 }

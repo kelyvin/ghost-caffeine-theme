@@ -34,31 +34,30 @@ src = {
     },
     js: {
         fonts: [
-            "assets/vendor/fontfaceobserver/fontfaceobserver.js",
+            "node_modules/fontfaceobserver/fontfaceobserver.js",
             "assets/js/src/fonts.js"
         ],
         main: [
             "assets/js/src/*.js"
         ],
-        vendor: [
+        node_modules: [
             "assets/js/src/libs/subbscribe.js",
-            "assets/vendor/ghostHunter/jquery.ghostHunter.min.js",
-            "assets/vendor/fitvids/jquery.fitvids.js",
-            "assets/vendor/reading-time/build/readingTime.min.js",
-            "assets/vendor/prism/prism.js",
-            "assets/vendor/toastr/toastr.min.js",
-            "assets/vendor/store-js/store.min.js"
+            "node_modules/ghosthunter/dist/jquery.ghosthunter.js",
+            "node_modules/fitvids/fitvids.min.js",
+            "node_modules/prismjs/prism.js",
+            "node_modules/toastr/build/toastr.min.js",
+            "node_modules/store/dist/store.modern.min.js"
         ]
     },
     css: {
         main: "assets/css/" + dist.name + ".css",
-        vendor: [
-            "assets/vendor/prism/themes/prism-okaidia.css"
+        node_modules: [
+            "node_modules/prismjs/themes/prism-okaidia.css",
         ]
     },
     fonts: {
         files: [
-            "assets/vendor/font-awesome/fonts/**.*"
+            "node_modules/font-awesome/fonts/**.*"
         ],
         dest: "assets/fonts"
     }
@@ -72,7 +71,7 @@ function fonts() {
 }
 
 function css() {
-    return gulp.src(src.css.vendor)
+    return gulp.src(src.css.node_modules)
         .pipe(changed(dist.css))
         .pipe(gulp.src(src.sass.main))
         .pipe(sass().on("error", gutil.log))
@@ -92,7 +91,7 @@ function js() {
     return gulp.src(src.js.fonts)
         .pipe(gulp.src(src.js.main))
         .pipe(changed(dist.js))
-        .pipe(gulp.src(src.js.vendor))
+        .pipe(gulp.src(src.js.node_modules))
         .pipe(concat(dist.name + ".js"))
         .pipe(uglify({
             mangle: false
@@ -116,7 +115,7 @@ function watch() {
     gulp.watch(src.sass.files).on("all", css);
     gulp.watch(src.js.main).on("all", js);
     gulp.watch(src.js.fonts).on("all", js);
-    return gulp.watch(src.js.vendor).on("all", js);
+    return gulp.watch(src.js.node_modules).on("all", js);
 }
 
 gulp.task("fonts", fonts);
