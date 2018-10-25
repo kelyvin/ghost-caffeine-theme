@@ -17,8 +17,7 @@
   },
   "scripts": {
     "start": "npm install && gulp",
-    "test": "gulp build",
-    "postinstall": "bower install"
+    "test": "gulp build"
   },
   "bugs": {
     "url": "https://github.com/kelyvin/caffeine-theme/issues"
@@ -36,24 +35,32 @@
     "ghost-theme"
   ],
   "devDependencies": {
-    "browser-sync": "2.18.12",
+    "browser-sync": "^2.26.0",
     "coffee-script": "1.12.6",
-    "gulp": "3.9.1",
-    "gulp-add-src": "0.2.0",
-    "gulp-autoprefixer": "4.0.0",
-    "gulp-changed": "3.1.0",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-changed": "^3.2.0",
     "gulp-concat": "2.6.1",
     "gulp-cssmin": "0.2.0",
-    "gulp-header": "1.8.8",
-    "gulp-minify-css": "1.2.4",
-    "gulp-sass": "3.1.0",
+    "gulp-header": "^2.0.5",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-sass": "^4.0.1",
     "gulp-strip-css-comments": "1.2.0",
-    "gulp-uglify": "3.0.0",
-    "gulp-util": "3.0.8",
+    "gulp-uglify": "^3.0.1",
     "underscore.string": "3.3.4"
   },
   "engines": {
     "node": "^8.9.4"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "bourbon": "^4.2.7",
+    "fitvids": "^2.0.0",
+    "font-awesome": "^4.7.0",
+    "fontfaceobserver": "^2.0.13",
+    "ghosthunter": "git://github.com/jamalneufeld/ghostHunter.git",
+    "prismjs": "^1.15.0",
+    "store": "^2.0.12",
+    "toastr": "^2.1.4"
+  }
 }

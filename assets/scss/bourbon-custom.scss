@@ -1,3 +1,6 @@
-@import '../vendor/bourbon/app/assets/stylesheets/settings/prefixer.scss';
-@import '../vendor/bourbon/app/assets/stylesheets/css3/transition.scss';
-@import "../vendor/bourbon/app/assets/stylesheets/addons/prefixer.scss";
+$output-bourbon-deprecation-warnings: false;
+@import '../../node_modules/bourbon/app/assets/stylesheets/bourbon-deprecate';
+@import '../../node_modules/bourbon/app/assets/stylesheets/bourbon-deprecated-upcoming';
+@import '../../node_modules/bourbon/app/assets/stylesheets/settings/prefixer';
+@import '../../node_modules/bourbon/app/assets/stylesheets/css3/transition';
+@import '../../node_modules/bourbon/app/assets/stylesheets/addons/prefixer';

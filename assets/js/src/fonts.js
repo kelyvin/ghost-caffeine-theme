@@ -18,7 +18,7 @@
     });
 
     w.Promise
-        .all([font1.check(), font2.check(), font3.check(), font4.check()])
+        .all([font1.load(), font2.load(), font3.load(), font4.load()])
         .then(function () {
             if (w.document.documentElement.className.indexOf("fonts-loaded") == -1) {
                 w.document.documentElement.className += " fonts-loaded";
