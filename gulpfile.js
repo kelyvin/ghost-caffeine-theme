@@ -38,7 +38,10 @@ src = {
             "assets/js/src/fonts.js"
         ],
         main: [
-            "assets/js/src/*.js"
+            "assets/js/src/__init.js",
+            "assets/js/src/main.js",
+            "assets/js/src/cover.js",
+            "assets/js/src/search.js"
         ],
         node_modules: [
             "assets/js/src/libs/subbscribe.js",
