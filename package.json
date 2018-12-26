@@ -47,16 +47,16 @@
     "gulp-sass": "^4.0.1",
     "gulp-strip-css-comments": "1.2.0",
     "gulp-uglify": "^3.0.1",
-    "underscore.string": "3.3.4"
+    "underscore.string": "^3.3.5"
   },
   "engines": {
     "node": "^8.9.4"
   },
   "license": "MIT",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.6.3",
     "bourbon": "^4.2.7",
     "fitvids": "^2.0.0",
-    "font-awesome": "^4.7.0",
     "fontfaceobserver": "^2.0.13",
     "ghosthunter": "git://github.com/jamalneufeld/ghostHunter.git",
     "prismjs": "^1.15.0",

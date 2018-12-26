@@ -60,7 +60,7 @@ src = {
     },
     fonts: {
         files: [
-            "node_modules/font-awesome/fonts/**.*"
+            "node_modules/\@fortawesome/fontawesome-free/webfonts/**.*"
         ],
         dest: "assets/fonts"
     }
