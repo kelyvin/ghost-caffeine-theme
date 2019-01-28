@@ -17,7 +17,8 @@
   },
   "scripts": {
     "start": "npm install && gulp",
-    "test": "gulp build"
+    "test": "npx gulp build",
+    "build": "npx gulp build"
   },
   "bugs": {
     "url": "https://github.com/kelyvin/caffeine-theme/issues"
