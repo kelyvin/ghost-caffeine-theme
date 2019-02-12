@@ -11,14 +11,12 @@ $(function() {
         $cover,
         $tagsOverlay,
         $searchField;
-
     $cover = $(".cover");
     $navHeader = $("#default-nav-header");
     $tagsButton = $(".tags-button");
     $homeButton = $navHeader.find("#home-button");
     $tagsOverlay = $(".tags-overlay");
     $searchField = $("#search-field");
-
     _expandCover = function() {
         $cover.toggleClass("expanded");
 
@@ -29,14 +27,12 @@ $(function() {
             CaffeineTheme.open();
         }
     };
-
     // Toggles the search/tags overlay
     _toggleTagsOverlay = function() {
         $tagsOverlay.toggleClass("show");
         $tagsButton.find("i").toggleClass("fa-search fa-close");
         $searchField.focus();
     };
-
     // Checks if the search/tags overlay is visible
     _isTagsOverlayOpen = function() {
         return $tagsOverlay.hasClass("show");
@@ -98,7 +94,30 @@ $(function() {
 
     $homeButton.click(_defaultLogoNavEvent);
     $(".open-link").click(_defaultLogoNavEvent);
+    var socialConfig = window.socialConfig;
+    if (socialConfig) {
+        replaceTitle($("#facebook"), socialConfig.facebook.title);
+        replaceTitle($("#twitter"), socialConfig.twitter.title);
+        replaceLinkAndTitle($("#linkedIn"), socialConfig.linkedIn);
+        replaceLinkAndTitle($("#github"), socialConfig.github);
+    }
 
+    function replaceLinkAndTitle(target, config) {
+        if (config) {
+            target.attr("href", config.link);
+            replaceTitle(target, config.title);
+        }
+        else {
+            target.parent().hide(0);
+        }
+    }
+
+    function replaceTitle(target, title) {
+        console.log(title);
+        if (title) {
+            target.attr("title", title);
+        }
+    }
     // "Home" page setup
     if (CaffeineTheme.is("page", "home")) {
         if (!CaffeineTheme.isOpen()) {
