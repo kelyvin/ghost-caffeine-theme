@@ -113,7 +113,6 @@ $(function() {
     }
 
     function replaceTitle(target, title) {
-        console.log(title);
         if (title) {
             target.attr("title", title);
         }
