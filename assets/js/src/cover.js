@@ -94,27 +94,26 @@ $(function() {
 
     $homeButton.click(_defaultLogoNavEvent);
     $(".open-link").click(_defaultLogoNavEvent);
-    var socialConfig = window.socialConfig;
-    if (socialConfig) {
-        replaceTitle($("#facebook"), socialConfig.facebook.title);
-        replaceTitle($("#twitter"), socialConfig.twitter.title);
-        replaceLinkAndTitle($("#linkedIn"), socialConfig.linkedIn);
-        replaceLinkAndTitle($("#github"), socialConfig.github);
-    }
+    var socialConfig = window.socialConfig || {};
+
+    replaceTitle($("#facebook"), socialConfig.facebook);
+    replaceTitle($("#twitter"), socialConfig.twitter);
+    replaceLinkAndTitle($("#linkedIn"), socialConfig.linkedIn);
+    replaceLinkAndTitle($("#github"), socialConfig.github);
 
     function replaceLinkAndTitle(target, config) {
-        if (config) {
+        if (config && config.link) {
             target.attr("href", config.link);
-            replaceTitle(target, config.title);
+            target.attr("title", config.title);
         }
         else {
             target.parent().hide(0);
         }
     }
 
-    function replaceTitle(target, title) {
-        if (title) {
-            target.attr("title", title);
+    function replaceTitle(target, config) {
+        if (config && config.title) {
+            target.attr("title", config.title);
         }
     }
     // "Home" page setup
