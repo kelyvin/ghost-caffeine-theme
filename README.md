@@ -296,7 +296,32 @@ This theme includes a special browser compatibility page for users who use IE9 a
 Check out the official [documentation](http://themes.ghost.org/docs/page-context) on Ghost.org.
 
 ### Social Networks
-This one isn't as easily to customize through the Ghost admin. So you'll have to get your hands a litle dirty. You can edit the file `partials/social.hbs` with all the social networks you want to show, following the same HTML markup pattern that you see. You can find the right social icon for you by searching through [Font Awesome's icon list](http://fontawesome.io/icons/).
+For Facebook and Twitter links, go to Ghost Admin panel → General → `Social accounts`.
+For LinkedIn and Github links, go to Ghost Admin panel → `Code Injection` → `Blog Header` and add:
+
+```html
+<script>
+    var socialConfig = {
+        facebook: {
+            title: "Caffeine Coding on Facebook"
+        },
+        twitter: {
+            title: "@KelyvinN on Twitter"
+        },
+        linkedIn: {
+            link: "https://linkedin.com/in/kelyvin",
+            title: "Kelyvin on LinkedIn"
+        },
+        github: {
+            link: "https://github.com/kelyvin",
+            title: "Kelyvin on Github"
+        }
+    };
+</script>
+```
+
+Other than the social links above, you'll have to get your hands a little dirty. You can edit the file `partials/social.hbs` with all the social networks you want to show, following the same HTML markup pattern that you see. You can find the right social icon for you by searching through [Font Awesome's icon list](http://fontawesome.io/icons/).
+
 
 ### AMP Support
 As of Ghost v0.10.0, Ghost supports and will automatically render AMP (accelerated mobile pages) versions of your posts. You can read more about the [AMP project here](https://www.ampproject.org/).
