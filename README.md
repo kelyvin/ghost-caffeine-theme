@@ -296,6 +296,8 @@ This theme includes a special browser compatibility page for users who use IE9 a
 Check out the official [documentation](http://themes.ghost.org/docs/page-context) on Ghost.org.
 
 ### Social Networks
+To manage your social networks, you'll need to provide a custom config option. 
+
 For Facebook and Twitter links, go to Ghost Admin panel → General → `Social accounts`.
 For LinkedIn and Github links, go to Ghost Admin panel → `Code Injection` → `Blog Header` and add:
 
@@ -320,7 +322,7 @@ For LinkedIn and Github links, go to Ghost Admin panel → `Code Injection` → 
 </script>
 ```
 
-Other than the social links above, you'll have to get your hands a little dirty. You can edit the file `partials/social.hbs` with all the social networks you want to show, following the same HTML markup pattern that you see. You can find the right social icon for you by searching through [Font Awesome's icon list](http://fontawesome.io/icons/).
+If you don't provide a config for any of these, they will automatically be omitted. If you want other social links besides these four, you'll have to get your hands a little dirty. You can edit the file `partials/social.hbs` with all the social networks you want to show, following the same HTML markup pattern that you see. You can find the right social icon for you by searching through [Font Awesome's icon list](http://fontawesome.io/icons/).
 
 
 ### AMP Support
