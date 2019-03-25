@@ -34,3 +34,6 @@ node_modules/
 
 # Assets
 assets/scss/bourbon
+
+# VS Code
+.vscode/
