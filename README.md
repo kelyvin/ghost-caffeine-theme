@@ -18,28 +18,42 @@ This theme has been upgraded to `v4.0.0` to support the latest version of `Ghost
 
 ### Table of Contents
 
-* [Theme Features](#theme-features)
-* [Installation](#installation)
-* [Customizations](#customizations)
-    * [Number of Posts](#number-of-posts) 
-    * [Header Icon](#header-icon)
-    * [Favicons](#favicons)
-    * [Tags Overlay](#tags-overlay)
-    * [Google Analytics](#google-analytics)
-    * [Disqus Comments](#disqus-comments)
-    * [Masonry Grid](#masonry-grid-layout-beta)
-    * [Mailchimp](#mailchimp)
-    * [Toast Notifications](#toast-notifications)
-    * [Cover](#cover)
-    * [Links](#links)
-    * [Browser Compatibility Page](#browser-compatibility-page)
-    * [Custom Static Pages](#custom-static-pages)
-    * [Social Networks](#social-networks)
-    * [AMP Support](#amp-support)
-* [Developing and Contributing](#developing-and-contributing)
-    * [Building](#building)
-    * [Colors](#colors)
-    * [Preparing for Production](#preparing-for-production)
+- [Caffeine Theme ![Build Status](https://travis-ci.org/kelyvin/caffeine-theme) [![GitHub version](https://badge.fury.io/gh/kelyvin%2Fcaffeine-theme.svg)](https://github.com/kelyvin/caffeine-theme/releases)](#caffeine-theme--)
+  - [Introduction](#introduction)
+  - [Ghost Versions Support](#ghost-versions-support)
+    - [Table of Contents](#table-of-contents)
+  - [Theme Features](#theme-features)
+  - [Installation](#installation)
+    - [Option 1](#option-1)
+    - [Option 2](#option-2)
+    - [Option 3](#option-3)
+  - [Add JQuery and other libraries](#add-jquery-and-other-libraries)
+  - [Customizations](#customizations)
+    - [General Settings](#general-settings)
+    - [Number of Posts](#number-of-posts)
+    - [Header icon](#header-icon)
+    - [Favicons](#favicons)
+    - [Tags Overlay](#tags-overlay)
+    - [Google Analytics](#google-analytics)
+    - [Disqus Comments](#disqus-comments)
+    - [Masonry Grid Layout (beta)](#masonry-grid-layout-beta)
+    - [Mailchimp](#mailchimp)
+    - [Toast Notifications](#toast-notifications)
+    - [Cover](#cover)
+      - [Cover title](#cover-title)
+      - [Cover subtitle](#cover-subtitle)
+      - [Disable Cover](#disable-cover)
+    - [Links](#links)
+    - [Browser Compatibility Page](#browser-compatibility-page)
+    - [Custom static pages](#custom-static-pages)
+    - [Social Networks](#social-networks)
+    - [AMP Support](#amp-support)
+    - [Syntax highlight support for addinional languages](#syntax-highlight-support-for-addinional-languages)
+  - [Developing and Contributing](#developing-and-contributing)
+    - [File System](#file-system)
+    - [Building](#building)
+    - [Colors](#colors)
+    - [Preparing for production](#preparing-for-production)
 
 
 
@@ -341,6 +355,15 @@ For example, if you'd like to change the default header color to match your them
 ```
 
 To see how the AMP version of a post looks, append `/amp` to the end of the URL of your post. So if you had a blog post with the url: `https://www.caffeinecoding.com/why-intuit/`, it's AMP equivalent would be: `https://www.caffeinecoding.com/why-intuit/amp`.
+
+### Syntax highlight support for addinional languages
+Prism.js inludes only some basic languages such as html, markdown, css and javascript. Add the Prism.js autoloader plugin to dynamically load additional languages. You need to inject it into the `Blog Footer` in the `Code injection` of your Ghost installation:
+
+```html
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-core.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/plugins/autoloader/prism-autoloader.js"></script>
+<script>Prism.plugins.autoloader.languages_path = 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/'</script>
+```
 
 ## Developing and Contributing
 There may be a situation where you want to pull the code and modify the code directly, or you may even want to contribute! You may do this to simply change the base colors, add additional features, or even help me fix some bugs! Follow the instructions below on how to get started with this.
