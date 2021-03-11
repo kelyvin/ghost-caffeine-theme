@@ -10,38 +10,46 @@
 
 You can check out the theme in action on my official blog [Caffeine Coding](https://www.caffeinecoding.com)
 
-
 ## Ghost Versions Support
+
 This theme has been upgraded to `v4.0.0` to support the latest version of `Ghost v2.*`. If you still need theme support for `Ghost v1.*`, you can download the [Caffeine Theme v3.0.6](https://github.com/kelyvin/caffeine-theme/releases/tag/v3.0.6) release. If you are still on `Ghost v0.11.*`, you can download [Caffeine Theme v2.9.0](https://github.com/kelyvin/caffeine-theme/releases/tag/v2.9.0) release.
 
 **Note**: because this theme maintains a certain style, you will not be able to take advantage of the [Image Size Options](https://themes.ghost.org/docs/ghost-editor#section-image-size-options) of Ghost v2. If you'd like to have more image sizing options, please provide a potential solution (that works well with the design) and make a pull request.
 
 ### Table of Contents
 
-* [Theme Features](#theme-features)
-* [Installation](#installation)
-* [Customizations](#customizations)
-    * [Number of Posts](#number-of-posts) 
-    * [Header Icon](#header-icon)
-    * [Favicons](#favicons)
-    * [Tags Overlay](#tags-overlay)
-    * [Google Analytics](#google-analytics)
-    * [Disqus Comments](#disqus-comments)
-    * [Masonry Grid](#masonry-grid-layout-beta)
-    * [Mailchimp](#mailchimp)
-    * [Toast Notifications](#toast-notifications)
-    * [Cover](#cover)
-    * [Links](#links)
-    * [Browser Compatibility Page](#browser-compatibility-page)
-    * [Custom Static Pages](#custom-static-pages)
-    * [Social Networks](#social-networks)
-    * [AMP Support](#amp-support)
-* [Developing and Contributing](#developing-and-contributing)
-    * [Building](#building)
-    * [Colors](#colors)
-    * [Preparing for Production](#preparing-for-production)
-
-
+- [Theme Features](#theme-features)
+- [Installation](#installation)
+  - [Option 1](#option-1)
+  - [Option 2](#option-2)
+  - [Option 3](#option-3)
+  - [Add JQuery and other libraries](#add-jquery-and-other-libraries)
+- [Customizations](#customizations)
+  - [General Settings](#general-settings)
+  - [Number of Posts](#number-of-posts)
+  - [Header icon](#header-icon)
+  - [Favicons](#favicons)
+  - [Tags Overlay](#tags-overlay)
+  - [Google Analytics](#google-analytics)
+  - [Disqus Comments](#disqus-comments)
+  - [Masonry Grid Layout (beta)](#masonry-grid-layout-beta)
+  - [Mailchimp](#mailchimp)
+  - [Toast Notifications](#toast-notifications)
+  - [Cover](#cover)
+    - [Cover title](#cover-title)
+    - [Cover subtitle](#cover-subtitle)
+    - [Disable Cover](#disable-cover)
+  - [Links](#links)
+  - [Browser Compatibility Page](#browser-compatibility-page)
+  - [Custom static pages](#custom-static-pages)
+  - [Social Networks](#social-networks)
+  - [AMP Support](#amp-support)
+  - [Syntax highlight support for additional languages](#syntax-highlight-support-for-additional-languages)
+- [Developing and Contributing](#developing-and-contributing)
+  - [File System](#file-system)
+  - [Building](#building)
+  - [Colors](#colors)
+  - [Preparing for production](#preparing-for-production)
 
 ## Theme Features
 
@@ -51,27 +59,29 @@ Like the original Uno-zen theme that helped provide the skeleton for this projec
 
 The following is a list of key differences that include, but are not limited to:
 
- - **Masonry** support for pinterest-esque grid layouts
- - **Scroll reveal** support for Google+ like rendering
- - **Mailchimp** integration and support for email subscriptions
- - **Font-awesome** support to use the latest icons from Font Awesome
- - **Toast notifications** support to keep your users informed when they hit your home page
- - **Prismjs** support for syntax highlighting in your posts
- - Special browser compatibility page for IE9 and below.
- - Mobile-first driven experience
- - Improved responsiveness for dynamic screen widths (no more hard-refreshing the page)
- - A search and tag overlay that can be used on both the desktop and mobile experience
- - Bigger emphasis on the splash page
- - Smoother animations and style
+- **Masonry** support for pinterest-esque grid layouts
+- **Scroll reveal** support for Google+ like rendering
+- **Mailchimp** integration and support for email subscriptions
+- **Font-awesome** support to use the latest icons from Font Awesome
+- **Toast notifications** support to keep your users informed when they hit your home page
+- **Prismjs** support for syntax highlighting in your posts
+- Special browser compatibility page for IE9 and below.
+- Mobile-first driven experience
+- Improved responsiveness for dynamic screen widths (no more hard-refreshing the page)
+- A search and tag overlay that can be used on both the desktop and mobile experience
+- Bigger emphasis on the splash page
+- Smoother animations and style
 
 ## Installation
 
 You can install this theme in one of three ways, but the last two options require `git`.
 
 ### Option 1
+
 Download the latest release on [Github](https://github.com/kelyvin/caffeine-theme/releases), download the zip, extract the folder, and paste it into your theme folder (`content/themes`) of your Ghost installation
 
 ### Option 2
+
 Enter the theme folder (`content/themes`) of your Ghost installation and paste the following command:
 
 ```bash
@@ -79,10 +89,12 @@ $ git clone https://github.com/kelyvin/caffeine-theme
 ```
 
 ### Option 3
+
 If you have your Ghost blog hosted on git and you want to continuously get the latest updates, you can add this repo as a submodule. Create a `.gitmodules` file in your root Ghost installation and add the following like so:
 ![](http://i.imgur.com/r6mN5U4l.png)
 
 ## Add JQuery and other libraries
+
 This theme needs jQuery to work, but jQuery is not provided by the theme. Instead, you need to inject it into the `Blog Footer` in the `Code injection` of your Ghost installation:
 
 ```html
@@ -103,12 +115,15 @@ At the end, it should probably look something like this:
 ![](http://i.imgur.com/AqE46Sr.png)
 
 ## Customizations
+
 As mentioned earlier, this theme is very easily configurable to suit your needs. Every feature of the theme that you can easily customize will be listed below.
 
 ### General Settings
+
 Make sure to set up some of your default settings within your Ghost Admin panel → `General`. By setting your blog title, description, cover, logo, and posts per page, you will be able to maximize the capabilities of this theme.
 
 ### Number of Posts
+
 With ghost migrating to v1, to set the number of posts per page, you'll have to configure a file within the theme directly. The configuration is set within the `package.json`. To adjust it, you'll need to modify the following:
 
 ```javascript
@@ -169,6 +184,7 @@ var disqus_shortname = 'YOUR_DISQUS_SHORTCUT_HERE';
 ```
 
 ### Masonry Grid Layout (beta)
+
 By default this theme will create a two column grid layout if you decided to import the Masonry package as described in the [instructions above](add-jquery-and-other-libraries). If you didn't import the package, the theme will render a single column grid.
 
 You can customize the number of columns you'd like your home page to render by simply specifying the number in the following option.
@@ -296,6 +312,7 @@ This theme includes a special browser compatibility page for users who use IE9 a
 Check out the official [documentation](http://themes.ghost.org/docs/page-context) on Ghost.org.
 
 ### Social Networks
+
 To manage your social networks, you'll need to provide a custom config option. 
 
 For Facebook and Twitter links, go to Ghost Admin panel → General → `Social accounts`.
@@ -326,6 +343,7 @@ If you don't provide a config for any of these, they will automatically be omitt
 
 
 ### AMP Support
+
 As of Ghost v0.10.0, Ghost supports and will automatically render AMP (accelerated mobile pages) versions of your posts. You can read more about the [AMP project here](https://www.ampproject.org/).
 
 Included in this theme is an `amp.hbs` file that represents the AMP template. This template is simply a clone of [Ghost's default template](http://themes.ghost.org/v0.10.0/docs/amp) but with some some slight modifications to better fit the style of this theme.
@@ -342,7 +360,18 @@ For example, if you'd like to change the default header color to match your them
 
 To see how the AMP version of a post looks, append `/amp` to the end of the URL of your post. So if you had a blog post with the url: `https://www.caffeinecoding.com/why-intuit/`, it's AMP equivalent would be: `https://www.caffeinecoding.com/why-intuit/amp`.
 
+### Syntax highlight support for additional languages
+
+Prism.js includes only some basic languages such as html, markdown, css and javascript. Add the Prism.js autoloader plugin to dynamically load additional languages. You need to inject it into the `Blog Footer` in the `Code injection` of your Ghost installation:
+
+```html
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-core.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/plugins/autoloader/prism-autoloader.js"></script>
+<script>Prism.plugins.autoloader.languages_path = 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/'</script>
+```
+
 ## Developing and Contributing
+
 There may be a situation where you want to pull the code and modify the code directly, or you may even want to contribute! You may do this to simply change the base colors, add additional features, or even help me fix some bugs! Follow the instructions below on how to get started with this.
 
 ### File System
@@ -453,7 +482,6 @@ You need to use the same port as your Ghost server for proxying. If your Ghost s
 ### Colors
 
 Edit the file `assets/scss/modules/_variables.scss`. Remember that before you deploy your changes to prod, it is necessary to compile the build to rebuild your new stylesheet, so keep running your gulp process in background.
-
 
 ### Preparing for production
 
