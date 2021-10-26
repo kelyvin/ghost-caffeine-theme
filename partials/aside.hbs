@@ -1,4 +1,4 @@
-<aside class="cover animated" style="background-image: url({{@blog.cover_image}})">
+<aside class="cover animated" style="background-image: url({{@site.cover_image}})">
     <div class="background-container">
         <div class="profile">
             <header id="aside-header" class="nav-header mobile">
@@ -8,22 +8,22 @@
             </header>
             {{#if @blog.logo}}
             <div class="profile-logo">
-                <a id="avatar-link" class="open-link" title="Link to homepage for {{@blog.title}}" href="{{@blog.url}}/#open">
-                    <img src="{{@blog.logo}}" alt="{{@blog.title}} avatar" class="avatar rounded hvr-buzz-out" />
+                <a id="avatar-link" class="open-link" title="Link to homepage for {{@site.title}}" href="{{@site.url}}/#open">
+                    <img src="{{@site.logo}}" alt="{{@site.title}} avatar" class="avatar rounded hvr-buzz-out" />
                 </a>
             </div>
             {{/if}}
             <div class="profile-header">
-                <a class="open-link" title="Link to homepage for {{@blog.title}}" href="{{@blog.url}}/#open">
-                    <h1 class="profile-title">{{@blog.title}}</h1>
+                <a class="open-link" title="Link to homepage for {{@site.title}}" href="{{@site.url}}/#open">
+                    <h1 class="profile-title">{{@site.title}}</h1>
                 </a>
             </div>
             <div class="profile-body">
-                <a class="open-link" title="Link to homepage for {{@blog.title}}" href="{{@blog.url}}/#open">
+                <a class="open-link" title="Link to homepage for {{@site.title}}" href="{{@site.url}}/#open">
                     <h3 id="profile-resume"></h3>
                 </a>
                 <hr class="divider long" />
-                <p>{{@blog.description}}</p>
+                <p>{{@site.description}}</p>
                 <hr class="divider short" />
                     <div class="call-to-action-container">
                         {{navigation}}
@@ -35,8 +35,8 @@
 </aside>
 
 <div class="blog-header">
-    <a title="Link to homepage for {{@blog.title}}" href="{{@blog.url}}/#open">
-        <h1 class="profile-title hvr-float">{{@blog.title}}</h1>
+    <a title="Link to homepage for {{@site.title}}" href="{{@site.url}}/#open">
+        <h1 class="profile-title hvr-float">{{@site.title}}</h1>
     </a>
     {{navigation}}
 </div>
