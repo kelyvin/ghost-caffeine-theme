@@ -2,6 +2,9 @@
 
 ![Caffeine Coding](http://i.imgur.com/NiugCmL.png)
 
+## Read before use
+Thank you so much for your support and contributions for the past 6+ years. The Ghost Foundation has evolved immensely in the past several years and their [current collection of free/paid themes](https://ghost.org/themes/) have gone a lot further than when I originally started this project. Because of this and a shift of personal priorities, I will **no longer be actively developing this theme** and any future updates will no longer be coming from me. I will still try to merge in a PR every now and then, and if anyone is passionate about continuing support, plesae reach out to me and I can make you a contributor. Thank you again for your years of support!
+
 ## Introduction
 
 **Caffeine Theme** is a Material Design inspired theme for the [Ghost](https://ghost.org?lmref=744)publishing platform. It originally began as a fork of [Uno-Zen](https://github.com/Kikobeats/uno-zen), but has since been drastically changed. Huge thanks to the original creator for the original theme layout and inspiration.
