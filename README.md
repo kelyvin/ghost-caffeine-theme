@@ -140,12 +140,12 @@ With ghost migrating to v1, to set the number of posts per page, you'll have to 
 On every page there is an icon on the upper-left hand corner that will open the splash screen. If you'd rather set your own icon, overwrite the `icon.png` within `assets/img/icon`. Or, if you rather not use an icon, you can simply open up the `partials/header.hbs` and uncomment the following line:
 
 ```html
-<img src="{{@blog.logo}}" alt="{{@blog.title}} avatar" class="avatar rounded hvr-buzz-out" />
+<img src="{{@site.logo}}" alt="{{@site.title}} avatar" class="avatar rounded hvr-buzz-out" />
 ```
 and delete the following line:
 
 ```html
- <img src="{{asset "img/icons/icon.png"}}" alt="{{@blog.title}} icon" class="icon rounded hvr-buzz-out" />
+ <img src="{{asset "img/icons/icon.png"}}" alt="{{@site.title}} icon" class="icon rounded hvr-buzz-out" />
 ```
 
 ### Favicons
